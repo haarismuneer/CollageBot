@@ -13,6 +13,9 @@
 		9D10321E2181575700A63E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D10321D2181575700A63E4F /* Assets.xcassets */; };
 		9D1032212181575700A63E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D10321F2181575700A63E4F /* LaunchScreen.storyboard */; };
 		9D1032292181580A00A63E4F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1032282181580A00A63E4F /* Secrets.swift */; };
+		9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */; };
+		9D10322D21841E8200A63E4F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322C21841E8200A63E4F /* Album.swift */; };
+		9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		9D1032202181575700A63E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D1032222181575700A63E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1032282181580A00A63E4F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastfmAPIClient.swift; sourceTree = "<group>"; };
+		9D10322C21841E8200A63E4F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationEntryViewController.swift; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +77,10 @@
 			children = (
 				9D1032162181575600A63E4F /* AppDelegate.swift */,
 				9D1032282181580A00A63E4F /* Secrets.swift */,
+				9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */,
+				9D10322C21841E8200A63E4F /* Album.swift */,
 				9D10321A2181575600A63E4F /* Main.storyboard */,
+				9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */,
 				9D10321D2181575700A63E4F /* Assets.xcassets */,
 				9D10321F2181575700A63E4F /* LaunchScreen.storyboard */,
 				9D1032222181575700A63E4F /* Info.plist */,
@@ -212,8 +221,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */,
 				9D1032172181575600A63E4F /* AppDelegate.swift in Sources */,
+				9D10322D21841E8200A63E4F /* Album.swift in Sources */,
 				9D1032292181580A00A63E4F /* Secrets.swift in Sources */,
+				9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
