@@ -10,13 +10,17 @@ class InformationEntryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        LastfmAPIClient.getTopAlbums(username: "moonear", timeframe: .oneMonth) { (result) in
+        var topAlbums = [Album]()
+        LastfmAPIClient.getTopAlbums(username: "moonear", timeframe: .oneMonth, limit: 9) { (result) in
             switch result {
             case let .success(albums):
                 for album in albums {
-                    let albumObject = Album(dictionary: album)
-                    print(albumObject)
+                    topAlbums.append(Album(dictionary: album))
                 }
+                ImageDownloader.downloadImages(albums: topAlbums, completion: { (images) in
+                    
+//                    CollageCreator.createCollage(rows: 3, columns: 3, images: images)
+                })
             case let .failure(error):
                 print(error)
             }
