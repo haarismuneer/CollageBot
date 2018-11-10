@@ -19,7 +19,11 @@ class InformationEntryViewController: UIViewController {
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: { (images) in
                     
-//                    CollageCreator.createCollage(rows: 3, columns: 3, images: images)
+                    let image = CollageCreator.createCollage(rows: 3, columns: 3, images: images)
+                    let collageVC = CollageDisplayViewController()
+                    collageVC.collageImage = image
+                    self.present(collageVC, animated: true, completion: nil)
+                    
                 })
             case let .failure(error):
                 print(error)
