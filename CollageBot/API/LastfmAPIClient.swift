@@ -5,15 +5,6 @@
 
 import Foundation
 
-enum Timeframe: String {
-    case overall
-    case oneWeek = "7day"
-    case oneMonth = "1month"
-    case threeMonths = "3month"
-    case sixMonths = "6month"
-    case twelveMonths = "12month"
-}
-
 enum NetworkResult<T> {
     case failure(Error)
     case success(T)

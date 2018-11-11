@@ -15,6 +15,9 @@
 		9D1032292181580A00A63E4F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1032282181580A00A63E4F /* Secrets.swift */; };
 		9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */; };
 		9D10322D21841E8200A63E4F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322C21841E8200A63E4F /* Album.swift */; };
+		9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */; };
+		9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */; };
+		9D41D19C2198DAEB007A8C91 /* Timeframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D19B2198DAEB007A8C91 /* Timeframe.swift */; };
 		9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */; };
 		9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADD218B817700F3B467 /* CollageDisplayViewController.swift */; };
 		9D5B5AE0218BC35A00F3B467 /* CollageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */; };
@@ -35,6 +38,9 @@
 		9D1032282181580A00A63E4F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastfmAPIClient.swift; sourceTree = "<group>"; };
 		9D10322C21841E8200A63E4F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionView.swift; sourceTree = "<group>"; };
+		9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGridButton.swift; sourceTree = "<group>"; };
+		9D41D19B2198DAEB007A8C91 /* Timeframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeframe.swift; sourceTree = "<group>"; };
 		9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationEntryViewController.swift; sourceTree = "<group>"; };
 		9D5B5ADD218B817700F3B467 /* CollageDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageDisplayViewController.swift; sourceTree = "<group>"; };
 		9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageCreator.swift; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 			children = (
 				9D10322C21841E8200A63E4F /* Album.swift */,
 				9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */,
+				9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */,
+				9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */,
+				9D41D19B2198DAEB007A8C91 /* Timeframe.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -285,8 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D5B5AE0218BC35A00F3B467 /* CollageCreator.swift in Sources */,
+				9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */,
 				9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */,
+				9D41D19C2198DAEB007A8C91 /* Timeframe.swift in Sources */,
 				9D1032172181575600A63E4F /* AppDelegate.swift in Sources */,
+				9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */,
 				9D10322D21841E8200A63E4F /* Album.swift in Sources */,
 				9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */,
 				9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */,
