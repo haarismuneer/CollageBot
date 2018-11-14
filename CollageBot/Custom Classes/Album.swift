@@ -15,7 +15,7 @@ class Album {
     var image: UIImage?
     
     init(dictionary: [String: Any]) {
-        title = dictionary["name"] as? String
+        title = (dictionary["name"] as! String) + (dictionary["name"] as! String) + (dictionary["name"] as! String)
         artistName = getArtistName(dictionary["artist"] as? [String: Any])
         playCount = dictionary["playcount"] as? String
         imageURL = URL(string: getImageURL(dictionary["image"] as? [[String: String]])) // replace with default image link

@@ -83,7 +83,8 @@ class InformationEntryViewController: UIViewController {
                     topAlbums.append(Album(dictionary: album))
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: {
-                    let image = CollageCreator.createCollage(rows: 3, columns: 3, albums: topAlbums)
+                    let options: CollageOptions = [.displayAlbumTitle, .displayArtist, .displayPlayCount]
+                    let image = CollageCreator.createCollage(rows: 3, columns: 3, albums: topAlbums, options: options)
                     let collageVC = CollageDisplayViewController()
                     collageVC.collageImage = image
                     self.present(collageVC, animated: true, completion: nil)

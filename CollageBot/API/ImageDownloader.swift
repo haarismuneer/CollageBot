@@ -11,7 +11,7 @@ class ImageDownloader {
     class func downloadImages(albums: [Album], completion: @escaping () -> Void) {
         let imageDownloadGroup = DispatchGroup()
         for i in 0..<albums.count {
-            var album = albums[i]
+            let album = albums[i]
             if let url = album.imageURL {
             imageDownloadGroup.enter()
                 downloadImageFromURL(url) { (image) in
