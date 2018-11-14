@@ -8,9 +8,26 @@ import SnapKit
 
 class InformationEntryViewController: UIViewController {
     
-    lazy var usernameField = UITextField()
+    let usernameField: UITextField = createView {
+        $0.placeholder = "Username"
+        $0.autocorrectionType = .no
+        $0.autocapitalizationType = .none
+        $0.borderStyle = .roundedRect
+        $0.textAlignment = .center
+    }
     lazy var timeframePicker = UIPickerView()
-    lazy var generateButton = UIButton(type: .system)
+    let generateButton: UIButton = createView {
+        $0.setTitle("Generate collage", for: .normal)
+        $0.setTitleColor(.orange, for: .normal)
+    }
+    
+    lazy var switchesStackView = UIStackView()
+    lazy var artistLabel = UILabel()
+    lazy var artistSwitch = UISwitch()
+    lazy var titleLabel = UILabel()
+    lazy var titleSwitch = UISwitch()
+    lazy var playCountLabel = UILabel()
+    lazy var playCountSwitch = UISwitch()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +39,6 @@ class InformationEntryViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
-        usernameField.placeholder = "Username"
-        usernameField.autocorrectionType = .no
-        usernameField.borderStyle = .roundedRect
-        usernameField.textAlignment = .center
         view.addSubview(usernameField)
         usernameField.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -39,23 +52,26 @@ class InformationEntryViewController: UIViewController {
         timeframePicker.snp.makeConstraints { (make) in
             make.top.equalTo(usernameField.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
-            make.height.equalTo(50)
+            make.height.equalTo(75)
         }
         
-        generateButton.setTitle("Generate collage", for: .normal)
-        generateButton.addTarget(self, action: #selector(generateCollage), for: .touchUpInside)
+        generateButton.addTarget(self, action: #selector(generateCollage(sender:)), for: .touchUpInside)
         view.addSubview(generateButton)
         generateButton.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().offset(-10)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
         }
     }
+    
+    
     
     @objc private func dismissKeyboard() {
         view.endEditing(true)
     }
     
-    @objc private func generateCollage() {
+    @objc private func generateCollage(sender: UIButton) {
+        sender.isEnabled = false
+        
         guard let username = usernameField.text else { return /*handle error here*/}
         let timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
         
@@ -66,14 +82,17 @@ class InformationEntryViewController: UIViewController {
                 for album in albums {
                     topAlbums.append(Album(dictionary: album))
                 }
-                ImageDownloader.downloadImages(albums: topAlbums, completion: { (images) in
-                    let image = CollageCreator.createCollage(rows: 3, columns: 3, images: images)
+                ImageDownloader.downloadImages(albums: topAlbums, completion: {
+                    let image = CollageCreator.createCollage(rows: 3, columns: 3, albums: topAlbums)
                     let collageVC = CollageDisplayViewController()
                     collageVC.collageImage = image
                     self.present(collageVC, animated: true, completion: nil)
                 })
             case let .failure(error):
                 print(error)
+            }
+            DispatchQueue.main.async {
+                sender.isEnabled = true
             }
         }
     }

@@ -8,25 +8,30 @@ import UIKit
 
 class ImageDownloader {
     
-    class func downloadImages(albums: [Album], completion: @escaping ([UIImage]) -> Void) {
-        let imageURLs = albums.compactMap { return $0.imageURL }
-        var images = [UIImage]()
-        
+    class func downloadImages(albums: [Album], completion: @escaping () -> Void) {
         let imageDownloadGroup = DispatchGroup()
-        for url in imageURLs {
+        for i in 0..<albums.count {
+            var album = albums[i]
+            if let url = album.imageURL {
             imageDownloadGroup.enter()
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let data = data,
-                let image = UIImage(data: data) {
-                    images.append(image)
+                downloadImageFromURL(url) { (image) in
+                    album.image = image
+                    imageDownloadGroup.leave()
                 }
-                imageDownloadGroup.leave()
-            }.resume()
-            
+            }
         }
         imageDownloadGroup.notify(queue: .main) {
-            completion(images)
+            completion()
         }
+    }
+    
+    class func downloadImageFromURL(_ url: URL, completion: @escaping (UIImage) -> Void) {
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let data = data,
+            let image = UIImage(data: data) {
+                completion(image)
+            }
+        }.resume()
     }
     
 }

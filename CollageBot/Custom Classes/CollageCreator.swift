@@ -8,7 +8,7 @@ import UIKit
 
 class CollageCreator {
     
-    class func createCollage(rows: Int, columns: Int, images: [UIImage]) -> UIImage? {
+    class func createCollage(rows: Int, columns: Int, albums: [Album]) -> UIImage? {
         var counter = 0
         let imageHeight = CGFloat(rows * Constants.imageDimension)
         let imageWidth = CGFloat(columns * Constants.imageDimension)
@@ -17,7 +17,7 @@ class CollageCreator {
         
         for row in 0..<rows {
             for column in 0..<columns {
-                let image = images[counter]
+                guard let image = albums[counter].image else { continue }
                 let xPosition = column * Constants.imageDimension
                 let yPosition = row * Constants.imageDimension
                 image.draw(at: CGPoint(x: xPosition, y: yPosition))

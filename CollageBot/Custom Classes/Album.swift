@@ -4,13 +4,15 @@
 //
 
 import Foundation
+import UIKit
 
-struct Album {
+class Album {
     
     var title: String?
     var artistName: String?
     var playCount: String?
     var imageURL: URL?
+    var image: UIImage?
     
     init(dictionary: [String: Any]) {
         title = dictionary["name"] as? String

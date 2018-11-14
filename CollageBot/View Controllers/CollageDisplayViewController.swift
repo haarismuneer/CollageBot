@@ -25,7 +25,8 @@ class CollageDisplayViewController: UIViewController {
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         view.addSubview(dismissButton)
         dismissButton.snp.makeConstraints { (make) in
-            make.top.left.equalToSuperview().offset(20)
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+            make.left.equalToSuperview().offset(20)
             make.height.width.equalTo(40)
         }
         
