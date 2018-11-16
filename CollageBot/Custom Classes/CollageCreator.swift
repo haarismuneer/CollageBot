@@ -6,17 +6,17 @@
 import Foundation
 import UIKit
 
-struct CollageOptions: OptionSet {
+struct CollageTextOptions: OptionSet {
     let rawValue: Int
     
-    static let displayAlbumTitle = CollageOptions(rawValue: 1)
-    static let displayArtist = CollageOptions(rawValue: 2)
-    static let displayPlayCount = CollageOptions(rawValue: 4)
+    static let displayAlbumTitle = CollageTextOptions(rawValue: 1)
+    static let displayArtist = CollageTextOptions(rawValue: 2)
+    static let displayPlayCount = CollageTextOptions(rawValue: 4)
 }
 
 class CollageCreator {
     
-    class func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageOptions) -> UIImage? {
+    class func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) -> UIImage? {
         var counter = 0
         let imageHeight = CGFloat(rows * Constants.imageDimension)
         let imageWidth = CGFloat(columns * Constants.imageDimension)
@@ -51,7 +51,7 @@ class CollageCreator {
         return collage
     }
     
-    private class func getTextDrawingConfiguration(album: Album, options: CollageOptions) -> (String, [NSAttributedString.Key: Any]) {
+    private class func getTextDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
         var stringToDraw = ""
         if options.contains(.displayAlbumTitle), let title = album.title {
             stringToDraw += "\(title)\n"

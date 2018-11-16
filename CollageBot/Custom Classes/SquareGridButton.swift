@@ -5,11 +5,16 @@
 
 import UIKit
 
+struct ButtonIndex {
+    var row: Int
+    var column: Int
+}
+
 class SquareGridButton: UIButton {
 
-    var index: (Int, Int)
+    var index: ButtonIndex
     
-    init(index: (Int, Int)) {
+    init(index: ButtonIndex) {
         self.index = index
         super.init(frame: .zero)
     }

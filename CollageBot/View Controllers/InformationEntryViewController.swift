@@ -21,12 +21,38 @@ class InformationEntryViewController: UIViewController {
         $0.setTitleColor(.orange, for: .normal)
     }
     
-    lazy var switchesStackView = UIStackView()
-    lazy var artistLabel = UILabel()
+    lazy var outerStackView: UIStackView = createView {
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        
+    }
+    lazy var switchesStackView: UIStackView = createView {
+        $0.axis = .vertical
+        $0.alignment = .leading
+        $0.distribution = .fillEqually
+    }
+    lazy var labelsStackView: UIStackView = createView {
+        $0.axis = .vertical
+        $0.alignment = .trailing
+        $0.distribution = .fillEqually
+    }
+    lazy var titleLabel: UILabel = createView {
+        $0.text = "Display album title"
+        $0.textColor = .black
+        $0.font = UIFont.collageBotFont(14)
+    }
+    lazy var artistLabel: UILabel = createView {
+        $0.text = "Display artist"
+        $0.textColor = .black
+        $0.font = UIFont.collageBotFont(14)
+    }
+    lazy var playCountLabel: UILabel = createView {
+        $0.text = "Display playcount"
+        $0.textColor = .black
+        $0.font = UIFont.collageBotFont(14)
+    }
     lazy var artistSwitch = UISwitch()
-    lazy var titleLabel = UILabel()
     lazy var titleSwitch = UISwitch()
-    lazy var playCountLabel = UILabel()
     lazy var playCountSwitch = UISwitch()
 
     override func viewDidLoad() {
@@ -55,6 +81,22 @@ class InformationEntryViewController: UIViewController {
             make.height.equalTo(75)
         }
         
+        labelsStackView.addArrangedSubview(titleLabel)
+        labelsStackView.addArrangedSubview(artistLabel)
+        labelsStackView.addArrangedSubview(playCountLabel)
+        switchesStackView.addArrangedSubview(titleSwitch)
+        switchesStackView.addArrangedSubview(artistSwitch)
+        switchesStackView.addArrangedSubview(playCountSwitch)
+        outerStackView.addArrangedSubview(labelsStackView)
+        outerStackView.addArrangedSubview(switchesStackView)
+        view.addSubview(outerStackView)
+        outerStackView.snp.makeConstraints { (make) in
+            make.top.equalTo(timeframePicker.snp.bottom).offset(20)
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.6)
+            make.height.equalToSuperview().multipliedBy(0.3)
+        }
+        
         generateButton.addTarget(self, action: #selector(generateCollage(sender:)), for: .touchUpInside)
         view.addSubview(generateButton)
         generateButton.snp.makeConstraints { (make) in
@@ -62,8 +104,6 @@ class InformationEntryViewController: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
         }
     }
-    
-    
     
     @objc private func dismissKeyboard() {
         view.endEditing(true)
@@ -74,6 +114,11 @@ class InformationEntryViewController: UIViewController {
         
         guard let username = usernameField.text else { return /*handle error here*/}
         let timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
+        var optionsValue = 0
+        optionsValue += titleSwitch.isOn ? CollageTextOptions.displayAlbumTitle.rawValue : 0
+        optionsValue += artistSwitch.isOn ? CollageTextOptions.displayArtist.rawValue : 0
+        optionsValue += playCountSwitch.isOn ? CollageTextOptions.displayPlayCount.rawValue : 0
+        let options = CollageTextOptions(rawValue: optionsValue)
         
         var topAlbums = [Album]()
         LastfmAPIClient.getTopAlbums(username: username, timeframe: timeframe, limit: 9) { (result) in
@@ -83,7 +128,6 @@ class InformationEntryViewController: UIViewController {
                     topAlbums.append(Album(dictionary: album))
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: {
-                    let options: CollageOptions = [.displayAlbumTitle, .displayArtist, .displayPlayCount]
                     let image = CollageCreator.createCollage(rows: 3, columns: 3, albums: topAlbums, options: options)
                     let collageVC = CollageDisplayViewController()
                     collageVC.collageImage = image
@@ -91,6 +135,7 @@ class InformationEntryViewController: UIViewController {
                 })
             case let .failure(error):
                 print(error)
+                // TODO: handle specific error case of username not existing in lastfm
             }
             DispatchQueue.main.async {
                 sender.isEnabled = true

@@ -41,5 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>CollageBot needs access to your photo library in order to export collages.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Comfortaa_Bold.ttf</string>
+		<string>Comfortaa_Thin.ttf</string>
+		<string>Comfortaa_Regular.ttf</string>
+	</array>
 </dict>
 </plist>

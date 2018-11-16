@@ -8,6 +8,7 @@ import UIKit
 class GridSelectionView: UIView {
     
     var buttons = [SquareGridButton]()
+    var selectedIndex: ButtonIndex?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,7 +22,7 @@ class GridSelectionView: UIView {
     private func setUpUI() {
         for row in 0..<5 {
             for column in 0..<5 {
-                let squareButton = SquareGridButton(index: (row, column))
+                let squareButton = SquareGridButton(index: ButtonIndex(row: row, column: column))
                 squareButton.addTarget(self, action: #selector(buttonTapped(sender:)), for: .touchUpInside)
                 addSubview(squareButton)
                 buttons.append(squareButton)
@@ -30,7 +31,10 @@ class GridSelectionView: UIView {
     }
     
     @objc private func buttonTapped(sender: SquareGridButton) {
-        
+        buttons.forEach {
+            $0.isSelected = $0.index.row <= sender.index.row && $0.index.column < sender.index.column
+        }
+        selectedIndex = sender.index
     }
     
 }

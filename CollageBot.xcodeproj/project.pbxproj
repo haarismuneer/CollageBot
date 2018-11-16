@@ -25,6 +25,10 @@
 		9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */; };
 		9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AE9218DF0CE00F3B467 /* ImageDownloader.swift */; };
 		9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AEB218F38EE00F3B467 /* Constants.swift */; };
+		9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */; };
+		9DA8DAD5219D2D0B00631575 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */; };
+		9DA8DAD6219D2D0B00631575 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */; };
+		9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Conversion.swift"; sourceTree = "<group>"; };
 		9D5B5AE9218DF0CE00F3B467 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		9D5B5AEB218F38EE00F3B467 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+CollageBot.swift"; sourceTree = "<group>"; };
+		9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Regular.ttf; sourceTree = "<group>"; };
+		9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Thin.ttf; sourceTree = "<group>"; };
+		9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +135,7 @@
 				9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */,
 				9D5B5AEB218F38EE00F3B467 /* Constants.swift */,
 				9D39F3FE219A88D100223F31 /* Utilities.swift */,
+				9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -134,6 +143,7 @@
 		9D5B5AE6218BC87E00F3B467 /* Assets+Application Support */ = {
 			isa = PBXGroup;
 			children = (
+				9DA8DAD1219D2CF200631575 /* Fonts */,
 				9D1032162181575600A63E4F /* AppDelegate.swift */,
 				9D10321D2181575700A63E4F /* Assets.xcassets */,
 				9D1032222181575700A63E4F /* Info.plist */,
@@ -161,6 +171,16 @@
 				9D5B5AE9218DF0CE00F3B467 /* ImageDownloader.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		9DA8DAD1219D2CF200631575 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */,
+				9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */,
+				9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		AE873B991D57B168FE70C9DA /* Pods */ = {
@@ -234,6 +254,9 @@
 			files = (
 				9D1032212181575700A63E4F /* LaunchScreen.storyboard in Resources */,
 				9D10321E2181575700A63E4F /* Assets.xcassets in Resources */,
+				9DA8DAD6219D2D0B00631575 /* Comfortaa_Thin.ttf in Resources */,
+				9DA8DAD5219D2D0B00631575 /* Comfortaa_Regular.ttf in Resources */,
+				9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */,
 				9D10321C2181575600A63E4F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +330,7 @@
 				9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */,
 				9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */,
 				9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */,
+				9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */,
 				9D1032292181580A00A63E4F /* Secrets.swift in Sources */,
 				9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */,
 				9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */,
