@@ -106,7 +106,7 @@
 				9D5B5AE8218BC8C400F3B467 /* API */,
 				9D5B5AE6218BC87E00F3B467 /* Assets+Application Support */,
 				9D5B5AE7218BC8B000F3B467 /* Custom Classes */,
-				9D5B5AE5218BC87400F3B467 /* Helpers + Extensions */,
+				9D5B5AE5218BC87400F3B467 /* Helpers+Extensions */,
 				9D5B5AE4218BC86E00F3B467 /* Storyboards */,
 				9D5B5AE3218BC86300F3B467 /* View Controllers */,
 			);
@@ -131,7 +131,7 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9D5B5AE5218BC87400F3B467 /* Helpers + Extensions */ = {
+		9D5B5AE5218BC87400F3B467 /* Helpers+Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */,
@@ -140,7 +140,7 @@
 				9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */,
 				9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */,
 			);
-			path = "Helpers + Extensions";
+			path = "Helpers+Extensions";
 			sourceTree = "<group>";
 		};
 		9D5B5AE6218BC87E00F3B467 /* Assets+Application Support */ = {

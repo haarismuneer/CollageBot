@@ -33,6 +33,7 @@ class GridSelectionView: UIView {
         }
         
         // Select preferred layout
+        // TODO: replace with User Defaults
         buttons.forEach {
             if $0.index.row == 2 && $0.index.column == 2 {
                 buttonTapped($0)

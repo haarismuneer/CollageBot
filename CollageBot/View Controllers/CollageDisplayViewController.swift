@@ -19,7 +19,7 @@ class CollageDisplayViewController: UIViewController {
     }
     
     func setUpUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .collageBotOffWhite
         
         dismissButton.setTitle("❌", for: .normal)
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
@@ -32,7 +32,7 @@ class CollageDisplayViewController: UIViewController {
         
         view.addSubview(collageImageView)
         collageImageView.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.center.width.equalToSuperview()
             make.height.equalTo(collageImageView.snp.width)
         }
         

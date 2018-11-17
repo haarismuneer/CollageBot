@@ -28,18 +28,18 @@ class CollageCreator {
                 let album = albums[counter]
                 guard let image = albums[counter].image else { continue }
                 
-                let xPosition = column * Constants.imageDimension
-                let yPosition = row * Constants.imageDimension
+                let xPosition = CGFloat(column * Constants.imageDimension)
+                let yPosition = CGFloat(row * Constants.imageDimension)
                 let imagePoint = CGPoint(x: xPosition, y: yPosition)
                 image.draw(at: imagePoint)
                 
-                let textConfiguration = getTextDrawingConfiguration(album: album, options: options)
+                let textConfiguration = getTextAndDrawingConfiguration(album: album, options: options)
                 let stringToDraw = textConfiguration.0
-                let textPoint = CGPoint(x: xPosition + 10, y: yPosition + 10)
+                let textRect = CGRect(x: xPosition + 10.0, y: yPosition + 10, width: 280, height: 280)
                 
                 // TODO: draw in rect instead of at point so that the text truncates/wraps properly
                 if stringToDraw != "" {
-                    NSString(string: stringToDraw).draw(at: textPoint, withAttributes: textConfiguration.1)
+                    NSString(string: stringToDraw).draw(in: textRect, withAttributes: textConfiguration.1)
                 }
                 
                 counter += 1
@@ -51,7 +51,7 @@ class CollageCreator {
         return collage
     }
     
-    private class func getTextDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
+    private class func getTextAndDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
         var stringToDraw = ""
         if options.contains(.displayAlbumTitle), let title = album.title {
             stringToDraw += "\(title)\n"
@@ -63,13 +63,14 @@ class CollageCreator {
             stringToDraw += "\(playCount)"
         }
         let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineBreakMode = .byWordWrapping
+        paragraphStyle.lineBreakMode = .byTruncatingTail
         let textAttributes: [NSAttributedString.Key: Any] = [
             NSAttributedString.Key.font: UIFont(name: "Helvetica", size: 20) as Any,
             NSAttributedString.Key.foregroundColor: UIColor.yellow,
             NSAttributedString.Key.strokeColor: UIColor.black,
-            NSAttributedString.Key.strokeWidth: -3,
-            NSAttributedString.Key.paragraphStyle: paragraphStyle
+            NSAttributedString.Key.strokeWidth: -4,
+            NSAttributedString.Key.paragraphStyle: paragraphStyle,
+            NSAttributedString.Key.kern: 1.35
         ]
         
         return (stringToDraw, textAttributes)
