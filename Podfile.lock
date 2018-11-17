@@ -1,24 +1,20 @@
 PODS:
-  - PromisesObjC (1.2.3)
-  - PromisesSwift (1.2.3):
-    - PromisesObjC (= 1.2.3)
+  - SCLAlertView (0.8)
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
-  - PromisesSwift (~> 1.2.3)
+  - SCLAlertView
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - PromisesObjC
-    - PromisesSwift
+    - SCLAlertView
     - SnapKit
 
 SPEC CHECKSUMS:
-  PromisesObjC: a3a4263d8a9260214267e0b3788d0f83466ad449
-  PromisesSwift: f7f45c21986419e85f7c5b645ed8c6a2c10c04b4
+  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 60a38ba75c88272e2bccfb5620a179d1db1cc1b3
+PODFILE CHECKSUM: ada9dbb50a8314da0c6d2b690b24c3623d84c717
 
 COCOAPODS: 1.5.3

@@ -18,13 +18,13 @@ class InformationEntryViewController: UIViewController {
     lazy var timeframePicker = UIPickerView()
     let generateButton: UIButton = createView {
         $0.setTitle("Generate collage", for: .normal)
-        $0.setTitleColor(.orange, for: .normal)
+        $0.setTitleColor(.collageBotOrange, for: .normal)
     }
     
     lazy var outerStackView: UIStackView = createView {
         $0.axis = .horizontal
         $0.distribution = .fillEqually
-        
+        $0.spacing = 10
     }
     lazy var switchesStackView: UIStackView = createView {
         $0.axis = .vertical
@@ -54,6 +54,7 @@ class InformationEntryViewController: UIViewController {
     lazy var artistSwitch = UISwitch()
     lazy var titleSwitch = UISwitch()
     lazy var playCountSwitch = UISwitch()
+    lazy var gridView = GridSelectionView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,11 +63,13 @@ class InformationEntryViewController: UIViewController {
     }
     
     private func setUpUI() {
+        view.backgroundColor = .collageBotOffWhite
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
         view.addSubview(usernameField)
-        usernameField.snp.makeConstraints { (make) in
+        usernameField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.75)
             make.centerY.equalToSuperview().multipliedBy(0.5)
@@ -75,11 +78,21 @@ class InformationEntryViewController: UIViewController {
         view.addSubview(timeframePicker)
         timeframePicker.delegate = self
         timeframePicker.dataSource = self
-        timeframePicker.snp.makeConstraints { (make) in
+        timeframePicker.snp.makeConstraints { make in
             make.top.equalTo(usernameField.snp.bottom).offset(10)
             make.centerX.equalToSuperview()
             make.height.equalTo(75)
         }
+        
+        view.addSubview(gridView)
+        gridView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.5)
+            make.height.equalTo(gridView.snp.width)
+            make.top.equalTo(timeframePicker.snp.bottom).offset(20)
+        }
+        view.layoutIfNeeded()
+        gridView.setUpUI()
         
         labelsStackView.addArrangedSubview(titleLabel)
         labelsStackView.addArrangedSubview(artistLabel)
@@ -90,16 +103,16 @@ class InformationEntryViewController: UIViewController {
         outerStackView.addArrangedSubview(labelsStackView)
         outerStackView.addArrangedSubview(switchesStackView)
         view.addSubview(outerStackView)
-        outerStackView.snp.makeConstraints { (make) in
-            make.top.equalTo(timeframePicker.snp.bottom).offset(20)
+        outerStackView.snp.makeConstraints { make in
+            make.top.equalTo(gridView.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.6)
-            make.height.equalToSuperview().multipliedBy(0.3)
+            make.height.equalToSuperview().multipliedBy(0.15)
         }
         
         generateButton.addTarget(self, action: #selector(generateCollage(sender:)), for: .touchUpInside)
         view.addSubview(generateButton)
-        generateButton.snp.makeConstraints { (make) in
+        generateButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
         }
@@ -113,6 +126,12 @@ class InformationEntryViewController: UIViewController {
         sender.isEnabled = false
         
         guard let username = usernameField.text else { return /*handle error here*/}
+        guard let selectedRow = gridView.selectedIndex?.row,
+        let selectedColumn = gridView.selectedIndex?.column else { return /*handle error here*/}
+        
+        let numRows = selectedRow + 1
+        let numColumns = selectedColumn + 1
+        
         let timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
         var optionsValue = 0
         optionsValue += titleSwitch.isOn ? CollageTextOptions.displayAlbumTitle.rawValue : 0
@@ -121,14 +140,20 @@ class InformationEntryViewController: UIViewController {
         let options = CollageTextOptions(rawValue: optionsValue)
         
         var topAlbums = [Album]()
-        LastfmAPIClient.getTopAlbums(username: username, timeframe: timeframe, limit: 9) { (result) in
+        LastfmAPIClient.getTopAlbums(username: username, timeframe: timeframe, limit: numRows*numColumns) { (result) in
             switch result {
             case let .success(albums):
                 for album in albums {
                     topAlbums.append(Album(dictionary: album))
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: {
-                    let image = CollageCreator.createCollage(rows: 3, columns: 3, albums: topAlbums, options: options)
+                    
+                    let image = CollageCreator.createCollage(
+                        rows: selectedRow + 1,
+                        columns: selectedColumn + 1,
+                        albums: topAlbums,
+                        options: options
+                    )
                     let collageVC = CollageDisplayViewController()
                     collageVC.collageImage = image
                     self.present(collageVC, animated: true, completion: nil)
@@ -141,6 +166,7 @@ class InformationEntryViewController: UIViewController {
                 sender.isEnabled = true
             }
         }
+        sender.isEnabled = true
     }
 
 }

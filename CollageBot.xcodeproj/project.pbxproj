@@ -29,6 +29,7 @@
 		9DA8DAD5219D2D0B00631575 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */; };
 		9DA8DAD6219D2D0B00631575 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */; };
 		9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */; };
+		9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Regular.ttf; sourceTree = "<group>"; };
 		9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Thin.ttf; sourceTree = "<group>"; };
 		9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
+		9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CollageBot.swift"; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,7 +106,7 @@
 				9D5B5AE8218BC8C400F3B467 /* API */,
 				9D5B5AE6218BC87E00F3B467 /* Assets+Application Support */,
 				9D5B5AE7218BC8B000F3B467 /* Custom Classes */,
-				9D5B5AE5218BC87400F3B467 /* Helpers */,
+				9D5B5AE5218BC87400F3B467 /* Helpers + Extensions */,
 				9D5B5AE4218BC86E00F3B467 /* Storyboards */,
 				9D5B5AE3218BC86300F3B467 /* View Controllers */,
 			);
@@ -129,15 +131,16 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9D5B5AE5218BC87400F3B467 /* Helpers */ = {
+		9D5B5AE5218BC87400F3B467 /* Helpers + Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */,
 				9D5B5AEB218F38EE00F3B467 /* Constants.swift */,
 				9D39F3FE219A88D100223F31 /* Utilities.swift */,
 				9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */,
+				9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */,
 			);
-			path = Helpers;
+			path = "Helpers + Extensions";
 			sourceTree = "<group>";
 		};
 		9D5B5AE6218BC87E00F3B467 /* Assets+Application Support */ = {
@@ -273,16 +276,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesSwift/Promises.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Promises.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +329,7 @@
 				9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */,
 				9D10322D21841E8200A63E4F /* Album.swift in Sources */,
 				9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */,
+				9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */,
 				9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */,
 				9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */,
 				9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */,

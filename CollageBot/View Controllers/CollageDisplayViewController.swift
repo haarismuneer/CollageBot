@@ -24,15 +24,15 @@ class CollageDisplayViewController: UIViewController {
         dismissButton.setTitle("❌", for: .normal)
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         view.addSubview(dismissButton)
-        dismissButton.snp.makeConstraints { (make) in
+        dismissButton.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
             make.left.equalToSuperview().offset(20)
             make.height.width.equalTo(40)
         }
         
         view.addSubview(collageImageView)
-        collageImageView.snp.makeConstraints { (make) in
-            make.center.width.equalToSuperview()
+        collageImageView.snp.makeConstraints { make in
+            make.center.equalToSuperview()
             make.height.equalTo(collageImageView.snp.width)
         }
         

@@ -7,403 +7,176 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0121D5CDAE66626C6581DF6B5A6B1454 /* PromisesObjC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 60A08E255A97C59764647CB13F9899E9 /* PromisesObjC-dummy.m */; };
-		018F36D8EDD2B850BB2A63DEA45B0E79 /* FBLPromise+Async.m in Sources */ = {isa = PBXBuildFile; fileRef = C9687D7587D5DC2A09ADC27C6196B33B /* FBLPromise+Async.m */; };
-		025166945C742DCED44E2ECCB4115861 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684E3A5A4744608F6EB8A1DB9F720473 /* ConstraintPriority.swift */; };
-		04BC731FFC587856962EA9BF662815B2 /* Promise+Catch.swift in Sources */ = {isa = PBXBuildFile; fileRef = B962FEECC28AE919667009A011D33498 /* Promise+Catch.swift */; };
-		059EF9ADD3805FEA551DE282313A947B /* FBLPromisePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = E98D418025EC080E777FE207B57A5A05 /* FBLPromisePrivate.h */; };
-		07EA71B4CC5F3339DFF4D0942C7889E1 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D7512315CE243EC8C679629250E16E /* ConstraintView+Extensions.swift */; };
-		0CF9F13D34F608A9F1436DB3BF98DEEA /* Promise+Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BA6A8E14E9FBC9B503F796BBCC75B /* Promise+Testing.swift */; };
-		13637486CF20849E80E1D8CCC5BB86B8 /* Promise+Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6A4CBA8CC7BBF67489115476F3012B /* Promise+Any.swift */; };
-		14D1B894E943CB4BAE7FFC65B18819A7 /* FBLPromise+Recover.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C417655DA9E78D9170414D4D19A4B5A /* FBLPromise+Recover.m */; };
-		187D9F0A0915CD81F758CCAD6558C244 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */; };
-		19ADC8A8911DFBA2019723020BF4C91B /* Promise+Timeout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54212955565B8FED78D9A8E00DCBAE /* Promise+Timeout.swift */; };
-		19DCC0CA9928AE06FC09F91A2304C778 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B81434C72F6F263310A8EF96C3600 /* ConstraintOffsetTarget.swift */; };
-		1F29760E0528AB4806795C6E0412E799 /* FBLPromise+Always.h in Headers */ = {isa = PBXBuildFile; fileRef = DB75ECD7F5709B26B49AED90D05F904E /* FBLPromise+Always.h */; };
-		1FF54222DC033F18C89AEFFECA02254C /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D628F0D94C94A4AE4D616BACAD1460 /* ConstraintDescription.swift */; };
-		203482E7608CBF5E89F81EF960DE1588 /* FBLPromise+Always.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DB75ECD7F5709B26B49AED90D05F904E /* FBLPromise+Always.h */; };
-		2053B7DC0A2160FB433A3E9741149B27 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62D52FF39A3D3AF50F25A7F9D47EE33 /* ConstraintLayoutGuideDSL.swift */; };
-		21FCF0DCAA7750DDADFDABB8466983F2 /* FBLPromise.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 3B9F327BA7A7DD66472945370F130499 /* FBLPromise.h */; };
-		228C04A0CBFBB0268D95A1ED4CF081FF /* FBLPromise+Await.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D954F1D1618027D3A5190ABD048EAF /* FBLPromise+Await.h */; };
-		25F3B4F4F294A8515CDA31821B3BE89C /* FBLPromisePrivate.h in Copy . Private Headers */ = {isa = PBXBuildFile; fileRef = E98D418025EC080E777FE207B57A5A05 /* FBLPromisePrivate.h */; };
-		2CB6148023C6553694D34E191B409795 /* FBLPromise+Reduce.h in Headers */ = {isa = PBXBuildFile; fileRef = D0EBC564EED3BACDB35F4486EFBAE90C /* FBLPromise+Reduce.h */; };
-		2CED1D30ED51114BB27572EF818125FA /* FBLPromise+Then.m in Sources */ = {isa = PBXBuildFile; fileRef = 8101F0B8A2B039F22E079A9B4E536048 /* FBLPromise+Then.m */; };
-		2D94F9CC8E1397BAC75B943D7EC56359 /* FBLPromise+Await.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 69D954F1D1618027D3A5190ABD048EAF /* FBLPromise+Await.h */; };
-		2F5B46DEB9276093FA6EC992D0435F4F /* FBLPromise+Retry.h in Headers */ = {isa = PBXBuildFile; fileRef = 47C1730403D71E95C3483BBC33DDD0CC /* FBLPromise+Retry.h */; };
-		301D354CE0A001592DE5C77713D72D28 /* Promise+Retry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152B153A72E7671F89A951B9FB1798BF /* Promise+Retry.swift */; };
-		30B634B14B335B7A52A93DA66F22968D /* FBLPromise+Async.h in Headers */ = {isa = PBXBuildFile; fileRef = A730CB5E18CC5EA0B0A815927EFD9C4A /* FBLPromise+Async.h */; };
-		311FE21487F1B3FFB6FB916EE01AC2AF /* FBLPromise+Then.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = CC7A6F333730CCACA92D3C6B33A61B7E /* FBLPromise+Then.h */; };
-		3373E421DE9A12BF21A80EB6F92C16CF /* FBLPromises.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D75D550B393B84825940B2689A728740 /* FBLPromises.framework */; };
-		369CEF01730949EC828106726923A0C6 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E1B00D438B6299130E3862751AFD11 /* ConstraintLayoutSupport.swift */; };
-		37FAF2636E8F86957FD7D46719724BB3 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59FAA544669BAA6753F5AB75A483E78A /* ConstraintPriorityTarget.swift */; };
-		3A68E0C68657B807BAB068C9B5AC9A83 /* Promise+Recover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA141AB10C3BABFDA32B0A935A7FA692 /* Promise+Recover.swift */; };
-		3B74D7DFBBF18918460CFEF97F920CF8 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F41E8C2C78D86D9080C55C51F468040 /* ConstraintAttributes.swift */; };
-		3DA3C5FDF79FF7D8329FCB439A0E8A7E /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08C232BB4EA822D967723539993537B /* ConstraintMakerFinalizable.swift */; };
-		41CBB5C9AD674A3B699BF61D13FE0A45 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD5521F214CC2CED9C8B218585861D0 /* LayoutConstraint.swift */; };
-		4593FA70A70E7E8AFA33FFC620B83FBA /* FBLPromise+Recover.h in Headers */ = {isa = PBXBuildFile; fileRef = DA76C20372563659AB0A8EE0DD6BEADE /* FBLPromise+Recover.h */; };
-		4634993400A6C96FD7D8858FE744CC3F /* FBLPromise+Race.h in Headers */ = {isa = PBXBuildFile; fileRef = 3BB8883A464FB67EB5398D3E36B7E268 /* FBLPromise+Race.h */; };
-		47102B0D4A9D1D0594E23F103461E610 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */; };
-		47E0BD83995412F5E1335492A409C63E /* FBLPromise+Async.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A730CB5E18CC5EA0B0A815927EFD9C4A /* FBLPromise+Async.h */; };
-		4A7F83C32195DC67B93B42DD7E4C60AD /* FBLPromise+Delay.m in Sources */ = {isa = PBXBuildFile; fileRef = B126D06A6A1297F21F39575C08C21DF8 /* FBLPromise+Delay.m */; };
-		4C92E5FF701C270186E7EC4673D777F4 /* Promise+Await.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E056559B33DE905308B4901636BEC83 /* Promise+Await.swift */; };
-		50664E123A52BC37220A47AFE340BCC0 /* FBLPromises.h in Headers */ = {isa = PBXBuildFile; fileRef = E6DFE66F4871EB4A000AFF83BBC289A7 /* FBLPromises.h */; };
-		51AAB4F96E53845BA26CB8DAEBDB0168 /* Promise+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A207E083F42BC1926D65D9C4AF092E6 /* Promise+Async.swift */; };
-		51AD4A927C27EFD505FFBCF6D2E942DA /* FBLPromises.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = E6DFE66F4871EB4A000AFF83BBC289A7 /* FBLPromises.h */; };
-		549FE4ECA4FCC27842812C1334D663DA /* FBLPromise+Do.m in Sources */ = {isa = PBXBuildFile; fileRef = 05A5D6FB0B2A8F52065C12BA2CB596DC /* FBLPromise+Do.m */; };
-		54D5638D792FD83ED7B9CFDF230BBEBA /* FBLPromise+Race.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A3152F1539897F56134CA9D55FBCA32 /* FBLPromise+Race.m */; };
-		55090A4B75B138E0FFA4EDD3909A0EFB /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BD760187E7705C668B46D253670F8F /* Constraint.swift */; };
-		5655E276A811C9FC2BFF993ECBE63043 /* FBLPromise.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE4DAB8E513C9053B9387B263C20120 /* FBLPromise.m */; };
-		59517A554B434B1A3E8170C542BE155C /* FBLPromise+Wrap.h in Headers */ = {isa = PBXBuildFile; fileRef = DFCDA5A24E4CCECA8F3389C48B2A5DF8 /* FBLPromise+Wrap.h */; };
-		597E573079DF01B620FCDB9E00B26940 /* Pods-CollageBot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1313603CC7418ED444246A8BE18062 /* Pods-CollageBot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59CE7470A8AAF5C3BD65AB45728474A6 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA314131E51AC1DA972D21541A66EB94 /* ConstraintMaker.swift */; };
-		5C65F4B1CCF1DA935CB953D25523789A /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B683596D8A4E800D7FC6481C67EF9822 /* UILayoutSupport+Extensions.swift */; };
-		5E6E6688B905A7252FD0B2CABE5DE6BA /* FBLPromise+Timeout.m in Sources */ = {isa = PBXBuildFile; fileRef = D307A8468E304D6EC123D8E6EAAB537A /* FBLPromise+Timeout.m */; };
-		615B0A1BF42F42F54A68886CAF706FDB /* FBLPromise+Catch.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A07800636B4399501205A9CC73B0270 /* FBLPromise+Catch.h */; };
-		645311ACB45CBDC339FDD46281E2EB03 /* Promise+All.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02FF7C3265E518B6EF71095305AC0D1 /* Promise+All.swift */; };
-		6487ADDACFE5A528A3F19B0D57CC5C52 /* FBLPromise+Wrap.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DFCDA5A24E4CCECA8F3389C48B2A5DF8 /* FBLPromise+Wrap.h */; };
-		65FF9362163C096F1BA9B4D4D05743D0 /* FBLPromise+Catch.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBCCF50BC95E16B3CE04EB6741178EB /* FBLPromise+Catch.m */; };
-		6BD648513140DC9976F7232D90DC49D2 /* Promise+Wrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63036460604BF5D47677A86BF1C2535 /* Promise+Wrap.swift */; };
-		6D636540B7979F37D5EF689C91C49E53 /* Pods-CollageBot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E50C1CE91E82C0AFC7D41FBE46D0CB8 /* Pods-CollageBot-dummy.m */; };
-		6E2E9F989C39653E1D64E6C4D5146844 /* FBLPromise+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDC473D526F6CFAB98BE27B52109B84 /* FBLPromise+Testing.h */; };
-		6ED9F1167F8854D536DAECC4AEE5E2FD /* FBLPromise+Catch.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 9A07800636B4399501205A9CC73B0270 /* FBLPromise+Catch.h */; };
-		70C3B3C81A3B1D56DC9CFD2CE482DFB7 /* FBLPromise+Any.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 93F2F6F80F0F7B5F2873BEC69E9F6B50 /* FBLPromise+Any.h */; };
-		7161B00D023E4013007326D2D0A0E642 /* FBLPromise+Reduce.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D0EBC564EED3BACDB35F4486EFBAE90C /* FBLPromise+Reduce.h */; };
-		796EF1DCF3F968D7DF9536C8F642E91A /* FBLPromise+Do.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0D5311FB50C89D9159B2B09BB2B22CE0 /* FBLPromise+Do.h */; };
-		7AABA6E51EA36AA7E5D4AF8A487DEAED /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292F11A26EDE90718266D50FD35C9F61 /* ConstraintConstantTarget.swift */; };
-		7AE3F1DAB9E146331B77461237221640 /* FBLPromise+All.h in Headers */ = {isa = PBXBuildFile; fileRef = E2770058C94DB4698E8E9DD64C627945 /* FBLPromise+All.h */; };
-		81D79BFAB5CE1DBED66D8BE8CB843DE0 /* Promise+Validate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF462472F76AC99482AEB1D05E2DA785 /* Promise+Validate.swift */; };
-		865056218CABDD05E3EEEB16C5A97117 /* PromiseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025097D0FA92EA99443AC2BCB76225AE /* PromiseError.swift */; };
-		8894D57E1F3DDD4522CBB9BE7B531292 /* FBLPromise+Any.h in Headers */ = {isa = PBXBuildFile; fileRef = 93F2F6F80F0F7B5F2873BEC69E9F6B50 /* FBLPromise+Any.h */; };
-		8918F43EDD3CA8CC0DBD7038FF7787FA /* FBLPromise+Retry.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 47C1730403D71E95C3483BBC33DDD0CC /* FBLPromise+Retry.h */; };
-		8D57619E199EE1DCF17AF4FAD36FFC78 /* FBLPromise+Always.m in Sources */ = {isa = PBXBuildFile; fileRef = 87CEB7FC0BD1FCB2151166C7BD632416 /* FBLPromise+Always.m */; };
-		8F71576E07679187E048781FF000B6F6 /* FBLPromise.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9F327BA7A7DD66472945370F130499 /* FBLPromise.h */; };
-		90F1DA9B5B5307E6CD5862373273E33C /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8365138F707C83B4862187960517BD2 /* Debugging.swift */; };
-		99D06EBD095EC2F08C104C082C3E759D /* FBLPromise+Await.m in Sources */ = {isa = PBXBuildFile; fileRef = 45C7B726611052A3E82C356AE5BE73D2 /* FBLPromise+Await.m */; };
-		9D00B111B9DD756DE4AED038242BD24F /* FBLPromise+Delay.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = E2F7A34491983B46F4D5865ADCD39183 /* FBLPromise+Delay.h */; };
-		9E14C4FDB0F716EBF89EB41F87DF842B /* Promise+Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5DDF3EDD8206A5DC3A1BCFAFEF433D /* Promise+Do.swift */; };
-		9F6A5F521C768B3D6FCC6295E22BC062 /* FBLPromise+Timeout.h in Headers */ = {isa = PBXBuildFile; fileRef = 0253626A8D63C10A8F5B7A32EF2A52C6 /* FBLPromise+Timeout.h */; };
-		A197E22514040686987D0C125F278C7A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEC9471DD7B499A4F835ABAC8F75453 /* Typealiases.swift */; };
-		A26C3AE26E0CD0F92A156E5D795DA083 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19199FFC5BF0867313FBBA9A263BBC07 /* LayoutConstraintItem.swift */; };
-		A83B4F7CFF3DEFD859E2CFF641E228C9 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625584C75D9B6783B0CF6DF5FA6CD4BE /* ConstraintView.swift */; };
-		A88601A40E96A5CCC8EB84E65C713FFB /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A572054E76F7DB517822CBB98846EE92 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A8D84BD7FF6E76BE35CF981716B98477 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7393CCF8336443E8BE451D5B88A174A7 /* ConstraintRelatableTarget.swift */; };
-		ADE60C9F0829157164896ADCA33C8658 /* Promise+Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FFCBA7C6880386272DDF51BB07C527F /* Promise+Delay.swift */; };
-		AE705457CF0EBB479FD84ABE8BA3CDA6 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4ED4E59340AD8AD73B237BC0AB598C /* ConstraintItem.swift */; };
-		AFC6D28D563182C4AC248556761826B3 /* FBLPromise+All.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = E2770058C94DB4698E8E9DD64C627945 /* FBLPromise+All.h */; };
-		AFECD1CF4072559270ED309326BD5103 /* FBLPromise+Timeout.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0253626A8D63C10A8F5B7A32EF2A52C6 /* FBLPromise+Timeout.h */; };
-		B3906D6A93A9AB900F92FC10B47706B1 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6265829D75DAE7909D555ECCD1269BD6 /* ConstraintViewDSL.swift */; };
-		B66F4A192635C04EFC6754DE7D396F31 /* FBLPromise+Validate.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 179DDC93BD3BFE88341BC6E4D7EFC602 /* FBLPromise+Validate.h */; };
-		B6DA8C239609E86707837B4855A2BDB3 /* FBLPromise+Recover.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DA76C20372563659AB0A8EE0DD6BEADE /* FBLPromise+Recover.h */; };
-		B704B2A3598A1BE733534210B4B0BABB /* FBLPromise+Retry.m in Sources */ = {isa = PBXBuildFile; fileRef = E265893E0BEC886885B0E5C9D9C111EB /* FBLPromise+Retry.m */; };
-		BAA9DBEE78228E0B6653E06A3C19D850 /* FBLPromise+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCB945B1667F33DFE014D9C1BDF8126 /* FBLPromise+Testing.m */; };
-		BC452EAB7CDEF38FC2E69542644B9527 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90564B27819AD284114CF17F9F83709F /* ConstraintDSL.swift */; };
-		C0EAA5DC76E7EC64C6F2E2C5ED7EE1E7 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F1207EB297432570EE5C3E933C30A2 /* ConstraintMakerExtendable.swift */; };
-		C197254191AE1D733127635052D548F1 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F15CF8D300B2BA8BB856BBED24B2C6 /* ConstraintMakerRelatable.swift */; };
-		C470DF1C8348C1233C1AF784D4E5F8C0 /* FBLPromiseError.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 11EBEBF09CCC1EB36F703EDCA9A26790 /* FBLPromiseError.h */; };
-		C4E1AF877C5F0A1CA2730D478C5FE355 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F762AC218E75C89A765CCABCA136804C /* ConstraintConfig.swift */; };
-		CA27CC6212EA80B1CCFAEBCE6727B0DC /* FBLPromise+Delay.h in Headers */ = {isa = PBXBuildFile; fileRef = E2F7A34491983B46F4D5865ADCD39183 /* FBLPromise+Delay.h */; };
-		CBE56DC3D48433139C3BBB54E5B2661E /* Promise+Always.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EC79CEF8E76F683377DD70D1270DCD /* Promise+Always.swift */; };
-		CC1805B5A08ED08DFB740172FA262FB8 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D79317F327B93B1D45E40F18863C60 /* ConstraintLayoutGuide+Extensions.swift */; };
-		CDD436820B5C1DFA057C3CD946C4A661 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */; };
-		CEB7EED4977313B74B3278FAC14DD84F /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E831F0195110C62A8DD1E74E0475E9F /* ConstraintMakerEditable.swift */; };
-		CF04C806CE36B54C1593D37CA4DA698E /* FBLPromise+Do.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D5311FB50C89D9159B2B09BB2B22CE0 /* FBLPromise+Do.h */; };
-		D29B345D32CB86CDF231380DBD66621F /* FBLPromise+Validate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C37D54DE6FD9FD04E05F7A1C78744FF /* FBLPromise+Validate.m */; };
-		D4ADE98BD923732BB61AC1E8725F21F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */; };
-		D7FD16A293F2021D159E557395E1525F /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693F8A1D69A40F96E930A3D38648A535 /* ConstraintRelation.swift */; };
-		DAB97CBBA9ACA6A30DFA1370394A4AAA /* PromisesSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00D9A93ACCBC739085C15B3EA61C5AB4 /* PromisesSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB6AA3136925AF95EEC2180C64D20892 /* FBLPromise+Testing.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 5BDC473D526F6CFAB98BE27B52109B84 /* FBLPromise+Testing.h */; };
-		DBC0CF53727C8887D3C34E5EC59833B6 /* FBLPromise+Race.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 3BB8883A464FB67EB5398D3E36B7E268 /* FBLPromise+Race.h */; };
-		DD78E2414EF408043C1D5DDDEE2A3A04 /* FBLPromise+All.m in Sources */ = {isa = PBXBuildFile; fileRef = 621E4C357503599403D1568ADCDA73D4 /* FBLPromise+All.m */; };
-		DD81FBD3F2C5E1923F90912B4E138F39 /* Promise+Race.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F87AF15E8EF6AECA0226735353AA95 /* Promise+Race.swift */; };
-		DDBEFA6AC5D4D27C724CFD6B995A52E2 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE17EC58C6EF97CDE485D0C812696D4 /* ConstraintLayoutSupportDSL.swift */; };
-		DF65C496758AA46543454D85CFDED1FC /* PromisesObjC-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7703FF50A0F004BD7F76F2591B2B5D34 /* PromisesObjC-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E2165033DDD9EDD8F62D9A39059AE875 /* Promise+Then.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB08A9C41DEDE0BD069BAA1FF37028DE /* Promise+Then.swift */; };
-		E24F7984AA1EC81654FE163AD1ED9CCA /* FBLPromiseError.h in Headers */ = {isa = PBXBuildFile; fileRef = 11EBEBF09CCC1EB36F703EDCA9A26790 /* FBLPromiseError.h */; };
-		E3DDF14228C69079E84FF00E8F4CB53C /* FBLPromise+Reduce.m in Sources */ = {isa = PBXBuildFile; fileRef = 734199C225517814E5B3E2B42BD56917 /* FBLPromise+Reduce.m */; };
-		EA8C5E4144984CDDBB7053C830FA55B9 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7239E9E88E4DACA4558F8E1DE48B018D /* Promise.swift */; };
-		EB5F0569B69BD1723544E551E8354039 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F67F92D27E9D570499BB38B855FC46A /* ConstraintMakerPriortizable.swift */; };
-		EB776E1ADCE199DEDC05425E968FF811 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36761B80ECC3682A8CB5B001607CF077 /* ConstraintInsets.swift */; };
-		F0CF04808B568C451BE4A408766F2903 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7D3A9CDE46B36ED35FF2B4296B3866 /* SnapKit-dummy.m */; };
-		F21E6DE43A795E07F280E004C084F58F /* FBLPromise+Any.m in Sources */ = {isa = PBXBuildFile; fileRef = F9489AA2475DE9EE87BA9BC12F1FC02B /* FBLPromise+Any.m */; };
-		F273926A1E7A85EB896281CBE42EFF17 /* Promise+Reduce.swift in Sources */ = {isa = PBXBuildFile; fileRef = B14881A771728D17DAC8F7E0BE12FDE6 /* Promise+Reduce.swift */; };
-		F54A9AF767DC2D42B04B25B095E0F370 /* FBLPromise+Validate.h in Headers */ = {isa = PBXBuildFile; fileRef = 179DDC93BD3BFE88341BC6E4D7EFC602 /* FBLPromise+Validate.h */; };
-		F68285CC16F390877D99CC612E82A1D9 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1ABB15E188374FB86154200DACD4FDE /* ConstraintLayoutGuide.swift */; };
-		FAF1ECCB39CB3515649F078B343C2C32 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6ECB7AB609A6705374A809FF991DE /* ConstraintMultiplierTarget.swift */; };
-		FBB7CECEB1354E03E6D42EA6ECA0D438 /* FBLPromise+Then.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7A6F333730CCACA92D3C6B33A61B7E /* FBLPromise+Then.h */; };
-		FC462B241ED61EEE06E5D95B52E86773 /* FBLPromise+Wrap.m in Sources */ = {isa = PBXBuildFile; fileRef = FD0545A0B05840CE760BF768BA0B7B08 /* FBLPromise+Wrap.m */; };
-		FDEFAB2FFEB4B65A58032D1BDBCEE61F /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A158D46B3BE11CAF712BB9F0850D03 /* ConstraintInsetTarget.swift */; };
-		FE08907D874CB5969C98CEB21A731888 /* FBLPromiseError.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5A12AFB74A4E9815B749C4F21CE8C5 /* FBLPromiseError.m */; };
-		FFA2BEAC906CD7414D21EEF7C058AEA1 /* PromisesSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 936B7D12D14E5A2B5514EAF63321D70B /* PromisesSwift-dummy.m */; };
+		046B268112E58244DED11AB0B83F4B9F /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D01401984F93FBB5F222AA452568D4B /* ConstraintMakerExtendable.swift */; };
+		05C130852D916A28429E75AF77BDA7F1 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926AA8321E3619395D5F24552E57C61E /* ConstraintItem.swift */; };
+		05CBF936F565110383F465FC834F3234 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E1F53BA870717D9A18A78FDF08DCA8 /* Typealiases.swift */; };
+		103D12B898351289CEB1C114C9B20525 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24975710E98A8B81C7F60213A32E3A0 /* ConstraintViewDSL.swift */; };
+		14B302B0ACDF2EEA3BF14AC1EA5DBA3F /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD3258AD1A051C71611A860494E278F /* ConstraintMakerFinalizable.swift */; };
+		19F6C0A6CF672AD07636BF5075C4DD16 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F696E57287A6AE4E73A62AF4320653E8 /* SCLExtensions.swift */; };
+		1F074DAF7727603E86CD6B2C0694BCF5 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6EBA0A6ADB0DE907AA3C77E615AFC5 /* ConstraintPriority.swift */; };
+		200014E2054E930A6EB06B5D7750BB0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		202E390D4184E5D8F18B8C9F2DEB0D49 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA620AC60FE2EBCF328ADA3D13D39F2D /* SCLAlertView.swift */; };
+		29CD934F4A56D2BB6676BB743B389945 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC4E8E501AF0CE9D597E8DF2BB6788 /* ConstraintInsets.swift */; };
+		32062231FB9215D640F63A889A94F85C /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4724CC6CC90F61086D5AB7E44446CC5 /* ConstraintInsetTarget.swift */; };
+		326E3D13ED72C46576AA1246898AD9E3 /* SCLAlertView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3507963F3E5704FA8EB1452BA4A96E7B /* SCLAlertView-dummy.m */; };
+		3C6D8B4A5F143B5E89BD66672D601048 /* Pods-CollageBot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E50C1CE91E82C0AFC7D41FBE46D0CB8 /* Pods-CollageBot-dummy.m */; };
+		3F3DCB5621A88BB338F7417A711F2BFB /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B12DB272C262224FCED42334F14B513 /* ConstraintPriorityTarget.swift */; };
+		41405DCBFE5F06B3FF0BB6863865343E /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF13510D659A98B453291F4070C96DD2 /* ConstraintMakerEditable.swift */; };
+		4337D3070C34E5D6CB5E64ECB5CA862C /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABDBA25C264DCC83F70944FA5C487F1 /* Constraint.swift */; };
+		43E306691FF53B31DC69273865ABD198 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EBFD0057069304E2555A790B3703CF /* ConstraintLayoutGuide+Extensions.swift */; };
+		4ADCE396A706D82212D9D0116EC18537 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		59759DA1FFB191BFB9D731D34D714DF7 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192BF54C310335B7B855F78C3555916A /* LayoutConstraint.swift */; };
+		6023C79F0C3F6D044F1F0978F404D7E1 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1E034E59330EB0A7B150D4DBA32F12 /* ConstraintLayoutSupportDSL.swift */; };
+		625C9A8AF0589BD50B5960B4CF72A077 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679E84DCE24B8BC3AD08E7197BD3D15C /* ConstraintConstantTarget.swift */; };
+		67090978B0A4E570B86DC2A2E54674E6 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEF9AC2D7C414185BAFB504B94D8038 /* ConstraintConfig.swift */; };
+		70D5BF6280E3A74F1D039EE909D6B5A5 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDFB219C63305B78B1BC70FD258B2A6 /* ConstraintDescription.swift */; };
+		7A3448C09B1E66A5E14D54994FB44036 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		852428A2223E6DD77AE52826EAE6AF5E /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595015B099BF8C35B2F4D345D059727 /* ConstraintMakerRelatable.swift */; };
+		8E1D413C43CBC7994A08A73C50B121EA /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D7DB515A333DD28F14F8DAF4CF4733 /* ConstraintLayoutGuideDSL.swift */; };
+		95DC5EC75972ED3385A7AB1789F80E16 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC3B8D52A53551D93A92EEFDF58A05E0 /* SnapKit-dummy.m */; };
+		A0BD4E63F51565BEE90D28F8CC7A3E15 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C54A78FBEB81E9909AEB8F4C332F69 /* ConstraintMakerPriortizable.swift */; };
+		A2295A1FA3CEC91581BA57EB51EBD2EB /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A104218CF11A8E44845F7043C01568 /* ConstraintRelation.swift */; };
+		A7299755CF71811E1B0B51CA90937BF2 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92972163ECAF8A22B3D5A72276D0D0DD /* Debugging.swift */; };
+		A8516F08D23887C8533C3D32610949A2 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D27ADDCF8330B8D5CB3B9991BAB4F427 /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AB56CBE89FCDD4CBE234A804871A1D89 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0925D645A9142F2D8A96625E90F1EA9F /* ConstraintLayoutGuide.swift */; };
+		AC8AFD77D2D5000E1693345562127449 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E07A8279096E1BE1F3242B246D5959F9 /* ConstraintOffsetTarget.swift */; };
+		B9F58621124BE26557FEAE7447A6EA09 /* SCLAlertView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 046C352EE2E9B5DB4E17544D2E6216D7 /* SCLAlertView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD1B98A558CCA4A56961FCB57F1829C4 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8ECFFC4CC5F28AC6E20DD21722C6F3 /* ConstraintView.swift */; };
+		C9DD6CC9A843BAFE79B34D68C3412432 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7454A8617C929A696DBDEC8415BC50D4 /* LayoutConstraintItem.swift */; };
+		D42E8B987BAB8116077726A41EBD1B07 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD4D6FE0ACE96ACCA6D133BD8C7364 /* ConstraintView+Extensions.swift */; };
+		D47E5581EEC354EF6C5D8998A0EFA9E8 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7E110EDAE3B8099D5C46C6858BB27 /* UILayoutSupport+Extensions.swift */; };
+		DAB3A28BCFFBBD0A30012D5D412DC752 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0330F227812E2C92E69D5AF5EE993E /* ConstraintLayoutSupport.swift */; };
+		DF18A16CD3FB4311506536AD2DF29C0C /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8434746C3C2CB9AD7734B77430B141 /* ConstraintRelatableTarget.swift */; };
+		E8064F314479CF053B191D015D4E7331 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B060341708ECAE9A9AFF5ED91BCEA327 /* ConstraintMultiplierTarget.swift */; };
+		F109859CED463FC13A290AF80F2081FA /* Pods-CollageBot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1313603CC7418ED444246A8BE18062 /* Pods-CollageBot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F4DEE81A5FEAA96F724432514A282EAC /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BC46ED7428E5C2A5D35C74A7B1FE7DE /* ConstraintAttributes.swift */; };
+		F69507B3BC4B53C76C0FCCB1B312EFC8 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127CB50B3D3D88FA6FF8F7DF6C7CCD84 /* ConstraintDSL.swift */; };
+		F81E8F198D627536DCF03F2D9DD2F4D9 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75AE31752C3394A24D39929826CD77B5 /* ConstraintMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		12ED8BE4FD87C9C33C308923BF007DD6 /* PBXContainerItemProxy */ = {
+		43C43C4BA37EB5B11DB8920070260673 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 65BFCD623AE0BEC748B358B35F10C2CF;
-			remoteInfo = PromisesObjC;
+			remoteGlobalIDString = 636E21F768CE1EE8859F4AFD684334C9;
+			remoteInfo = SCLAlertView;
 		};
-		9D7C2D46E13E0187F03F6C0E7BE0FD81 /* PBXContainerItemProxy */ = {
+		A2128A9C4C95739E747DAE92F966F8FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 65BFCD623AE0BEC748B358B35F10C2CF;
-			remoteInfo = PromisesObjC;
-		};
-		AFDBF181DCFFE0D91BB6DC89E83FCBD9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 185533A78B99FA3491F0272D5826C973;
-			remoteInfo = PromisesSwift;
-		};
-		D98BDEDE661E180F419D2208E7B0649F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 65DCDA202AFD57441A1ED3C5335BD080;
+			remoteGlobalIDString = D6CD58B57BADDF377A2CB6DD6C10193E;
 			remoteInfo = SnapKit;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		8E0CBEFC9D4AC78CD5587EBA0D8AF68B /* Copy . Private Headers */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(PRIVATE_HEADERS_FOLDER_PATH)/.";
-			dstSubfolderSpec = 16;
-			files = (
-				25F3B4F4F294A8515CDA31821B3BE89C /* FBLPromisePrivate.h in Copy . Private Headers */,
-			);
-			name = "Copy . Private Headers";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6E63EBE9C1BF1C49BA44024FDAFCD89 /* Copy . Public Headers */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/.";
-			dstSubfolderSpec = 16;
-			files = (
-				AFC6D28D563182C4AC248556761826B3 /* FBLPromise+All.h in Copy . Public Headers */,
-				203482E7608CBF5E89F81EF960DE1588 /* FBLPromise+Always.h in Copy . Public Headers */,
-				70C3B3C81A3B1D56DC9CFD2CE482DFB7 /* FBLPromise+Any.h in Copy . Public Headers */,
-				47E0BD83995412F5E1335492A409C63E /* FBLPromise+Async.h in Copy . Public Headers */,
-				2D94F9CC8E1397BAC75B943D7EC56359 /* FBLPromise+Await.h in Copy . Public Headers */,
-				6ED9F1167F8854D536DAECC4AEE5E2FD /* FBLPromise+Catch.h in Copy . Public Headers */,
-				9D00B111B9DD756DE4AED038242BD24F /* FBLPromise+Delay.h in Copy . Public Headers */,
-				796EF1DCF3F968D7DF9536C8F642E91A /* FBLPromise+Do.h in Copy . Public Headers */,
-				DBC0CF53727C8887D3C34E5EC59833B6 /* FBLPromise+Race.h in Copy . Public Headers */,
-				B6DA8C239609E86707837B4855A2BDB3 /* FBLPromise+Recover.h in Copy . Public Headers */,
-				7161B00D023E4013007326D2D0A0E642 /* FBLPromise+Reduce.h in Copy . Public Headers */,
-				8918F43EDD3CA8CC0DBD7038FF7787FA /* FBLPromise+Retry.h in Copy . Public Headers */,
-				DB6AA3136925AF95EEC2180C64D20892 /* FBLPromise+Testing.h in Copy . Public Headers */,
-				311FE21487F1B3FFB6FB916EE01AC2AF /* FBLPromise+Then.h in Copy . Public Headers */,
-				AFECD1CF4072559270ED309326BD5103 /* FBLPromise+Timeout.h in Copy . Public Headers */,
-				B66F4A192635C04EFC6754DE7D396F31 /* FBLPromise+Validate.h in Copy . Public Headers */,
-				6487ADDACFE5A528A3F19B0D57CC5C52 /* FBLPromise+Wrap.h in Copy . Public Headers */,
-				21FCF0DCAA7750DDADFDABB8466983F2 /* FBLPromise.h in Copy . Public Headers */,
-				C470DF1C8348C1233C1AF784D4E5F8C0 /* FBLPromiseError.h in Copy . Public Headers */,
-				51AD4A927C27EFD505FFBCF6D2E942DA /* FBLPromises.h in Copy . Public Headers */,
-			);
-			name = "Copy . Public Headers";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		00D9A93ACCBC739085C15B3EA61C5AB4 /* PromisesSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesSwift-umbrella.h"; sourceTree = "<group>"; };
-		025097D0FA92EA99443AC2BCB76225AE /* PromiseError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PromiseError.swift; path = Sources/Promises/PromiseError.swift; sourceTree = "<group>"; };
-		0253626A8D63C10A8F5B7A32EF2A52C6 /* FBLPromise+Timeout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Timeout.h"; path = "Sources/FBLPromises/include/FBLPromise+Timeout.h"; sourceTree = "<group>"; };
-		05A5D6FB0B2A8F52065C12BA2CB596DC /* FBLPromise+Do.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Do.m"; path = "Sources/FBLPromises/FBLPromise+Do.m"; sourceTree = "<group>"; };
-		08A158D46B3BE11CAF712BB9F0850D03 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		0C4ED4E59340AD8AD73B237BC0AB598C /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		0D5311FB50C89D9159B2B09BB2B22CE0 /* FBLPromise+Do.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Do.h"; path = "Sources/FBLPromises/include/FBLPromise+Do.h"; sourceTree = "<group>"; };
-		0EA6ECB7AB609A6705374A809FF991DE /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
-		11EBEBF09CCC1EB36F703EDCA9A26790 /* FBLPromiseError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromiseError.h; path = Sources/FBLPromises/include/FBLPromiseError.h; sourceTree = "<group>"; };
-		152B153A72E7671F89A951B9FB1798BF /* Promise+Retry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Retry.swift"; path = "Sources/Promises/Promise+Retry.swift"; sourceTree = "<group>"; };
-		179DDC93BD3BFE88341BC6E4D7EFC602 /* FBLPromise+Validate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Validate.h"; path = "Sources/FBLPromises/include/FBLPromise+Validate.h"; sourceTree = "<group>"; };
-		19199FFC5BF0867313FBBA9A263BBC07 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		1A207E083F42BC1926D65D9C4AF092E6 /* Promise+Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Async.swift"; path = "Sources/Promises/Promise+Async.swift"; sourceTree = "<group>"; };
-		1A3152F1539897F56134CA9D55FBCA32 /* FBLPromise+Race.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Race.m"; path = "Sources/FBLPromises/FBLPromise+Race.m"; sourceTree = "<group>"; };
-		1F67F92D27E9D570499BB38B855FC46A /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		22307A497BBE4684E212004B96AA8721 /* PromisesSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromisesSwift.modulemap; sourceTree = "<group>"; };
-		292F11A26EDE90718266D50FD35C9F61 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		2A1134B1204F08D7F5B5FDA480E32A56 /* PromisesSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesSwift-prefix.pch"; sourceTree = "<group>"; };
-		2CEC9471DD7B499A4F835ABAC8F75453 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		0099C9198D4B434D819E75CC60BC527A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046C352EE2E9B5DB4E17544D2E6216D7 /* SCLAlertView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-umbrella.h"; sourceTree = "<group>"; };
+		0925D645A9142F2D8A96625E90F1EA9F /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
+		0B12DB272C262224FCED42334F14B513 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		0D01401984F93FBB5F222AA452568D4B /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		0F2693FFA05381B1A0641FBA4E829834 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127CB50B3D3D88FA6FF8F7DF6C7CCD84 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
+		148043D06D322E62FF6CBAB0C52B963B /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		14E1F53BA870717D9A18A78FDF08DCA8 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
+		16D7DB515A333DD28F14F8DAF4CF4733 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
+		192BF54C310335B7B855F78C3555916A /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
+		2D1E034E59330EB0A7B150D4DBA32F12 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		2E50C1CE91E82C0AFC7D41FBE46D0CB8 /* Pods-CollageBot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CollageBot-dummy.m"; sourceTree = "<group>"; };
-		36761B80ECC3682A8CB5B001607CF077 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		37D7512315CE243EC8C679629250E16E /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		2F8434746C3C2CB9AD7734B77430B141 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
+		30CC4E8E501AF0CE9D597E8DF2BB6788 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
+		3507963F3E5704FA8EB1452BA4A96E7B /* SCLAlertView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SCLAlertView-dummy.m"; sourceTree = "<group>"; };
 		39908FBEB31A502184404BACFB48EB8A /* Pods-CollageBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CollageBot.debug.xcconfig"; sourceTree = "<group>"; };
-		39D628F0D94C94A4AE4D616BACAD1460 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		3B9F327BA7A7DD66472945370F130499 /* FBLPromise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromise.h; path = Sources/FBLPromises/include/FBLPromise.h; sourceTree = "<group>"; };
-		3BB8883A464FB67EB5398D3E36B7E268 /* FBLPromise+Race.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Race.h"; path = "Sources/FBLPromises/include/FBLPromise+Race.h"; sourceTree = "<group>"; };
-		3C37D54DE6FD9FD04E05F7A1C78744FF /* FBLPromise+Validate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Validate.m"; path = "Sources/FBLPromises/FBLPromise+Validate.m"; sourceTree = "<group>"; };
-		3DCB945B1667F33DFE014D9C1BDF8126 /* FBLPromise+Testing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Testing.m"; path = "Sources/FBLPromises/FBLPromise+Testing.m"; sourceTree = "<group>"; };
-		436BA6A8E14E9FBC9B503F796BBCC75B /* Promise+Testing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Testing.swift"; path = "Sources/Promises/Promise+Testing.swift"; sourceTree = "<group>"; };
-		45C7B726611052A3E82C356AE5BE73D2 /* FBLPromise+Await.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Await.m"; path = "Sources/FBLPromises/FBLPromise+Await.m"; sourceTree = "<group>"; };
-		46F15CF8D300B2BA8BB856BBED24B2C6 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		47C1730403D71E95C3483BBC33DDD0CC /* FBLPromise+Retry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Retry.h"; path = "Sources/FBLPromises/include/FBLPromise+Retry.h"; sourceTree = "<group>"; };
-		487F8060937DF561E5932977C6850DF2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3ABDBA25C264DCC83F70944FA5C487F1 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
+		3BC46ED7428E5C2A5D35C74A7B1FE7DE /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
 		48A70B59AC80C18F997FE2D3433CBFFD /* Pods-CollageBot-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CollageBot-resources.sh"; sourceTree = "<group>"; };
-		4A5DDF3EDD8206A5DC3A1BCFAFEF433D /* Promise+Do.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Do.swift"; path = "Sources/Promises/Promise+Do.swift"; sourceTree = "<group>"; };
-		4AE17EC58C6EF97CDE485D0C812696D4 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		4B66A2B4E082CA9AEA33343656FBEEE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49C54A78FBEB81E9909AEB8F4C332F69 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		4C7546557059BEC82C4BE0ABB5D51FCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5090AD03C7D77DF6B072F8E377659CA7 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
-		50F1207EB297432570EE5C3E933C30A2 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		51BD760187E7705C668B46D253670F8F /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		59FAA544669BAA6753F5AB75A483E78A /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
-		5BDC473D526F6CFAB98BE27B52109B84 /* FBLPromise+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Testing.h"; path = "Sources/FBLPromises/include/FBLPromise+Testing.h"; sourceTree = "<group>"; };
-		5C417655DA9E78D9170414D4D19A4B5A /* FBLPromise+Recover.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Recover.m"; path = "Sources/FBLPromises/FBLPromise+Recover.m"; sourceTree = "<group>"; };
-		5E831F0195110C62A8DD1E74E0475E9F /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		5F41E8C2C78D86D9080C55C51F468040 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		60A08E255A97C59764647CB13F9899E9 /* PromisesObjC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromisesObjC-dummy.m"; sourceTree = "<group>"; };
-		621E4C357503599403D1568ADCDA73D4 /* FBLPromise+All.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+All.m"; path = "Sources/FBLPromises/FBLPromise+All.m"; sourceTree = "<group>"; };
-		625584C75D9B6783B0CF6DF5FA6CD4BE /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
-		6265829D75DAE7909D555ECCD1269BD6 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		63C66D9DA0FFBE572B12763FF41653C6 /* PromisesObjC.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PromisesObjC.modulemap; sourceTree = "<group>"; };
+		4F8ECFFC4CC5F28AC6E20DD21722C6F3 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		56EBFD0057069304E2555A790B3703CF /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
+		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5BED42C7F36986A213AAB948209FA18C /* SCLAlertView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SCLAlertView.framework; path = SCLAlertView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		679328899854411AEA0B1587C7849274 /* Pods-CollageBot-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CollageBot-acknowledgements.plist"; sourceTree = "<group>"; };
-		67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		684E3A5A4744608F6EB8A1DB9F720473 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
-		693F8A1D69A40F96E930A3D38648A535 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		69D954F1D1618027D3A5190ABD048EAF /* FBLPromise+Await.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Await.h"; path = "Sources/FBLPromises/include/FBLPromise+Await.h"; sourceTree = "<group>"; };
+		679E84DCE24B8BC3AD08E7197BD3D15C /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		6B1313603CC7418ED444246A8BE18062 /* Pods-CollageBot-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CollageBot-umbrella.h"; sourceTree = "<group>"; };
-		6B2DFC3DF5B2A5DC7A75EF5D8CBBBDBD /* PromisesSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesSwift.xcconfig; sourceTree = "<group>"; };
-		6B7B81434C72F6F263310A8EF96C3600 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		6F90D9374F3AF4D76253D72161F39D5F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FFCBA7C6880386272DDF51BB07C527F /* Promise+Delay.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Delay.swift"; path = "Sources/Promises/Promise+Delay.swift"; sourceTree = "<group>"; };
-		7239E9E88E4DACA4558F8E1DE48B018D /* Promise.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Promise.swift; path = Sources/Promises/Promise.swift; sourceTree = "<group>"; };
-		734199C225517814E5B3E2B42BD56917 /* FBLPromise+Reduce.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Reduce.m"; path = "Sources/FBLPromises/FBLPromise+Reduce.m"; sourceTree = "<group>"; };
-		7393CCF8336443E8BE451D5B88A174A7 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		7703FF50A0F004BD7F76F2591B2B5D34 /* PromisesObjC-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PromisesObjC-umbrella.h"; sourceTree = "<group>"; };
-		77DB516F219FED71146CE13402203E28 /* PromisesObjC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PromisesObjC.xcconfig; sourceTree = "<group>"; };
-		7D54212955565B8FED78D9A8E00DCBAE /* Promise+Timeout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Timeout.swift"; path = "Sources/Promises/Promise+Timeout.swift"; sourceTree = "<group>"; };
-		7E6A4CBA8CC7BBF67489115476F3012B /* Promise+Any.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Any.swift"; path = "Sources/Promises/Promise+Any.swift"; sourceTree = "<group>"; };
-		8101F0B8A2B039F22E079A9B4E536048 /* FBLPromise+Then.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Then.m"; path = "Sources/FBLPromises/FBLPromise+Then.m"; sourceTree = "<group>"; };
-		87CEB7FC0BD1FCB2151166C7BD632416 /* FBLPromise+Always.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Always.m"; path = "Sources/FBLPromises/FBLPromise+Always.m"; sourceTree = "<group>"; };
-		8E056559B33DE905308B4901636BEC83 /* Promise+Await.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Await.swift"; path = "Sources/Promises/Promise+Await.swift"; sourceTree = "<group>"; };
-		90564B27819AD284114CF17F9F83709F /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		936B7D12D14E5A2B5514EAF63321D70B /* PromisesSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PromisesSwift-dummy.m"; sourceTree = "<group>"; };
+		7454A8617C929A696DBDEC8415BC50D4 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
+		75AE31752C3394A24D39929826CD77B5 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		863BA1B5987AA64AA0C50A29FC6AB98C /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
+		8F28C101194944311A3F0549590F5677 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
+		926AA8321E3619395D5F24552E57C61E /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
+		92972163ECAF8A22B3D5A72276D0D0DD /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93F2F6F80F0F7B5F2873BEC69E9F6B50 /* FBLPromise+Any.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Any.h"; path = "Sources/FBLPromises/include/FBLPromise+Any.h"; sourceTree = "<group>"; };
-		95BDBE765C225CBFFECF98F4627B5031 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
+		9595015B099BF8C35B2F4D345D059727 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		977CEB1794813574FFBC8B26D3C1957E /* Pods-CollageBot-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CollageBot-frameworks.sh"; sourceTree = "<group>"; };
-		9A07800636B4399501205A9CC73B0270 /* FBLPromise+Catch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Catch.h"; path = "Sources/FBLPromises/include/FBLPromise+Catch.h"; sourceTree = "<group>"; };
-		A02FF7C3265E518B6EF71095305AC0D1 /* Promise+All.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+All.swift"; path = "Sources/Promises/Promise+All.swift"; sourceTree = "<group>"; };
-		A26C5666FB70782F652214C40286EFC5 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A572054E76F7DB517822CBB98846EE92 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
-		A730CB5E18CC5EA0B0A815927EFD9C4A /* FBLPromise+Async.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Async.h"; path = "Sources/FBLPromises/include/FBLPromise+Async.h"; sourceTree = "<group>"; };
-		B126D06A6A1297F21F39575C08C21DF8 /* FBLPromise+Delay.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Delay.m"; path = "Sources/FBLPromises/FBLPromise+Delay.m"; sourceTree = "<group>"; };
-		B14881A771728D17DAC8F7E0BE12FDE6 /* Promise+Reduce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Reduce.swift"; path = "Sources/Promises/Promise+Reduce.swift"; sourceTree = "<group>"; };
-		B2D79317F327B93B1D45E40F18863C60 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		B4AA172F979727090628AD370A0F3ED8 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBLPromises.framework; path = PromisesObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B683596D8A4E800D7FC6481C67EF9822 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		B962FEECC28AE919667009A011D33498 /* Promise+Catch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Catch.swift"; path = "Sources/Promises/Promise+Catch.swift"; sourceTree = "<group>"; };
-		B99CBAC002BA563A703483CE4AD1D047 /* Promises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Promises.framework; path = PromisesSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCDC4AFA665583A5E65FF39FAC774507 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		BD5A12AFB74A4E9815B749C4F21CE8C5 /* FBLPromiseError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromiseError.m; path = Sources/FBLPromises/FBLPromiseError.m; sourceTree = "<group>"; };
-		BFE4DAB8E513C9053B9387B263C20120 /* FBLPromise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBLPromise.m; path = Sources/FBLPromises/FBLPromise.m; sourceTree = "<group>"; };
-		C62D52FF39A3D3AF50F25A7F9D47EE33 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		C8365138F707C83B4862187960517BD2 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		C9687D7587D5DC2A09ADC27C6196B33B /* FBLPromise+Async.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Async.m"; path = "Sources/FBLPromises/FBLPromise+Async.m"; sourceTree = "<group>"; };
-		CA141AB10C3BABFDA32B0A935A7FA692 /* Promise+Recover.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Recover.swift"; path = "Sources/Promises/Promise+Recover.swift"; sourceTree = "<group>"; };
-		CC7A6F333730CCACA92D3C6B33A61B7E /* FBLPromise+Then.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Then.h"; path = "Sources/FBLPromises/include/FBLPromise+Then.h"; sourceTree = "<group>"; };
-		CC7D3A9CDE46B36ED35FF2B4296B3866 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
-		D08C232BB4EA822D967723539993537B /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		D0EBC564EED3BACDB35F4486EFBAE90C /* FBLPromise+Reduce.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Reduce.h"; path = "Sources/FBLPromises/include/FBLPromise+Reduce.h"; sourceTree = "<group>"; };
-		D307A8468E304D6EC123D8E6EAAB537A /* FBLPromise+Timeout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Timeout.m"; path = "Sources/FBLPromises/FBLPromise+Timeout.m"; sourceTree = "<group>"; };
-		D3E1B00D438B6299130E3862751AFD11 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		D5EC79CEF8E76F683377DD70D1270DCD /* Promise+Always.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Always.swift"; path = "Sources/Promises/Promise+Always.swift"; sourceTree = "<group>"; };
-		D75D550B393B84825940B2689A728740 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA76C20372563659AB0A8EE0DD6BEADE /* FBLPromise+Recover.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Recover.h"; path = "Sources/FBLPromises/include/FBLPromise+Recover.h"; sourceTree = "<group>"; };
-		DB08A9C41DEDE0BD069BAA1FF37028DE /* Promise+Then.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Then.swift"; path = "Sources/Promises/Promise+Then.swift"; sourceTree = "<group>"; };
-		DB75ECD7F5709B26B49AED90D05F904E /* FBLPromise+Always.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Always.h"; path = "Sources/FBLPromises/include/FBLPromise+Always.h"; sourceTree = "<group>"; };
-		DCD5521F214CC2CED9C8B218585861D0 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		DFCDA5A24E4CCECA8F3389C48B2A5DF8 /* FBLPromise+Wrap.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Wrap.h"; path = "Sources/FBLPromises/include/FBLPromise+Wrap.h"; sourceTree = "<group>"; };
-		E265893E0BEC886885B0E5C9D9C111EB /* FBLPromise+Retry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Retry.m"; path = "Sources/FBLPromises/FBLPromise+Retry.m"; sourceTree = "<group>"; };
-		E2770058C94DB4698E8E9DD64C627945 /* FBLPromise+All.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+All.h"; path = "Sources/FBLPromises/include/FBLPromise+All.h"; sourceTree = "<group>"; };
-		E2F7A34491983B46F4D5865ADCD39183 /* FBLPromise+Delay.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "FBLPromise+Delay.h"; path = "Sources/FBLPromises/include/FBLPromise+Delay.h"; sourceTree = "<group>"; };
-		E6DFE66F4871EB4A000AFF83BBC289A7 /* FBLPromises.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromises.h; path = Sources/FBLPromises/include/FBLPromises.h; sourceTree = "<group>"; };
-		E98D418025EC080E777FE207B57A5A05 /* FBLPromisePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBLPromisePrivate.h; path = Sources/FBLPromises/include/FBLPromisePrivate.h; sourceTree = "<group>"; };
-		EA314131E51AC1DA972D21541A66EB94 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
+		9A0330F227812E2C92E69D5AF5EE993E /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
+		A5A104218CF11A8E44845F7043C01568 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
+		B060341708ECAE9A9AFF5ED91BCEA327 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
+		C6984FAC954A22DDBA0B55D7686FD1B5 /* SCLAlertView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SCLAlertView.modulemap; sourceTree = "<group>"; };
+		C6AD4D6FE0ACE96ACCA6D133BD8C7364 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
+		CAEF9AC2D7C414185BAFB504B94D8038 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		D27ADDCF8330B8D5CB3B9991BAB4F427 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
+		D302D5920F3D5E453A7DDCEE2B20FC00 /* SCLAlertView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SCLAlertView.xcconfig; sourceTree = "<group>"; };
+		DC3B8D52A53551D93A92EEFDF58A05E0 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
+		E07A8279096E1BE1F3242B246D5959F9 /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
+		E24975710E98A8B81C7F60213A32E3A0 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
+		EA620AC60FE2EBCF328ADA3D13D39F2D /* SCLAlertView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLAlertView.swift; path = SCLAlertView/SCLAlertView.swift; sourceTree = "<group>"; };
 		EA6295F33EBD60FE9AE0A96BBB001ED3 /* Pods-CollageBot-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CollageBot-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EAA7E110EDAE3B8099D5C46C6858BB27 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		EB5F7F6CEF982D2B873EBCB14372AAAA /* Pods-CollageBot.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CollageBot.modulemap"; sourceTree = "<group>"; };
-		EE23E9BED39BF1D086AECF19E7B7D120 /* Pods_CollageBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CollageBot.framework; path = "Pods-CollageBot.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFBCCF50BC95E16B3CE04EB6741178EB /* FBLPromise+Catch.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Catch.m"; path = "Sources/FBLPromises/FBLPromise+Catch.m"; sourceTree = "<group>"; };
+		ECA898FCE793EC001BCCF608283C7945 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF13510D659A98B453291F4070C96DD2 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
+		EFD3258AD1A051C71611A860494E278F /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
+		EFDFB219C63305B78B1BC70FD258B2A6 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
 		F093139C3D61BD10D37284AADCB10263 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
-		F1ABB15E188374FB86154200DACD4FDE /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		F4F87AF15E8EF6AECA0226735353AA95 /* Promise+Race.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Race.swift"; path = "Sources/Promises/Promise+Race.swift"; sourceTree = "<group>"; };
-		F63036460604BF5D47677A86BF1C2535 /* Promise+Wrap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Wrap.swift"; path = "Sources/Promises/Promise+Wrap.swift"; sourceTree = "<group>"; };
-		F762AC218E75C89A765CCABCA136804C /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		F9489AA2475DE9EE87BA9BC12F1FC02B /* FBLPromise+Any.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Any.m"; path = "Sources/FBLPromises/FBLPromise+Any.m"; sourceTree = "<group>"; };
-		FD0545A0B05840CE760BF768BA0B7B08 /* FBLPromise+Wrap.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "FBLPromise+Wrap.m"; path = "Sources/FBLPromises/FBLPromise+Wrap.m"; sourceTree = "<group>"; };
-		FF462472F76AC99482AEB1D05E2DA785 /* Promise+Validate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Promise+Validate.swift"; path = "Sources/Promises/Promise+Validate.swift"; sourceTree = "<group>"; };
+		F0E840F886D9A696D1BA96CBFD2863DF /* Pods_CollageBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CollageBot.framework; path = "Pods-CollageBot.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F309D23F699C059AE7FAB0685B6ED231 /* SCLAlertView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SCLAlertView-prefix.pch"; sourceTree = "<group>"; };
+		F4724CC6CC90F61086D5AB7E44446CC5 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		F696E57287A6AE4E73A62AF4320653E8 /* SCLExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCLExtensions.swift; path = SCLAlertView/SCLExtensions.swift; sourceTree = "<group>"; };
+		FB6EBA0A6ADB0DE907AA3C77E615AFC5 /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4E1249122A3837FD11161C42E509196F /* Frameworks */ = {
+		04BFAC82404A52E9B27F4D3F420C6CDB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187D9F0A0915CD81F758CCAD6558C244 /* Foundation.framework in Frameworks */,
+				200014E2054E930A6EB06B5D7750BB0D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		71798362AE997443466C6F123D557350 /* Frameworks */ = {
+		E510CD2ECEFE1E19A67AEEBD033447E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3373E421DE9A12BF21A80EB6F92C16CF /* FBLPromises.framework in Frameworks */,
-				47102B0D4A9D1D0594E23F103461E610 /* Foundation.framework in Frameworks */,
+				4ADCE396A706D82212D9D0116EC18537 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73C7FEAB9A93EF3327DE74FF2788902F /* Frameworks */ = {
+		FF2094B729BD1C210098D88C26EDB0BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDD436820B5C1DFA057C3CD946C4A661 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE8645E1DBEC007AE95B75C0E3BD8149 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D4ADE98BD923732BB61AC1E8725F21F4 /* Foundation.framework in Frameworks */,
+				7A3448C09B1E66A5E14D54994FB44036 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		023CA5F3E731200584448DFAF67C6A3D /* Frameworks */ = {
+		2E6575876A09A58280B913E166AA09AE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D75D550B393B84825940B2689A728740 /* FBLPromises.framework */,
-				124A60DE7CAB15309C60FB6690A7BEEB /* iOS */,
+				0F2693FFA05381B1A0641FBA4E829834 /* Info.plist */,
+				148043D06D322E62FF6CBAB0C52B963B /* SnapKit.modulemap */,
+				8F28C101194944311A3F0549590F5677 /* SnapKit.xcconfig */,
+				DC3B8D52A53551D93A92EEFDF58A05E0 /* SnapKit-dummy.m */,
+				863BA1B5987AA64AA0C50A29FC6AB98C /* SnapKit-prefix.pch */,
+				D27ADDCF8330B8D5CB3B9991BAB4F427 /* SnapKit-umbrella.h */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		124A60DE7CAB15309C60FB6690A7BEEB /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				67BB1EC4235E6D7B59D530ABBE354A38 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		269AC206F87A992BBABDFBB2AB48F0F1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B4AA172F979727090628AD370A0F3ED8 /* FBLPromises.framework */,
-				EE23E9BED39BF1D086AECF19E7B7D120 /* Pods_CollageBot.framework */,
-				B99CBAC002BA563A703483CE4AD1D047 /* Promises.framework */,
-				A26C5666FB70782F652214C40286EFC5 /* SnapKit.framework */,
-			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SnapKit";
 			sourceTree = "<group>";
 		};
 		329148F6E68BFDCE28E1C9EC5EF3E096 /* Targets Support Files */ = {
@@ -414,32 +187,47 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		366B3F1E5BFB1A3B5FC09499ADD8C3A7 /* PromisesSwift */ = {
+		385EC5C45B2FA613DC4EBE3E366FD6DE /* SnapKit */ = {
 			isa = PBXGroup;
 			children = (
-				7239E9E88E4DACA4558F8E1DE48B018D /* Promise.swift */,
-				A02FF7C3265E518B6EF71095305AC0D1 /* Promise+All.swift */,
-				D5EC79CEF8E76F683377DD70D1270DCD /* Promise+Always.swift */,
-				7E6A4CBA8CC7BBF67489115476F3012B /* Promise+Any.swift */,
-				1A207E083F42BC1926D65D9C4AF092E6 /* Promise+Async.swift */,
-				8E056559B33DE905308B4901636BEC83 /* Promise+Await.swift */,
-				B962FEECC28AE919667009A011D33498 /* Promise+Catch.swift */,
-				6FFCBA7C6880386272DDF51BB07C527F /* Promise+Delay.swift */,
-				4A5DDF3EDD8206A5DC3A1BCFAFEF433D /* Promise+Do.swift */,
-				F4F87AF15E8EF6AECA0226735353AA95 /* Promise+Race.swift */,
-				CA141AB10C3BABFDA32B0A935A7FA692 /* Promise+Recover.swift */,
-				B14881A771728D17DAC8F7E0BE12FDE6 /* Promise+Reduce.swift */,
-				152B153A72E7671F89A951B9FB1798BF /* Promise+Retry.swift */,
-				436BA6A8E14E9FBC9B503F796BBCC75B /* Promise+Testing.swift */,
-				DB08A9C41DEDE0BD069BAA1FF37028DE /* Promise+Then.swift */,
-				7D54212955565B8FED78D9A8E00DCBAE /* Promise+Timeout.swift */,
-				FF462472F76AC99482AEB1D05E2DA785 /* Promise+Validate.swift */,
-				F63036460604BF5D47677A86BF1C2535 /* Promise+Wrap.swift */,
-				025097D0FA92EA99443AC2BCB76225AE /* PromiseError.swift */,
-				A648D7FCDC793FF638D8CF33BF2B43C7 /* Support Files */,
+				3ABDBA25C264DCC83F70944FA5C487F1 /* Constraint.swift */,
+				3BC46ED7428E5C2A5D35C74A7B1FE7DE /* ConstraintAttributes.swift */,
+				CAEF9AC2D7C414185BAFB504B94D8038 /* ConstraintConfig.swift */,
+				679E84DCE24B8BC3AD08E7197BD3D15C /* ConstraintConstantTarget.swift */,
+				EFDFB219C63305B78B1BC70FD258B2A6 /* ConstraintDescription.swift */,
+				127CB50B3D3D88FA6FF8F7DF6C7CCD84 /* ConstraintDSL.swift */,
+				30CC4E8E501AF0CE9D597E8DF2BB6788 /* ConstraintInsets.swift */,
+				F4724CC6CC90F61086D5AB7E44446CC5 /* ConstraintInsetTarget.swift */,
+				926AA8321E3619395D5F24552E57C61E /* ConstraintItem.swift */,
+				0925D645A9142F2D8A96625E90F1EA9F /* ConstraintLayoutGuide.swift */,
+				56EBFD0057069304E2555A790B3703CF /* ConstraintLayoutGuide+Extensions.swift */,
+				16D7DB515A333DD28F14F8DAF4CF4733 /* ConstraintLayoutGuideDSL.swift */,
+				9A0330F227812E2C92E69D5AF5EE993E /* ConstraintLayoutSupport.swift */,
+				2D1E034E59330EB0A7B150D4DBA32F12 /* ConstraintLayoutSupportDSL.swift */,
+				75AE31752C3394A24D39929826CD77B5 /* ConstraintMaker.swift */,
+				EF13510D659A98B453291F4070C96DD2 /* ConstraintMakerEditable.swift */,
+				0D01401984F93FBB5F222AA452568D4B /* ConstraintMakerExtendable.swift */,
+				EFD3258AD1A051C71611A860494E278F /* ConstraintMakerFinalizable.swift */,
+				49C54A78FBEB81E9909AEB8F4C332F69 /* ConstraintMakerPriortizable.swift */,
+				9595015B099BF8C35B2F4D345D059727 /* ConstraintMakerRelatable.swift */,
+				B060341708ECAE9A9AFF5ED91BCEA327 /* ConstraintMultiplierTarget.swift */,
+				E07A8279096E1BE1F3242B246D5959F9 /* ConstraintOffsetTarget.swift */,
+				FB6EBA0A6ADB0DE907AA3C77E615AFC5 /* ConstraintPriority.swift */,
+				0B12DB272C262224FCED42334F14B513 /* ConstraintPriorityTarget.swift */,
+				2F8434746C3C2CB9AD7734B77430B141 /* ConstraintRelatableTarget.swift */,
+				A5A104218CF11A8E44845F7043C01568 /* ConstraintRelation.swift */,
+				4F8ECFFC4CC5F28AC6E20DD21722C6F3 /* ConstraintView.swift */,
+				C6AD4D6FE0ACE96ACCA6D133BD8C7364 /* ConstraintView+Extensions.swift */,
+				E24975710E98A8B81C7F60213A32E3A0 /* ConstraintViewDSL.swift */,
+				92972163ECAF8A22B3D5A72276D0D0DD /* Debugging.swift */,
+				192BF54C310335B7B855F78C3555916A /* LayoutConstraint.swift */,
+				7454A8617C929A696DBDEC8415BC50D4 /* LayoutConstraintItem.swift */,
+				14E1F53BA870717D9A18A78FDF08DCA8 /* Typealiases.swift */,
+				EAA7E110EDAE3B8099D5C46C6858BB27 /* UILayoutSupport+Extensions.swift */,
+				2E6575876A09A58280B913E166AA09AE /* Support Files */,
 			);
-			name = PromisesSwift;
-			path = PromisesSwift;
+			name = SnapKit;
+			path = SnapKit;
 			sourceTree = "<group>";
 		};
 		40A3F27D8197F889341FABCA65F61885 /* Pods-CollageBot */ = {
@@ -460,266 +248,133 @@
 			path = "Target Support Files/Pods-CollageBot";
 			sourceTree = "<group>";
 		};
-		4D30F4F0ABCA9EBA56EFFF722A1257F1 /* PromisesObjC */ = {
+		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3B9F327BA7A7DD66472945370F130499 /* FBLPromise.h */,
-				BFE4DAB8E513C9053B9387B263C20120 /* FBLPromise.m */,
-				E2770058C94DB4698E8E9DD64C627945 /* FBLPromise+All.h */,
-				621E4C357503599403D1568ADCDA73D4 /* FBLPromise+All.m */,
-				DB75ECD7F5709B26B49AED90D05F904E /* FBLPromise+Always.h */,
-				87CEB7FC0BD1FCB2151166C7BD632416 /* FBLPromise+Always.m */,
-				93F2F6F80F0F7B5F2873BEC69E9F6B50 /* FBLPromise+Any.h */,
-				F9489AA2475DE9EE87BA9BC12F1FC02B /* FBLPromise+Any.m */,
-				A730CB5E18CC5EA0B0A815927EFD9C4A /* FBLPromise+Async.h */,
-				C9687D7587D5DC2A09ADC27C6196B33B /* FBLPromise+Async.m */,
-				69D954F1D1618027D3A5190ABD048EAF /* FBLPromise+Await.h */,
-				45C7B726611052A3E82C356AE5BE73D2 /* FBLPromise+Await.m */,
-				9A07800636B4399501205A9CC73B0270 /* FBLPromise+Catch.h */,
-				EFBCCF50BC95E16B3CE04EB6741178EB /* FBLPromise+Catch.m */,
-				E2F7A34491983B46F4D5865ADCD39183 /* FBLPromise+Delay.h */,
-				B126D06A6A1297F21F39575C08C21DF8 /* FBLPromise+Delay.m */,
-				0D5311FB50C89D9159B2B09BB2B22CE0 /* FBLPromise+Do.h */,
-				05A5D6FB0B2A8F52065C12BA2CB596DC /* FBLPromise+Do.m */,
-				3BB8883A464FB67EB5398D3E36B7E268 /* FBLPromise+Race.h */,
-				1A3152F1539897F56134CA9D55FBCA32 /* FBLPromise+Race.m */,
-				DA76C20372563659AB0A8EE0DD6BEADE /* FBLPromise+Recover.h */,
-				5C417655DA9E78D9170414D4D19A4B5A /* FBLPromise+Recover.m */,
-				D0EBC564EED3BACDB35F4486EFBAE90C /* FBLPromise+Reduce.h */,
-				734199C225517814E5B3E2B42BD56917 /* FBLPromise+Reduce.m */,
-				47C1730403D71E95C3483BBC33DDD0CC /* FBLPromise+Retry.h */,
-				E265893E0BEC886885B0E5C9D9C111EB /* FBLPromise+Retry.m */,
-				5BDC473D526F6CFAB98BE27B52109B84 /* FBLPromise+Testing.h */,
-				3DCB945B1667F33DFE014D9C1BDF8126 /* FBLPromise+Testing.m */,
-				CC7A6F333730CCACA92D3C6B33A61B7E /* FBLPromise+Then.h */,
-				8101F0B8A2B039F22E079A9B4E536048 /* FBLPromise+Then.m */,
-				0253626A8D63C10A8F5B7A32EF2A52C6 /* FBLPromise+Timeout.h */,
-				D307A8468E304D6EC123D8E6EAAB537A /* FBLPromise+Timeout.m */,
-				179DDC93BD3BFE88341BC6E4D7EFC602 /* FBLPromise+Validate.h */,
-				3C37D54DE6FD9FD04E05F7A1C78744FF /* FBLPromise+Validate.m */,
-				DFCDA5A24E4CCECA8F3389C48B2A5DF8 /* FBLPromise+Wrap.h */,
-				FD0545A0B05840CE760BF768BA0B7B08 /* FBLPromise+Wrap.m */,
-				11EBEBF09CCC1EB36F703EDCA9A26790 /* FBLPromiseError.h */,
-				BD5A12AFB74A4E9815B749C4F21CE8C5 /* FBLPromiseError.m */,
-				E98D418025EC080E777FE207B57A5A05 /* FBLPromisePrivate.h */,
-				E6DFE66F4871EB4A000AFF83BBC289A7 /* FBLPromises.h */,
-				BDA608DA01B275667B5656FF24AA7F55 /* Support Files */,
+				5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */,
 			);
-			name = PromisesObjC;
-			path = PromisesObjC;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				023CA5F3E731200584448DFAF67C6A3D /* Frameworks */,
-				E54CB6A481C9235608FF33C48521F7C2 /* Pods */,
-				269AC206F87A992BBABDFBB2AB48F0F1 /* Products */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				8BBA352CD2889C7BBCB6234E90A36214 /* Pods */,
+				A844642DB3E082F1701F418C07C7A5FA /* Products */,
 				329148F6E68BFDCE28E1C9EC5EF3E096 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A331ED6CB5A6A4AED60D5B99C3E06176 /* SnapKit */ = {
+		8BBA352CD2889C7BBCB6234E90A36214 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				51BD760187E7705C668B46D253670F8F /* Constraint.swift */,
-				5F41E8C2C78D86D9080C55C51F468040 /* ConstraintAttributes.swift */,
-				F762AC218E75C89A765CCABCA136804C /* ConstraintConfig.swift */,
-				292F11A26EDE90718266D50FD35C9F61 /* ConstraintConstantTarget.swift */,
-				39D628F0D94C94A4AE4D616BACAD1460 /* ConstraintDescription.swift */,
-				90564B27819AD284114CF17F9F83709F /* ConstraintDSL.swift */,
-				36761B80ECC3682A8CB5B001607CF077 /* ConstraintInsets.swift */,
-				08A158D46B3BE11CAF712BB9F0850D03 /* ConstraintInsetTarget.swift */,
-				0C4ED4E59340AD8AD73B237BC0AB598C /* ConstraintItem.swift */,
-				F1ABB15E188374FB86154200DACD4FDE /* ConstraintLayoutGuide.swift */,
-				B2D79317F327B93B1D45E40F18863C60 /* ConstraintLayoutGuide+Extensions.swift */,
-				C62D52FF39A3D3AF50F25A7F9D47EE33 /* ConstraintLayoutGuideDSL.swift */,
-				D3E1B00D438B6299130E3862751AFD11 /* ConstraintLayoutSupport.swift */,
-				4AE17EC58C6EF97CDE485D0C812696D4 /* ConstraintLayoutSupportDSL.swift */,
-				EA314131E51AC1DA972D21541A66EB94 /* ConstraintMaker.swift */,
-				5E831F0195110C62A8DD1E74E0475E9F /* ConstraintMakerEditable.swift */,
-				50F1207EB297432570EE5C3E933C30A2 /* ConstraintMakerExtendable.swift */,
-				D08C232BB4EA822D967723539993537B /* ConstraintMakerFinalizable.swift */,
-				1F67F92D27E9D570499BB38B855FC46A /* ConstraintMakerPriortizable.swift */,
-				46F15CF8D300B2BA8BB856BBED24B2C6 /* ConstraintMakerRelatable.swift */,
-				0EA6ECB7AB609A6705374A809FF991DE /* ConstraintMultiplierTarget.swift */,
-				6B7B81434C72F6F263310A8EF96C3600 /* ConstraintOffsetTarget.swift */,
-				684E3A5A4744608F6EB8A1DB9F720473 /* ConstraintPriority.swift */,
-				59FAA544669BAA6753F5AB75A483E78A /* ConstraintPriorityTarget.swift */,
-				7393CCF8336443E8BE451D5B88A174A7 /* ConstraintRelatableTarget.swift */,
-				693F8A1D69A40F96E930A3D38648A535 /* ConstraintRelation.swift */,
-				625584C75D9B6783B0CF6DF5FA6CD4BE /* ConstraintView.swift */,
-				37D7512315CE243EC8C679629250E16E /* ConstraintView+Extensions.swift */,
-				6265829D75DAE7909D555ECCD1269BD6 /* ConstraintViewDSL.swift */,
-				C8365138F707C83B4862187960517BD2 /* Debugging.swift */,
-				DCD5521F214CC2CED9C8B218585861D0 /* LayoutConstraint.swift */,
-				19199FFC5BF0867313FBBA9A263BBC07 /* LayoutConstraintItem.swift */,
-				2CEC9471DD7B499A4F835ABAC8F75453 /* Typealiases.swift */,
-				B683596D8A4E800D7FC6481C67EF9822 /* UILayoutSupport+Extensions.swift */,
-				D7B2A74DC7D0769AFFA4AD78BC808E91 /* Support Files */,
-			);
-			name = SnapKit;
-			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		A648D7FCDC793FF638D8CF33BF2B43C7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6F90D9374F3AF4D76253D72161F39D5F /* Info.plist */,
-				22307A497BBE4684E212004B96AA8721 /* PromisesSwift.modulemap */,
-				6B2DFC3DF5B2A5DC7A75EF5D8CBBBDBD /* PromisesSwift.xcconfig */,
-				936B7D12D14E5A2B5514EAF63321D70B /* PromisesSwift-dummy.m */,
-				2A1134B1204F08D7F5B5FDA480E32A56 /* PromisesSwift-prefix.pch */,
-				00D9A93ACCBC739085C15B3EA61C5AB4 /* PromisesSwift-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PromisesSwift";
-			sourceTree = "<group>";
-		};
-		BDA608DA01B275667B5656FF24AA7F55 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4B66A2B4E082CA9AEA33343656FBEEE7 /* Info.plist */,
-				63C66D9DA0FFBE572B12763FF41653C6 /* PromisesObjC.modulemap */,
-				77DB516F219FED71146CE13402203E28 /* PromisesObjC.xcconfig */,
-				60A08E255A97C59764647CB13F9899E9 /* PromisesObjC-dummy.m */,
-				7703FF50A0F004BD7F76F2591B2B5D34 /* PromisesObjC-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/PromisesObjC";
-			sourceTree = "<group>";
-		};
-		D7B2A74DC7D0769AFFA4AD78BC808E91 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				487F8060937DF561E5932977C6850DF2 /* Info.plist */,
-				95BDBE765C225CBFFECF98F4627B5031 /* SnapKit.modulemap */,
-				5090AD03C7D77DF6B072F8E377659CA7 /* SnapKit.xcconfig */,
-				CC7D3A9CDE46B36ED35FF2B4296B3866 /* SnapKit-dummy.m */,
-				BCDC4AFA665583A5E65FF39FAC774507 /* SnapKit-prefix.pch */,
-				A572054E76F7DB517822CBB98846EE92 /* SnapKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapKit";
-			sourceTree = "<group>";
-		};
-		E54CB6A481C9235608FF33C48521F7C2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4D30F4F0ABCA9EBA56EFFF722A1257F1 /* PromisesObjC */,
-				366B3F1E5BFB1A3B5FC09499ADD8C3A7 /* PromisesSwift */,
-				A331ED6CB5A6A4AED60D5B99C3E06176 /* SnapKit */,
+				AB303C7716CECFF58C76364F7DAFAE27 /* SCLAlertView */,
+				385EC5C45B2FA613DC4EBE3E366FD6DE /* SnapKit */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		A844642DB3E082F1701F418C07C7A5FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0E840F886D9A696D1BA96CBFD2863DF /* Pods_CollageBot.framework */,
+				5BED42C7F36986A213AAB948209FA18C /* SCLAlertView.framework */,
+				ECA898FCE793EC001BCCF608283C7945 /* SnapKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AB303C7716CECFF58C76364F7DAFAE27 /* SCLAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				EA620AC60FE2EBCF328ADA3D13D39F2D /* SCLAlertView.swift */,
+				F696E57287A6AE4E73A62AF4320653E8 /* SCLExtensions.swift */,
+				D09E769771DA6CE00BF48C7F306E5DA0 /* Support Files */,
+			);
+			name = SCLAlertView;
+			path = SCLAlertView;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D919E635D23B70123790B8308F8EF /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D09E769771DA6CE00BF48C7F306E5DA0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0099C9198D4B434D819E75CC60BC527A /* Info.plist */,
+				C6984FAC954A22DDBA0B55D7686FD1B5 /* SCLAlertView.modulemap */,
+				D302D5920F3D5E453A7DDCEE2B20FC00 /* SCLAlertView.xcconfig */,
+				3507963F3E5704FA8EB1452BA4A96E7B /* SCLAlertView-dummy.m */,
+				F309D23F699C059AE7FAB0685B6ED231 /* SCLAlertView-prefix.pch */,
+				046C352EE2E9B5DB4E17544D2E6216D7 /* SCLAlertView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SCLAlertView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		239E4AB78193CE84E89E62B5098D3011 /* Headers */ = {
+		8723BB7F6007A60EB85487A439CCFA0C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AE3F1DAB9E146331B77461237221640 /* FBLPromise+All.h in Headers */,
-				1F29760E0528AB4806795C6E0412E799 /* FBLPromise+Always.h in Headers */,
-				8894D57E1F3DDD4522CBB9BE7B531292 /* FBLPromise+Any.h in Headers */,
-				30B634B14B335B7A52A93DA66F22968D /* FBLPromise+Async.h in Headers */,
-				228C04A0CBFBB0268D95A1ED4CF081FF /* FBLPromise+Await.h in Headers */,
-				615B0A1BF42F42F54A68886CAF706FDB /* FBLPromise+Catch.h in Headers */,
-				CA27CC6212EA80B1CCFAEBCE6727B0DC /* FBLPromise+Delay.h in Headers */,
-				CF04C806CE36B54C1593D37CA4DA698E /* FBLPromise+Do.h in Headers */,
-				4634993400A6C96FD7D8858FE744CC3F /* FBLPromise+Race.h in Headers */,
-				4593FA70A70E7E8AFA33FFC620B83FBA /* FBLPromise+Recover.h in Headers */,
-				2CB6148023C6553694D34E191B409795 /* FBLPromise+Reduce.h in Headers */,
-				2F5B46DEB9276093FA6EC992D0435F4F /* FBLPromise+Retry.h in Headers */,
-				6E2E9F989C39653E1D64E6C4D5146844 /* FBLPromise+Testing.h in Headers */,
-				FBB7CECEB1354E03E6D42EA6ECA0D438 /* FBLPromise+Then.h in Headers */,
-				9F6A5F521C768B3D6FCC6295E22BC062 /* FBLPromise+Timeout.h in Headers */,
-				F54A9AF767DC2D42B04B25B095E0F370 /* FBLPromise+Validate.h in Headers */,
-				59517A554B434B1A3E8170C542BE155C /* FBLPromise+Wrap.h in Headers */,
-				8F71576E07679187E048781FF000B6F6 /* FBLPromise.h in Headers */,
-				E24F7984AA1EC81654FE163AD1ED9CCA /* FBLPromiseError.h in Headers */,
-				059EF9ADD3805FEA551DE282313A947B /* FBLPromisePrivate.h in Headers */,
-				50664E123A52BC37220A47AFE340BCC0 /* FBLPromises.h in Headers */,
-				DF65C496758AA46543454D85CFDED1FC /* PromisesObjC-umbrella.h in Headers */,
+				A8516F08D23887C8533C3D32610949A2 /* SnapKit-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		23B9A52A6DF280EFDF3F986759A19C6E /* Headers */ = {
+		A00F3FA74353EB9C582B5F1F0EA214B3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAB97CBBA9ACA6A30DFA1370394A4AAA /* PromisesSwift-umbrella.h in Headers */,
+				F109859CED463FC13A290AF80F2081FA /* Pods-CollageBot-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		98DCAE3F53354621A3C03D7A74E7BA5D /* Headers */ = {
+		D4C0D7D28EA85FDF2132811C3A010166 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				597E573079DF01B620FCDB9E00B26940 /* Pods-CollageBot-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EBC28F2B725B4E57FE2AD2742EA804C4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A88601A40E96A5CCC8EB84E65C713FFB /* SnapKit-umbrella.h in Headers */,
+				B9F58621124BE26557FEAE7447A6EA09 /* SCLAlertView-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		185533A78B99FA3491F0272D5826C973 /* PromisesSwift */ = {
+		636E21F768CE1EE8859F4AFD684334C9 /* SCLAlertView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FCE2B9D6B31608FC7AA071BB10D2126 /* Build configuration list for PBXNativeTarget "PromisesSwift" */;
+			buildConfigurationList = 3E1A1D35CA496F73FC403CD08F32749A /* Build configuration list for PBXNativeTarget "SCLAlertView" */;
 			buildPhases = (
-				23B9A52A6DF280EFDF3F986759A19C6E /* Headers */,
-				2A7C956E458BEBCDA3BADF53D4F6C6CF /* Sources */,
-				71798362AE997443466C6F123D557350 /* Frameworks */,
-				E6014574C37763A1ADFB1E10409679D3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5804BF926E75887D55DAF2CFF91201C2 /* PBXTargetDependency */,
-			);
-			name = PromisesSwift;
-			productName = PromisesSwift;
-			productReference = B99CBAC002BA563A703483CE4AD1D047 /* Promises.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		65BFCD623AE0BEC748B358B35F10C2CF /* PromisesObjC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7DEE53E4FAC0DE5CCEAED107B79CC40C /* Build configuration list for PBXNativeTarget "PromisesObjC" */;
-			buildPhases = (
-				239E4AB78193CE84E89E62B5098D3011 /* Headers */,
-				B650A3F94D42A2476459F10583BCD6C9 /* Sources */,
-				73C7FEAB9A93EF3327DE74FF2788902F /* Frameworks */,
-				AACEB829D201D5072FAA3A51F344A7D7 /* Resources */,
-				E6E63EBE9C1BF1C49BA44024FDAFCD89 /* Copy . Public Headers */,
-				8E0CBEFC9D4AC78CD5587EBA0D8AF68B /* Copy . Private Headers */,
+				D4C0D7D28EA85FDF2132811C3A010166 /* Headers */,
+				067194C299D99D3B49C75C132C7FBC26 /* Sources */,
+				FF2094B729BD1C210098D88C26EDB0BC /* Frameworks */,
+				4C4735D40745B8A9DA450A85A0DB1896 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PromisesObjC;
-			productName = PromisesObjC;
-			productReference = B4AA172F979727090628AD370A0F3ED8 /* FBLPromises.framework */;
+			name = SCLAlertView;
+			productName = SCLAlertView;
+			productReference = 5BED42C7F36986A213AAB948209FA18C /* SCLAlertView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		65DCDA202AFD57441A1ED3C5335BD080 /* SnapKit */ = {
+		D6CD58B57BADDF377A2CB6DD6C10193E /* SnapKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3CAEEBEB331A6271AB47C49703F2B78 /* Build configuration list for PBXNativeTarget "SnapKit" */;
+			buildConfigurationList = 0A12DEAFBC665737CB54F45E79E25BDE /* Build configuration list for PBXNativeTarget "SnapKit" */;
 			buildPhases = (
-				EBC28F2B725B4E57FE2AD2742EA804C4 /* Headers */,
-				8C562B8B6DF90890E996AD992CF01ABB /* Sources */,
-				4E1249122A3837FD11161C42E509196F /* Frameworks */,
-				4FAE62C44112CA85F125A7D20B6EE338 /* Resources */,
+				8723BB7F6007A60EB85487A439CCFA0C /* Headers */,
+				54B65C573C9FB854A01B3AB4D240C916 /* Sources */,
+				04BFAC82404A52E9B27F4D3F420C6CDB /* Frameworks */,
+				7DC7C9C9EF22BE58C8DFD48E800103E3 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -727,28 +382,27 @@
 			);
 			name = SnapKit;
 			productName = SnapKit;
-			productReference = A26C5666FB70782F652214C40286EFC5 /* SnapKit.framework */;
+			productReference = ECA898FCE793EC001BCCF608283C7945 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7A519495A6CB8157D74B0F4D902544AE /* Pods-CollageBot */ = {
+		F40A2F2DD828798E03194A6E11BA8984 /* Pods-CollageBot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD036B8BBE24755440540CE49EF2657 /* Build configuration list for PBXNativeTarget "Pods-CollageBot" */;
+			buildConfigurationList = 7B09B8DA00433E2579BE0AD59EA2EB5E /* Build configuration list for PBXNativeTarget "Pods-CollageBot" */;
 			buildPhases = (
-				98DCAE3F53354621A3C03D7A74E7BA5D /* Headers */,
-				788CC5B6DA3D3F750D9072116F2F50C7 /* Sources */,
-				DE8645E1DBEC007AE95B75C0E3BD8149 /* Frameworks */,
-				96FD55835037A1870EE84420EBE0D634 /* Resources */,
+				A00F3FA74353EB9C582B5F1F0EA214B3 /* Headers */,
+				FB32264BC8A373A8B8283923FEBCB8C8 /* Sources */,
+				E510CD2ECEFE1E19A67AEEBD033447E9 /* Frameworks */,
+				B1AB6AF4687E48A731283D15DF644129 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E5021C35643DA8EF97FB4DBEB789F0F2 /* PBXTargetDependency */,
-				AD6A25B0AA441259B01AAEC1D98B2BAB /* PBXTargetDependency */,
-				AD8D0F1D2D71CA458221B2FA762D3110 /* PBXTargetDependency */,
+				0A19F09E29473AD8BB5D2AA104959259 /* PBXTargetDependency */,
+				356315A4594E2A861B059F5999F618D0 /* PBXTargetDependency */,
 			);
 			name = "Pods-CollageBot";
 			productName = "Pods-CollageBot";
-			productReference = EE23E9BED39BF1D086AECF19E7B7D120 /* Pods_CollageBot.framework */;
+			productReference = F0E840F886D9A696D1BA96CBFD2863DF /* Pods_CollageBot.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -768,41 +422,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 269AC206F87A992BBABDFBB2AB48F0F1 /* Products */;
+			productRefGroup = A844642DB3E082F1701F418C07C7A5FA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A519495A6CB8157D74B0F4D902544AE /* Pods-CollageBot */,
-				65BFCD623AE0BEC748B358B35F10C2CF /* PromisesObjC */,
-				185533A78B99FA3491F0272D5826C973 /* PromisesSwift */,
-				65DCDA202AFD57441A1ED3C5335BD080 /* SnapKit */,
+				F40A2F2DD828798E03194A6E11BA8984 /* Pods-CollageBot */,
+				636E21F768CE1EE8859F4AFD684334C9 /* SCLAlertView */,
+				D6CD58B57BADDF377A2CB6DD6C10193E /* SnapKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4FAE62C44112CA85F125A7D20B6EE338 /* Resources */ = {
+		4C4735D40745B8A9DA450A85A0DB1896 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		96FD55835037A1870EE84420EBE0D634 /* Resources */ = {
+		7DC7C9C9EF22BE58C8DFD48E800103E3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AACEB829D201D5072FAA3A51F344A7D7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6014574C37763A1ADFB1E10409679D3 /* Resources */ = {
+		B1AB6AF4687E48A731283D15DF644129 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -812,288 +458,84 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2A7C956E458BEBCDA3BADF53D4F6C6CF /* Sources */ = {
+		067194C299D99D3B49C75C132C7FBC26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				645311ACB45CBDC339FDD46281E2EB03 /* Promise+All.swift in Sources */,
-				CBE56DC3D48433139C3BBB54E5B2661E /* Promise+Always.swift in Sources */,
-				13637486CF20849E80E1D8CCC5BB86B8 /* Promise+Any.swift in Sources */,
-				51AAB4F96E53845BA26CB8DAEBDB0168 /* Promise+Async.swift in Sources */,
-				4C92E5FF701C270186E7EC4673D777F4 /* Promise+Await.swift in Sources */,
-				04BC731FFC587856962EA9BF662815B2 /* Promise+Catch.swift in Sources */,
-				ADE60C9F0829157164896ADCA33C8658 /* Promise+Delay.swift in Sources */,
-				9E14C4FDB0F716EBF89EB41F87DF842B /* Promise+Do.swift in Sources */,
-				DD81FBD3F2C5E1923F90912B4E138F39 /* Promise+Race.swift in Sources */,
-				3A68E0C68657B807BAB068C9B5AC9A83 /* Promise+Recover.swift in Sources */,
-				F273926A1E7A85EB896281CBE42EFF17 /* Promise+Reduce.swift in Sources */,
-				301D354CE0A001592DE5C77713D72D28 /* Promise+Retry.swift in Sources */,
-				0CF9F13D34F608A9F1436DB3BF98DEEA /* Promise+Testing.swift in Sources */,
-				E2165033DDD9EDD8F62D9A39059AE875 /* Promise+Then.swift in Sources */,
-				19ADC8A8911DFBA2019723020BF4C91B /* Promise+Timeout.swift in Sources */,
-				81D79BFAB5CE1DBED66D8BE8CB843DE0 /* Promise+Validate.swift in Sources */,
-				6BD648513140DC9976F7232D90DC49D2 /* Promise+Wrap.swift in Sources */,
-				EA8C5E4144984CDDBB7053C830FA55B9 /* Promise.swift in Sources */,
-				865056218CABDD05E3EEEB16C5A97117 /* PromiseError.swift in Sources */,
-				FFA2BEAC906CD7414D21EEF7C058AEA1 /* PromisesSwift-dummy.m in Sources */,
+				326E3D13ED72C46576AA1246898AD9E3 /* SCLAlertView-dummy.m in Sources */,
+				202E390D4184E5D8F18B8C9F2DEB0D49 /* SCLAlertView.swift in Sources */,
+				19F6C0A6CF672AD07636BF5075C4DD16 /* SCLExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		788CC5B6DA3D3F750D9072116F2F50C7 /* Sources */ = {
+		54B65C573C9FB854A01B3AB4D240C916 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6D636540B7979F37D5EF689C91C49E53 /* Pods-CollageBot-dummy.m in Sources */,
+				4337D3070C34E5D6CB5E64ECB5CA862C /* Constraint.swift in Sources */,
+				F4DEE81A5FEAA96F724432514A282EAC /* ConstraintAttributes.swift in Sources */,
+				67090978B0A4E570B86DC2A2E54674E6 /* ConstraintConfig.swift in Sources */,
+				625C9A8AF0589BD50B5960B4CF72A077 /* ConstraintConstantTarget.swift in Sources */,
+				70D5BF6280E3A74F1D039EE909D6B5A5 /* ConstraintDescription.swift in Sources */,
+				F69507B3BC4B53C76C0FCCB1B312EFC8 /* ConstraintDSL.swift in Sources */,
+				29CD934F4A56D2BB6676BB743B389945 /* ConstraintInsets.swift in Sources */,
+				32062231FB9215D640F63A889A94F85C /* ConstraintInsetTarget.swift in Sources */,
+				05C130852D916A28429E75AF77BDA7F1 /* ConstraintItem.swift in Sources */,
+				43E306691FF53B31DC69273865ABD198 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				AB56CBE89FCDD4CBE234A804871A1D89 /* ConstraintLayoutGuide.swift in Sources */,
+				8E1D413C43CBC7994A08A73C50B121EA /* ConstraintLayoutGuideDSL.swift in Sources */,
+				DAB3A28BCFFBBD0A30012D5D412DC752 /* ConstraintLayoutSupport.swift in Sources */,
+				6023C79F0C3F6D044F1F0978F404D7E1 /* ConstraintLayoutSupportDSL.swift in Sources */,
+				F81E8F198D627536DCF03F2D9DD2F4D9 /* ConstraintMaker.swift in Sources */,
+				41405DCBFE5F06B3FF0BB6863865343E /* ConstraintMakerEditable.swift in Sources */,
+				046B268112E58244DED11AB0B83F4B9F /* ConstraintMakerExtendable.swift in Sources */,
+				14B302B0ACDF2EEA3BF14AC1EA5DBA3F /* ConstraintMakerFinalizable.swift in Sources */,
+				A0BD4E63F51565BEE90D28F8CC7A3E15 /* ConstraintMakerPriortizable.swift in Sources */,
+				852428A2223E6DD77AE52826EAE6AF5E /* ConstraintMakerRelatable.swift in Sources */,
+				E8064F314479CF053B191D015D4E7331 /* ConstraintMultiplierTarget.swift in Sources */,
+				AC8AFD77D2D5000E1693345562127449 /* ConstraintOffsetTarget.swift in Sources */,
+				1F074DAF7727603E86CD6B2C0694BCF5 /* ConstraintPriority.swift in Sources */,
+				3F3DCB5621A88BB338F7417A711F2BFB /* ConstraintPriorityTarget.swift in Sources */,
+				DF18A16CD3FB4311506536AD2DF29C0C /* ConstraintRelatableTarget.swift in Sources */,
+				A2295A1FA3CEC91581BA57EB51EBD2EB /* ConstraintRelation.swift in Sources */,
+				D42E8B987BAB8116077726A41EBD1B07 /* ConstraintView+Extensions.swift in Sources */,
+				BD1B98A558CCA4A56961FCB57F1829C4 /* ConstraintView.swift in Sources */,
+				103D12B898351289CEB1C114C9B20525 /* ConstraintViewDSL.swift in Sources */,
+				A7299755CF71811E1B0B51CA90937BF2 /* Debugging.swift in Sources */,
+				59759DA1FFB191BFB9D731D34D714DF7 /* LayoutConstraint.swift in Sources */,
+				C9DD6CC9A843BAFE79B34D68C3412432 /* LayoutConstraintItem.swift in Sources */,
+				95DC5EC75972ED3385A7AB1789F80E16 /* SnapKit-dummy.m in Sources */,
+				05CBF936F565110383F465FC834F3234 /* Typealiases.swift in Sources */,
+				D47E5581EEC354EF6C5D8998A0EFA9E8 /* UILayoutSupport+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C562B8B6DF90890E996AD992CF01ABB /* Sources */ = {
+		FB32264BC8A373A8B8283923FEBCB8C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55090A4B75B138E0FFA4EDD3909A0EFB /* Constraint.swift in Sources */,
-				3B74D7DFBBF18918460CFEF97F920CF8 /* ConstraintAttributes.swift in Sources */,
-				C4E1AF877C5F0A1CA2730D478C5FE355 /* ConstraintConfig.swift in Sources */,
-				7AABA6E51EA36AA7E5D4AF8A487DEAED /* ConstraintConstantTarget.swift in Sources */,
-				1FF54222DC033F18C89AEFFECA02254C /* ConstraintDescription.swift in Sources */,
-				BC452EAB7CDEF38FC2E69542644B9527 /* ConstraintDSL.swift in Sources */,
-				EB776E1ADCE199DEDC05425E968FF811 /* ConstraintInsets.swift in Sources */,
-				FDEFAB2FFEB4B65A58032D1BDBCEE61F /* ConstraintInsetTarget.swift in Sources */,
-				AE705457CF0EBB479FD84ABE8BA3CDA6 /* ConstraintItem.swift in Sources */,
-				CC1805B5A08ED08DFB740172FA262FB8 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				F68285CC16F390877D99CC612E82A1D9 /* ConstraintLayoutGuide.swift in Sources */,
-				2053B7DC0A2160FB433A3E9741149B27 /* ConstraintLayoutGuideDSL.swift in Sources */,
-				369CEF01730949EC828106726923A0C6 /* ConstraintLayoutSupport.swift in Sources */,
-				DDBEFA6AC5D4D27C724CFD6B995A52E2 /* ConstraintLayoutSupportDSL.swift in Sources */,
-				59CE7470A8AAF5C3BD65AB45728474A6 /* ConstraintMaker.swift in Sources */,
-				CEB7EED4977313B74B3278FAC14DD84F /* ConstraintMakerEditable.swift in Sources */,
-				C0EAA5DC76E7EC64C6F2E2C5ED7EE1E7 /* ConstraintMakerExtendable.swift in Sources */,
-				3DA3C5FDF79FF7D8329FCB439A0E8A7E /* ConstraintMakerFinalizable.swift in Sources */,
-				EB5F0569B69BD1723544E551E8354039 /* ConstraintMakerPriortizable.swift in Sources */,
-				C197254191AE1D733127635052D548F1 /* ConstraintMakerRelatable.swift in Sources */,
-				FAF1ECCB39CB3515649F078B343C2C32 /* ConstraintMultiplierTarget.swift in Sources */,
-				19DCC0CA9928AE06FC09F91A2304C778 /* ConstraintOffsetTarget.swift in Sources */,
-				025166945C742DCED44E2ECCB4115861 /* ConstraintPriority.swift in Sources */,
-				37FAF2636E8F86957FD7D46719724BB3 /* ConstraintPriorityTarget.swift in Sources */,
-				A8D84BD7FF6E76BE35CF981716B98477 /* ConstraintRelatableTarget.swift in Sources */,
-				D7FD16A293F2021D159E557395E1525F /* ConstraintRelation.swift in Sources */,
-				07EA71B4CC5F3339DFF4D0942C7889E1 /* ConstraintView+Extensions.swift in Sources */,
-				A83B4F7CFF3DEFD859E2CFF641E228C9 /* ConstraintView.swift in Sources */,
-				B3906D6A93A9AB900F92FC10B47706B1 /* ConstraintViewDSL.swift in Sources */,
-				90F1DA9B5B5307E6CD5862373273E33C /* Debugging.swift in Sources */,
-				41CBB5C9AD674A3B699BF61D13FE0A45 /* LayoutConstraint.swift in Sources */,
-				A26C3AE26E0CD0F92A156E5D795DA083 /* LayoutConstraintItem.swift in Sources */,
-				F0CF04808B568C451BE4A408766F2903 /* SnapKit-dummy.m in Sources */,
-				A197E22514040686987D0C125F278C7A /* Typealiases.swift in Sources */,
-				5C65F4B1CCF1DA935CB953D25523789A /* UILayoutSupport+Extensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B650A3F94D42A2476459F10583BCD6C9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DD78E2414EF408043C1D5DDDEE2A3A04 /* FBLPromise+All.m in Sources */,
-				8D57619E199EE1DCF17AF4FAD36FFC78 /* FBLPromise+Always.m in Sources */,
-				F21E6DE43A795E07F280E004C084F58F /* FBLPromise+Any.m in Sources */,
-				018F36D8EDD2B850BB2A63DEA45B0E79 /* FBLPromise+Async.m in Sources */,
-				99D06EBD095EC2F08C104C082C3E759D /* FBLPromise+Await.m in Sources */,
-				65FF9362163C096F1BA9B4D4D05743D0 /* FBLPromise+Catch.m in Sources */,
-				4A7F83C32195DC67B93B42DD7E4C60AD /* FBLPromise+Delay.m in Sources */,
-				549FE4ECA4FCC27842812C1334D663DA /* FBLPromise+Do.m in Sources */,
-				54D5638D792FD83ED7B9CFDF230BBEBA /* FBLPromise+Race.m in Sources */,
-				14D1B894E943CB4BAE7FFC65B18819A7 /* FBLPromise+Recover.m in Sources */,
-				E3DDF14228C69079E84FF00E8F4CB53C /* FBLPromise+Reduce.m in Sources */,
-				B704B2A3598A1BE733534210B4B0BABB /* FBLPromise+Retry.m in Sources */,
-				BAA9DBEE78228E0B6653E06A3C19D850 /* FBLPromise+Testing.m in Sources */,
-				2CED1D30ED51114BB27572EF818125FA /* FBLPromise+Then.m in Sources */,
-				5E6E6688B905A7252FD0B2CABE5DE6BA /* FBLPromise+Timeout.m in Sources */,
-				D29B345D32CB86CDF231380DBD66621F /* FBLPromise+Validate.m in Sources */,
-				FC462B241ED61EEE06E5D95B52E86773 /* FBLPromise+Wrap.m in Sources */,
-				5655E276A811C9FC2BFF993ECBE63043 /* FBLPromise.m in Sources */,
-				FE08907D874CB5969C98CEB21A731888 /* FBLPromiseError.m in Sources */,
-				0121D5CDAE66626C6581DF6B5A6B1454 /* PromisesObjC-dummy.m in Sources */,
+				3C6D8B4A5F143B5E89BD66672D601048 /* Pods-CollageBot-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5804BF926E75887D55DAF2CFF91201C2 /* PBXTargetDependency */ = {
+		0A19F09E29473AD8BB5D2AA104959259 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = PromisesObjC;
-			target = 65BFCD623AE0BEC748B358B35F10C2CF /* PromisesObjC */;
-			targetProxy = 9D7C2D46E13E0187F03F6C0E7BE0FD81 /* PBXContainerItemProxy */;
+			name = SCLAlertView;
+			target = 636E21F768CE1EE8859F4AFD684334C9 /* SCLAlertView */;
+			targetProxy = 43C43C4BA37EB5B11DB8920070260673 /* PBXContainerItemProxy */;
 		};
-		AD6A25B0AA441259B01AAEC1D98B2BAB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromisesSwift;
-			target = 185533A78B99FA3491F0272D5826C973 /* PromisesSwift */;
-			targetProxy = AFDBF181DCFFE0D91BB6DC89E83FCBD9 /* PBXContainerItemProxy */;
-		};
-		AD8D0F1D2D71CA458221B2FA762D3110 /* PBXTargetDependency */ = {
+		356315A4594E2A861B059F5999F618D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SnapKit;
-			target = 65DCDA202AFD57441A1ED3C5335BD080 /* SnapKit */;
-			targetProxy = D98BDEDE661E180F419D2208E7B0649F /* PBXContainerItemProxy */;
-		};
-		E5021C35643DA8EF97FB4DBEB789F0F2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PromisesObjC;
-			target = 65BFCD623AE0BEC748B358B35F10C2CF /* PromisesObjC */;
-			targetProxy = 12ED8BE4FD87C9C33C308923BF007DD6 /* PBXContainerItemProxy */;
+			target = D6CD58B57BADDF377A2CB6DD6C10193E /* SnapKit */;
+			targetProxy = A2128A9C4C95739E747DAE92F966F8FE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		000FE1723BB5CBA43DE3BD33F0D07CF7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2DFC3DF5B2A5DC7A75EF5D8CBBBDBD /* PromisesSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PromisesSwift/PromisesSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PromisesSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PromisesSwift/PromisesSwift.modulemap";
-				PRODUCT_MODULE_NAME = Promises;
-				PRODUCT_NAME = Promises;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		14FC92AFD93E15434A594F2A97BDFDF4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77DB516F219FED71146CE13402203E28 /* PromisesObjC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/PromisesObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PromisesObjC/PromisesObjC.modulemap";
-				PRODUCT_MODULE_NAME = FBLPromises;
-				PRODUCT_NAME = FBLPromises;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2F34C416DA87F6A0B014DE5591D3EFA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77DB516F219FED71146CE13402203E28 /* PromisesObjC.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/PromisesObjC/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PromisesObjC/PromisesObjC.modulemap";
-				PRODUCT_MODULE_NAME = FBLPromises;
-				PRODUCT_NAME = FBLPromises;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3E1DB29AA5354577A8BA85C95F45FD65 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F093139C3D61BD10D37284AADCB10263 /* Pods-CollageBot.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CollageBot/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CollageBot/Pods-CollageBot.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		40B45BB3CF3EE4476259302A7FAAD78F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1153,9 +595,9 @@
 			};
 			name = Release;
 		};
-		4E871556576F90465A12313B8BA48717 /* Release */ = {
+		4E3D55499131D89870C1E74C396809EA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5090AD03C7D77DF6B072F8E377659CA7 /* SnapKit.xcconfig */;
+			baseConfigurationReference = 8F28C101194944311A3F0549590F5677 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1190,82 +632,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		51FE5EC9CE8D7DA2CE41139F2A872A9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6B2DFC3DF5B2A5DC7A75EF5D8CBBBDBD /* PromisesSwift.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PromisesSwift/PromisesSwift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PromisesSwift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/PromisesSwift/PromisesSwift.modulemap";
-				PRODUCT_MODULE_NAME = Promises;
-				PRODUCT_NAME = Promises;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6FB426538C19123F43291E005AF54B2A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39908FBEB31A502184404BACFB48EB8A /* Pods-CollageBot.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CollageBot/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CollageBot/Pods-CollageBot.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		85ED3013A635C27F8B7FAF51362B108C /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1331,9 +697,124 @@
 			};
 			name = Debug;
 		};
-		B7586E1E72000522E5D4685B811A9565 /* Debug */ = {
+		8AB6898B43BD0B4CF2978C3ACCE68F95 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5090AD03C7D77DF6B072F8E377659CA7 /* SnapKit.xcconfig */;
+			baseConfigurationReference = D302D5920F3D5E453A7DDCEE2B20FC00 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AEC93CBC24D7F2F1926AB2A7937AC25C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D302D5920F3D5E453A7DDCEE2B20FC00 /* SCLAlertView.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SCLAlertView/SCLAlertView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SCLAlertView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SCLAlertView/SCLAlertView.modulemap";
+				PRODUCT_MODULE_NAME = SCLAlertView;
+				PRODUCT_NAME = SCLAlertView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB5761B973B76D1B485702C6F9A80F05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F093139C3D61BD10D37284AADCB10263 /* Pods-CollageBot.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CollageBot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CollageBot/Pods-CollageBot.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C8935C71E5A6AE883C4F5FBD39882300 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F28C101194944311A3F0549590F5677 /* SnapKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1367,9 +848,58 @@
 			};
 			name = Debug;
 		};
+		CCC61490D093E1B954903884AF45576C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39908FBEB31A502184404BACFB48EB8A /* Pods-CollageBot.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CollageBot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CollageBot/Pods-CollageBot.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0A12DEAFBC665737CB54F45E79E25BDE /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8935C71E5A6AE883C4F5FBD39882300 /* Debug */,
+				4E3D55499131D89870C1E74C396809EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1379,38 +909,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FCE2B9D6B31608FC7AA071BB10D2126 /* Build configuration list for PBXNativeTarget "PromisesSwift" */ = {
+		3E1A1D35CA496F73FC403CD08F32749A /* Build configuration list for PBXNativeTarget "SCLAlertView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				51FE5EC9CE8D7DA2CE41139F2A872A9F /* Debug */,
-				000FE1723BB5CBA43DE3BD33F0D07CF7 /* Release */,
+				AEC93CBC24D7F2F1926AB2A7937AC25C /* Debug */,
+				8AB6898B43BD0B4CF2978C3ACCE68F95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD036B8BBE24755440540CE49EF2657 /* Build configuration list for PBXNativeTarget "Pods-CollageBot" */ = {
+		7B09B8DA00433E2579BE0AD59EA2EB5E /* Build configuration list for PBXNativeTarget "Pods-CollageBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6FB426538C19123F43291E005AF54B2A /* Debug */,
-				3E1DB29AA5354577A8BA85C95F45FD65 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7DEE53E4FAC0DE5CCEAED107B79CC40C /* Build configuration list for PBXNativeTarget "PromisesObjC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F34C416DA87F6A0B014DE5591D3EFA9 /* Debug */,
-				14FC92AFD93E15434A594F2A97BDFDF4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D3CAEEBEB331A6271AB47C49703F2B78 /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7586E1E72000522E5D4685B811A9565 /* Debug */,
-				4E871556576F90465A12313B8BA48717 /* Release */,
+				CCC61490D093E1B954903884AF45576C /* Debug */,
+				BB5761B973B76D1B485702C6F9A80F05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

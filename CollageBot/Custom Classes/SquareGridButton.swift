@@ -17,6 +17,15 @@ class SquareGridButton: UIButton {
     init(index: ButtonIndex) {
         self.index = index
         super.init(frame: .zero)
+        
+        setUpBorder()
+    }
+    
+    private func setUpBorder() {
+        layer.borderColor = UIColor.collageBotBlue.cgColor
+        layer.borderWidth = 2
+        layer.cornerRadius = 3
+        layer.masksToBounds = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,7 +34,7 @@ class SquareGridButton: UIButton {
     
     override var isSelected: Bool {
         didSet {
-            self.backgroundColor = self.isSelected ? .blue : .clear
+            self.backgroundColor = self.isSelected ? .collageBotTeal : .clear
         }
     }
 

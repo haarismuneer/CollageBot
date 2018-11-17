@@ -7,6 +7,6 @@ target 'CollageBot' do
 
   # Pods for CollageBot
   pod 'SnapKit', '~> 4.0.0'
-  pod 'PromisesSwift', '~> 1.2.3'
+  pod 'SCLAlertView'
 
 end
