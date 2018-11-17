@@ -19,6 +19,23 @@ class CollageDisplayViewController: UIViewController {
     }
     
     func setUpUI() {
+        let collageWidth = collageImage.size.width
+        let collageHeight = collageImage.size.height
+        
+        func setConstraintsBasedOnWidth() {
+            collageImageView.snp.makeConstraints { make in
+                make.width.equalToSuperview()
+                make.height.equalTo(collageImageView.snp.width).multipliedBy(collageHeight/collageWidth)
+            }
+        }
+        
+        func setConstraintsBasedOnHeight() {
+            collageImageView.snp.makeConstraints { make in
+                make.height.equalToSuperview().multipliedBy(0.55)
+                make.width.equalTo(collageImageView.snp.height).multipliedBy(collageWidth/collageHeight)
+            }
+        }
+        
         view.backgroundColor = .collageBotOffWhite
         
         dismissButton.setTitle("❌", for: .normal)
@@ -31,12 +48,16 @@ class CollageDisplayViewController: UIViewController {
         }
         
         view.addSubview(collageImageView)
+        
         collageImageView.snp.makeConstraints { make in
-            make.center.width.equalToSuperview()
-            make.height.equalTo(collageImageView.snp.width)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(dismissButton.snp.bottom).offset(20)
         }
         
+        collageWidth >= collageHeight ? setConstraintsBasedOnWidth() : setConstraintsBasedOnHeight()
+        
         collageImageView.image = collageImage
+        collageImageView.contentMode = .scaleAspectFit
     }
     
     @objc private func dismissView() {

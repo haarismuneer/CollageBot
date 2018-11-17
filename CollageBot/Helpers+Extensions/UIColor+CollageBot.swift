@@ -19,7 +19,7 @@ extension UIColor {
     }
     
     static var collageBotOffWhite: UIColor {
-        return UIColor(red: 270, green: 278, blue: 240, alpha: 1.0)
+        return UIColor(red: 288, green: 300, blue: 260, alpha: 1.0)
     }
     
     convenience init(red: Int, green: Int, blue: Int, alpha: CGFloat) {

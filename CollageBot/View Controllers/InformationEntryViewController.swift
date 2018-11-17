@@ -182,11 +182,11 @@ class InformationEntryViewController: UIViewController {
         LastfmAPIClient.getTopAlbums(username: username, timeframe: timeframe, limit: numRows*numColumns) { (result) in
             switch result {
             case let .success(albums):
+                // return and show alert if number of albums is less than rows x columns
                 for album in albums {
                     topAlbums.append(Album(dictionary: album))
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: {
-                    
                     let image = CollageCreator.createCollage(
                         rows: selectedRow + 1,
                         columns: selectedColumn + 1,
