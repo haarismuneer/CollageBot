@@ -6,7 +6,7 @@ target 'CollageBot' do
   use_frameworks!
 
   # Pods for CollageBot
-  pod 'SnapKit', '~> 4.0.0'
-  pod 'SCLAlertView'
+  pod 'SnapKit'
+  pod 'SCLAlertView', :git => 'https://github.com/vikmeup/SCLAlertView-Swift.git', :branch => 'master'
 
 end

@@ -12,12 +12,15 @@ class ImageDownloader {
         let imageDownloadGroup = DispatchGroup()
         for i in 0..<albums.count {
             let album = albums[i]
-            if let url = album.imageURL {
             imageDownloadGroup.enter()
+            if let url = album.imageURL {
                 downloadImageFromURL(url) { (image) in
                     album.image = image
                     imageDownloadGroup.leave()
                 }
+            } else {
+                album.image = UIImage(named: "default_album_art")
+                imageDownloadGroup.leave()
             }
         }
         imageDownloadGroup.notify(queue: .main) {
@@ -30,6 +33,8 @@ class ImageDownloader {
             if let data = data,
             let image = UIImage(data: data) {
                 completion(image)
+            } else if let defaultImage = UIImage(named: "default_album_art") {
+                completion(defaultImage)
             }
         }.resume()
     }

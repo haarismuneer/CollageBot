@@ -1,20 +1,29 @@
 PODS:
-  - SCLAlertView (0.8)
-  - SnapKit (4.0.1)
+  - SCLAlertView (0.8.1)
+  - SnapKit (5.0.1)
 
 DEPENDENCIES:
-  - SCLAlertView
-  - SnapKit (~> 4.0.0)
+  - SCLAlertView (from `https://github.com/vikmeup/SCLAlertView-Swift.git`, branch `master`)
+  - SnapKit
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - SCLAlertView
+  trunk:
     - SnapKit
 
+EXTERNAL SOURCES:
+  SCLAlertView:
+    :branch: master
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
+CHECKOUT OPTIONS:
+  SCLAlertView:
+    :commit: f08ec93c299a221210e59462c84c79410050e5b7
+    :git: https://github.com/vikmeup/SCLAlertView-Swift.git
+
 SPEC CHECKSUMS:
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
-  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SCLAlertView: 776813fb1f62248965f37cb7edf4088ee6394460
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: ada9dbb50a8314da0c6d2b690b24c3623d84c717
+PODFILE CHECKSUM: 3cf51ccdf41e13bdfd740b277d514d5ee27e2bcd
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

@@ -18,7 +18,7 @@ class Album {
         title = (dictionary["name"] as? String)
         artistName = getArtistName(dictionary["artist"] as? [String: Any])
         playCount = dictionary["playcount"] as? String
-        imageURL = URL(string: getImageURL(dictionary["image"] as? [[String: String]])) // replace with default image link
+        imageURL = URL(string: getImageURL(dictionary["image"] as? [[String: String]]))
     }
     
     private func getArtistName(_ dict: [String: Any]?) -> String {

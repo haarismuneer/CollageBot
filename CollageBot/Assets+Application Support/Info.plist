@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>CollageBot needs access to your photo library in order to export collages.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>CollageBot needs access to your photo library in order to save collages.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Comfortaa_Bold.ttf</string>

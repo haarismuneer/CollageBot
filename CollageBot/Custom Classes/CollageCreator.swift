@@ -16,7 +16,7 @@ struct CollageTextOptions: OptionSet {
 
 class CollageCreator {
     
-    class func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) -> UIImage? {
+    class func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) throws -> UIImage {
         var counter = 0
         let imageHeight = CGFloat(rows * Constants.imageDimension)
         let imageWidth = CGFloat(columns * Constants.imageDimension)
@@ -46,7 +46,9 @@ class CollageCreator {
             }
         }
         
-        guard let collage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        guard let collage = UIGraphicsGetImageFromCurrentImageContext() else {
+            throw NSError()
+        }
         UIGraphicsEndImageContext()
         return collage
     }

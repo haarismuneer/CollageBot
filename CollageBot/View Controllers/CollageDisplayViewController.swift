@@ -8,7 +8,7 @@ import SnapKit
 
 class CollageDisplayViewController: UIViewController {
     
-    var collageImage: UIImage!
+    var collageImage = UIImage()
     lazy var dismissButton = UIButton(type: .system)
     lazy var collageImageView = UIImageView()
 
@@ -60,8 +60,25 @@ class CollageDisplayViewController: UIViewController {
         collageImageView.contentMode = .scaleAspectFit
     }
     
+    @objc private func shareCollage() {
+        let activityController = UIActivityViewController(activityItems: [collageImage], applicationActivities: nil)
+        present(activityController, animated: true)
+    }
+    
+    @objc private func saveCollage() {
+        UIImageWriteToSavedPhotosAlbum(collageImage, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    }
+    
     @objc private func dismissView() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // failed
+        } else {
+            //success
+        }
     }
 
 }

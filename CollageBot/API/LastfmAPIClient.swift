@@ -10,11 +10,24 @@ enum NetworkResult<T> {
     case success(T)
 }
 
+enum ContentType: String, CaseIterable {
+    case albums
+    case artists
+    case tracks
+    
+    func displayableName() -> String {
+        return String(self.rawValue.dropLast())
+    }
+}
+
 class LastfmAPIClient {
     
-    class func getTopAlbums(username: String, timeframe: Timeframe, limit: Int, completion: @escaping (NetworkResult<[[String: Any]]>) -> Void) {
+    class func getTopContent(type: ContentType, username: String, timeframe: Timeframe, limit: Int, completion: @escaping (NetworkResult<[[String: Any]]>) -> Void) {
         guard var urlComponents = URLComponents(string: "https://ws.audioscrobbler.com/2.0/") else { return }
-        urlComponents.query = "method=user.gettopalbums&user=\(username)&period=\(timeframe.rawValue)&limit=\(limit)&api_key=\(Secrets.lastFMKey)&format=json"
+        var query = "method=user.gettop\(type.rawValue)"
+        query += "&user=\(username)&period=\(timeframe.rawValue)"
+        query += "&limit=\(limit)&api_key=\(Secrets.lastFMKey)&format=json"
+        urlComponents.query = query
         
         guard let url = urlComponents.url else { return }
         
@@ -27,7 +40,12 @@ class LastfmAPIClient {
                     let serializedData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
                     if let allResults = serializedData?["topalbums"] as? [String: Any],
                     let albums = allResults["album"] as? [[String: Any]] {
-                        completion(NetworkResult.success(albums))
+                        if albums.count == limit {
+                            completion(NetworkResult.success(albums))
+                        } else {
+//                            let incorrectCountError = Error()
+//                            completion(NetworkResult.failure(incorrectCountError))
+                        }
                     } else {
                         // TODO: handle error
                     }

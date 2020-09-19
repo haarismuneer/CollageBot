@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,7 @@
 		9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */; };
 		9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */; };
 		9D41D19C2198DAEB007A8C91 /* Timeframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D19B2198DAEB007A8C91 /* Timeframe.swift */; };
-		9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */; };
+		9D5B5ADC218AB3EA00F3B467 /* ContentEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADB218AB3EA00F3B467 /* ContentEntryViewController.swift */; };
 		9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADD218B817700F3B467 /* CollageDisplayViewController.swift */; };
 		9D5B5AE0218BC35A00F3B467 /* CollageCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */; };
 		9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */; };
@@ -29,6 +29,7 @@
 		9DA8DAD5219D2D0B00631575 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */; };
 		9DA8DAD6219D2D0B00631575 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */; };
 		9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */; };
+		9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */; };
 		9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +49,7 @@
 		9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionView.swift; sourceTree = "<group>"; };
 		9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGridButton.swift; sourceTree = "<group>"; };
 		9D41D19B2198DAEB007A8C91 /* Timeframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeframe.swift; sourceTree = "<group>"; };
-		9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationEntryViewController.swift; sourceTree = "<group>"; };
+		9D5B5ADB218AB3EA00F3B467 /* ContentEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentEntryViewController.swift; sourceTree = "<group>"; };
 		9D5B5ADD218B817700F3B467 /* CollageDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageDisplayViewController.swift; sourceTree = "<group>"; };
 		9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageCreator.swift; sourceTree = "<group>"; };
 		9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Conversion.swift"; sourceTree = "<group>"; };
@@ -58,6 +59,7 @@
 		9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Regular.ttf; sourceTree = "<group>"; };
 		9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Thin.ttf; sourceTree = "<group>"; };
 		9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
+		9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollagePreferencesViewController.swift; sourceTree = "<group>"; };
 		9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CollageBot.swift"; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,7 +118,8 @@
 		9D5B5AE3218BC86300F3B467 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9D5B5ADB218AB3EA00F3B467 /* InformationEntryViewController.swift */,
+				9D5B5ADB218AB3EA00F3B467 /* ContentEntryViewController.swift */,
+				9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */,
 				9D5B5ADD218B817700F3B467 /* CollageDisplayViewController.swift */,
 			);
 			path = "View Controllers";
@@ -224,11 +227,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Haaris Muneer";
 				TargetAttributes = {
 					9D1032122181575600A63E4F = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -273,22 +277,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4EB6489A780D56BFE6CCD467 /* [CP] Check Pods Manifest.lock */ = {
@@ -323,7 +320,7 @@
 				9D5B5AE0218BC35A00F3B467 /* CollageCreator.swift in Sources */,
 				9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */,
 				9D39F3FF219A88D100223F31 /* Utilities.swift in Sources */,
-				9D5B5ADC218AB3EA00F3B467 /* InformationEntryViewController.swift in Sources */,
+				9D5B5ADC218AB3EA00F3B467 /* ContentEntryViewController.swift in Sources */,
 				9D41D19C2198DAEB007A8C91 /* Timeframe.swift in Sources */,
 				9D1032172181575600A63E4F /* AppDelegate.swift in Sources */,
 				9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */,
@@ -335,6 +332,7 @@
 				9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */,
 				9D1032292181580A00A63E4F /* Secrets.swift in Sources */,
 				9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */,
+				9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */,
 				9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +385,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -448,6 +447,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -491,7 +491,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.CollageBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -510,7 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.CollageBot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
