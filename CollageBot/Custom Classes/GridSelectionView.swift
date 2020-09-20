@@ -42,8 +42,10 @@ class GridSelectionView: UIView {
     }
     
     @objc private func buttonTapped(_ sender: SquareGridButton) {
-        buttons.forEach {
-            $0.isSelected = $0.index.row <= sender.index.row && $0.index.column <= sender.index.column
+        buttons.forEach { button in
+            UIView.animate(withDuration: 0.15) {
+                button.isSelected = button.index.row <= sender.index.row && button.index.column <= sender.index.column
+            }
         }
         selectedIndex = sender.index
     }

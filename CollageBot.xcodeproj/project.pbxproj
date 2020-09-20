@@ -14,7 +14,7 @@
 		9D1032212181575700A63E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D10321F2181575700A63E4F /* LaunchScreen.storyboard */; };
 		9D1032292181580A00A63E4F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1032282181580A00A63E4F /* Secrets.swift */; };
 		9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */; };
-		9D10322D21841E8200A63E4F /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322C21841E8200A63E4F /* Album.swift */; };
+		9D10322D21841E8200A63E4F /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322C21841E8200A63E4F /* MediaItem.swift */; };
 		9D39F3FF219A88D100223F31 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39F3FE219A88D100223F31 /* Utilities.swift */; };
 		9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */; };
 		9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */; };
@@ -45,7 +45,7 @@
 		9D1032222181575700A63E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1032282181580A00A63E4F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastfmAPIClient.swift; sourceTree = "<group>"; };
-		9D10322C21841E8200A63E4F /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		9D10322C21841E8200A63E4F /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
 		9D39F3FE219A88D100223F31 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionView.swift; sourceTree = "<group>"; };
 		9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGridButton.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		9D5B5AE7218BC8B000F3B467 /* Custom Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9D10322C21841E8200A63E4F /* Album.swift */,
+				9D10322C21841E8200A63E4F /* MediaItem.swift */,
 				9D5B5ADF218BC35A00F3B467 /* CollageCreator.swift */,
 				9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */,
 				9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */,
@@ -327,7 +327,7 @@
 				9D41D19C2198DAEB007A8C91 /* Timeframe.swift in Sources */,
 				9D1032172181575600A63E4F /* AppDelegate.swift in Sources */,
 				9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */,
-				9D10322D21841E8200A63E4F /* Album.swift in Sources */,
+				9D10322D21841E8200A63E4F /* MediaItem.swift in Sources */,
 				9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */,
 				9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */,
 				9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */,

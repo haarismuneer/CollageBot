@@ -18,6 +18,10 @@ enum ContentType: String, CaseIterable {
     func displayableName() -> String {
         return String(self.rawValue.dropLast())
     }
+    
+    func apiKeyword() -> String {
+        return "top" + rawValue
+    }
 }
 
 class LastfmAPIClient {
@@ -38,13 +42,13 @@ class LastfmAPIClient {
             } else if let data = data {
                 do {
                     let serializedData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any]
-                    if let allResults = serializedData?["topalbums"] as? [String: Any],
-                    let albums = allResults["album"] as? [[String: Any]] {
-                        if albums.count == limit {
-                            completion(NetworkResult.success(albums))
+                    if let allResults = serializedData?[type.apiKeyword()] as? [String: Any],
+                       let content = allResults[type.displayableName()] as? [[String: Any]] {
+                        if content.count == limit {
+                            completion(NetworkResult.success(content))
                         } else {
-//                            let incorrectCountError = Error()
-//                            completion(NetworkResult.failure(incorrectCountError))
+                            // let incorrectCountError = Error()
+                            // completion(NetworkResult.failure(incorrectCountError))
                         }
                     } else {
                         // TODO: handle error

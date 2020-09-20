@@ -31,7 +31,7 @@ class CollageDisplayViewController: UIViewController {
         
         func setConstraintsBasedOnHeight() {
             collageImageView.snp.makeConstraints { make in
-                make.height.equalToSuperview().multipliedBy(0.55)
+                make.height.equalToSuperview().multipliedBy(0.7)
                 make.width.equalTo(collageImageView.snp.height).multipliedBy(collageWidth/collageHeight)
             }
         }

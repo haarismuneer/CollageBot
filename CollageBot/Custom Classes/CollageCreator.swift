@@ -9,7 +9,7 @@ import UIKit
 struct CollageTextOptions: OptionSet {
     let rawValue: Int
     
-    static let displayAlbumTitle = CollageTextOptions(rawValue: 1)
+    static let displayTitle = CollageTextOptions(rawValue: 1)
     static let displayArtist = CollageTextOptions(rawValue: 2)
     static let displayPlayCount = CollageTextOptions(rawValue: 4)
 }
@@ -20,7 +20,7 @@ class CollageCreator {
     var timeframe: Timeframe?
     var contentType: ContentType?
     
-    func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) throws -> UIImage {
+    func createCollage(rows: Int, columns: Int, albums: [MediaItem], options: CollageTextOptions) throws -> UIImage {
         var counter = 0
         let imageHeight = CGFloat(rows * Constants.imageDimension)
         let imageWidth = CGFloat(columns * Constants.imageDimension)
@@ -57,9 +57,9 @@ class CollageCreator {
         return collage
     }
     
-    private func getTextAndDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
+    private func getTextAndDrawingConfiguration(album: MediaItem, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
         var stringToDraw = ""
-        if options.contains(.displayAlbumTitle), let title = album.title {
+        if options.contains(.displayTitle), let title = album.albumTitle {
             stringToDraw += "\(title)\n"
         }
         if options.contains(.displayArtist), let artist = album.artistName {

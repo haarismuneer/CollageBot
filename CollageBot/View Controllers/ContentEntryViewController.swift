@@ -23,19 +23,16 @@ class ContentEntryViewController: UIViewController {
         $0.borderStyle = .roundedRect
         $0.textAlignment = .center
     }
-    
     var contentTypeStackView: UIStackView = createView {
         $0.axis = .horizontal
         $0.alignment = .center
     }
-    
     var getLabel: UILabel = createView {
         $0.text = "Get"
         $0.textColor = .black
         $0.font = .collageBotFont(16, fontType: .regular)
         $0.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     }
-    
     var dataLabel: UILabel = createView {
         $0.text = "data"
         $0.textColor = .black
@@ -43,13 +40,11 @@ class ContentEntryViewController: UIViewController {
         $0.textAlignment = .right
         $0.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
     }
-    
     var forLabel: UILabel = createView {
         $0.text = "for..."
         $0.textColor = .black
         $0.font = .collageBotFont(16, fontType: .regular)
     }
-    
     var nextButton = UIButton(type: .system)
     var contentTypePicker = UIPickerView()
     var timeframePicker = UIPickerView()
@@ -60,6 +55,11 @@ class ContentEntryViewController: UIViewController {
         super.viewDidLoad()
 
         setUpUI()
+        
+//        LastfmAPIClient.getTopContent(type: .albums, username: "moonea", timeframe: .twelveMonths, limit: 25) { result in
+//
+//            print("hi")
+//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -170,6 +170,13 @@ class ContentEntryViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let collageCreator = CollageCreator()
         collageCreator.username = usernameField.text
+        collageCreator.timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
+        let actualContentTypeIndex = contentTypePicker.selectedRow(inComponent: 0) % ContentType.allCases.count
+        collageCreator.contentType = ContentType.allCases[actualContentTypeIndex]
+        
+        if let preferencesVC = segue.destination as? CollagePreferencesViewController {
+            preferencesVC.collageCreator = collageCreator
+        }
     }
 
 }

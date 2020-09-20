@@ -8,7 +8,7 @@ import UIKit
 
 class ImageDownloader {
     
-    class func downloadImages(albums: [Album], completion: @escaping () -> Void) {
+    class func downloadImages(albums: [MediaItem], completion: @escaping () -> Void) {
         let imageDownloadGroup = DispatchGroup()
         for i in 0..<albums.count {
             let album = albums[i]

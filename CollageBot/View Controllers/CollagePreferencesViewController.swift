@@ -37,6 +37,11 @@ class CollagePreferencesViewController: UIViewController {
         $0.textColor = .black
         $0.font = .collageBotFont(15, fontType: .thin)
     }
+    var gridSizeLabel: UILabel = createView {
+        $0.text = "Grid size:"
+        $0.textColor = .black
+        $0.font = .collageBotFont(18, fontType: .regular)
+    }
     var artistSwitch = UISwitch()
     var titleSwitch = UISwitch()
     var playCountSwitch = UISwitch()
@@ -49,15 +54,22 @@ class CollagePreferencesViewController: UIViewController {
 
         setUpGridView()
         setUpStackViews()
+        setUpGenerateButton()
     }
     
     private func setUpGridView() {
+        view.addSubview(gridSizeLabel)
+        gridSizeLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
+        }
+        
         view.addSubview(gridView)
         gridView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.5)
             make.height.equalTo(gridView.snp.width)
-            make.top.equalToSuperview().offset(30)
+            make.top.equalTo(gridSizeLabel.snp.bottom).offset(10)
         }
         view.layoutIfNeeded()
         gridView.setUpUI()
@@ -65,10 +77,16 @@ class CollagePreferencesViewController: UIViewController {
     
     private func setUpStackViews() {
         // TODO: set initial state of switches based on User Defaults
-        labelsStackView.addArrangedSubview(titleLabel)
+        // If an artist collage is being made, there's no title to display
+        // so no need for title preferences.
+        if collageCreator?.contentType != .artists {
+            titleLabel.text = collageCreator?.contentType == .albums ? "Display album title" : "Display track title"
+            labelsStackView.addArrangedSubview(titleLabel)
+            switchesStackView.addArrangedSubview(titleSwitch)
+        }
+        
         labelsStackView.addArrangedSubview(artistLabel)
         labelsStackView.addArrangedSubview(playCountLabel)
-        switchesStackView.addArrangedSubview(titleSwitch)
         switchesStackView.addArrangedSubview(artistSwitch)
         switchesStackView.addArrangedSubview(playCountSwitch)
         
@@ -88,7 +106,7 @@ class CollagePreferencesViewController: UIViewController {
     }
     
     private func setUpGenerateButton() {
-        generateButton.setTitle("Generate collage", for: .normal)
+        generateButton.setTitle("Generate collage!", for: .normal)
         generateButton.setTitleColor(.collageBotOrange, for: .normal)
         generateButton.titleLabel?.font = UIFont.collageBotFont(22)
         generateButton.addTarget(self, action: #selector(generateCollage(sender:)), for: .touchUpInside)
@@ -113,24 +131,31 @@ class CollagePreferencesViewController: UIViewController {
         let numColumns = selectedColumn + 1
         
         var optionsValue = 0
-        optionsValue += titleSwitch.isOn ? CollageTextOptions.displayAlbumTitle.rawValue : 0
+        if contentType != .artists {
+            optionsValue += titleSwitch.isOn ? CollageTextOptions.displayTitle.rawValue : 0
+        }
         optionsValue += artistSwitch.isOn ? CollageTextOptions.displayArtist.rawValue : 0
         optionsValue += playCountSwitch.isOn ? CollageTextOptions.displayPlayCount.rawValue : 0
         let options = CollageTextOptions(rawValue: optionsValue)
         
-        var topAlbums = [Album]()
-        LastfmAPIClient.getTopContent(type: .albums, username: username, timeframe: timeframe, limit: numRows*numColumns) { (result) in
+        var media = [MediaItem]()
+        LastfmAPIClient.getTopContent(
+            type: contentType,
+            username: username,
+            timeframe: timeframe,
+            limit: numRows*numColumns
+        ) { result in
             switch result {
-            case let .success(albums):
+            case let .success(content):
                 // return and show alert if number of albums is less than rows x columns
-                for album in albums {
-                    topAlbums.append(Album(dictionary: album))
+                for item in content {
+                    media.append(MediaItem(albumDictionary: item))
                 }
-                ImageDownloader.downloadImages(albums: topAlbums, completion: {
+                ImageDownloader.downloadImages(albums: media, completion: {
                     if let image = try? self.collageCreator?.createCollage(
                         rows: selectedRow + 1,
                         columns: selectedColumn + 1,
-                        albums: topAlbums,
+                        albums: media,
                         options: options
                     ) {
                         let collageVC = CollageDisplayViewController()

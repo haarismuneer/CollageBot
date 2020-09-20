@@ -6,19 +6,20 @@
 import Foundation
 import UIKit
 
-class Album {
+class MediaItem {
     
-    var title: String?
+    var albumTitle: String?
+    var trackTitle: String?
     var artistName: String?
     var playCount: String?
     var imageURL: URL?
     var image: UIImage?
     
-    init(dictionary: [String: Any]) {
-        title = (dictionary["name"] as? String)
-        artistName = getArtistName(dictionary["artist"] as? [String: Any])
-        playCount = dictionary["playcount"] as? String
-        imageURL = URL(string: getImageURL(dictionary["image"] as? [[String: String]]))
+    init(albumDictionary: [String: Any]) {
+        albumTitle = (albumDictionary["name"] as? String)
+        artistName = getArtistName(albumDictionary["artist"] as? [String: Any])
+        playCount = albumDictionary["playcount"] as? String
+        imageURL = URL(string: getImageURL(albumDictionary["image"] as? [[String: String]]))
     }
     
     private func getArtistName(_ dict: [String: Any]?) -> String {
