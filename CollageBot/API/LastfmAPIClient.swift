@@ -11,8 +11,8 @@ enum NetworkResult<T> {
 }
 
 enum ContentType: String, CaseIterable {
-    case albums
     case artists
+    case albums
     case tracks
     
     func displayableName() -> String {

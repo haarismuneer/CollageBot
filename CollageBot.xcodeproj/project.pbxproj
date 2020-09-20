@@ -31,6 +31,7 @@
 		9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */; };
 		9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */; };
 		9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */; };
+		9DF396E325170E0F0044CC8C /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF396E225170E0F0044CC8C /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
 		9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollagePreferencesViewController.swift; sourceTree = "<group>"; };
 		9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CollageBot.swift"; sourceTree = "<group>"; };
+		9DF396E225170E0F0044CC8C /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */,
+				9DF396E225170E0F0044CC8C /* String+Utils.swift */,
 				9D5B5AEB218F38EE00F3B467 /* Constants.swift */,
 				9D39F3FE219A88D100223F31 /* Utilities.swift */,
 				9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */,
@@ -331,6 +334,7 @@
 				9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */,
 				9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */,
 				9D1032292181580A00A63E4F /* Secrets.swift in Sources */,
+				9DF396E325170E0F0044CC8C /* String+Utils.swift in Sources */,
 				9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */,
 				9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */,
 				9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */,

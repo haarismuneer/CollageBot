@@ -16,7 +16,11 @@ struct CollageTextOptions: OptionSet {
 
 class CollageCreator {
     
-    class func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) throws -> UIImage {
+    var username: String?
+    var timeframe: Timeframe?
+    var contentType: ContentType?
+    
+    func createCollage(rows: Int, columns: Int, albums: [Album], options: CollageTextOptions) throws -> UIImage {
         var counter = 0
         let imageHeight = CGFloat(rows * Constants.imageDimension)
         let imageWidth = CGFloat(columns * Constants.imageDimension)
@@ -53,7 +57,7 @@ class CollageCreator {
         return collage
     }
     
-    private class func getTextAndDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
+    private func getTextAndDrawingConfiguration(album: Album, options: CollageTextOptions) -> (String, [NSAttributedString.Key: Any]) {
         var stringToDraw = ""
         if options.contains(.displayAlbumTitle), let title = album.title {
             stringToDraw += "\(title)\n"

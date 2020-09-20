@@ -16,17 +16,17 @@ enum Timeframe: String, CaseIterable {
     func displayableName() -> String {
         switch self {
         case .oneWeek:
-            return "1 week"
+            return "the last week"
         case .oneMonth:
-            return "1 month"
+            return "the last month"
         case .threeMonths:
-            return "3 months"
+            return "the last 3 months"
         case .sixMonths:
-            return "6 months"
+            return "the last 6 months"
         case .twelveMonths:
-            return "1 year"
+            return "the last year"
         case .overall:
-            return self.rawValue.capitalized
+            return "all time"
         }
     }
 }

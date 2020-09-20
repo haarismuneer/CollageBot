@@ -6,6 +6,7 @@
 import UIKit
 
 extension UIColor {
+    
     static var collageBotOrange: UIColor {
         return UIColor(red: 243, green: 134, blue: 48, alpha: 1.0)
     }

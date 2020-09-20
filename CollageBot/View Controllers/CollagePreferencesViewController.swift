@@ -7,41 +7,42 @@ import UIKit
 
 class CollagePreferencesViewController: UIViewController {
     
-    lazy var outerStackView: UIStackView = createView {
+    var outerStackView: UIStackView = createView {
         $0.axis = .horizontal
         $0.distribution = .fillProportionally
         $0.spacing = 10
     }
-    lazy var switchesStackView: UIStackView = createView {
+    var switchesStackView: UIStackView = createView {
         $0.axis = .vertical
         $0.alignment = .leading
         $0.distribution = .fillEqually
     }
-    lazy var labelsStackView: UIStackView = createView {
+    var labelsStackView: UIStackView = createView {
         $0.axis = .vertical
         $0.alignment = .trailing
         $0.distribution = .fillEqually
     }
-    lazy var titleLabel: UILabel = createView {
+    var titleLabel: UILabel = createView {
         $0.text = "Display album title"
         $0.textColor = .black
         $0.font = .collageBotFont(15, fontType: .thin)
     }
-    lazy var artistLabel: UILabel = createView {
+    var artistLabel: UILabel = createView {
         $0.text = "Display artist"
         $0.textColor = .black
         $0.font = .collageBotFont(15, fontType: .thin)
     }
-    lazy var playCountLabel: UILabel = createView {
+    var playCountLabel: UILabel = createView {
         $0.text = "Display playcount"
         $0.textColor = .black
         $0.font = .collageBotFont(15, fontType: .thin)
     }
-    lazy var artistSwitch = UISwitch()
-    lazy var titleSwitch = UISwitch()
-    lazy var playCountSwitch = UISwitch()
-    lazy var gridView = GridSelectionView()
-    lazy var generateButton = UIButton(type: .system)
+    var artistSwitch = UISwitch()
+    var titleSwitch = UISwitch()
+    var playCountSwitch = UISwitch()
+    var gridView = GridSelectionView()
+    var generateButton = UIButton(type: .system)
+    var collageCreator: CollageCreator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,7 @@ class CollagePreferencesViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.5)
             make.height.equalTo(gridView.snp.width)
-            make.top.equalTo(timeframePicker.snp.bottom).offset(20)
+            make.top.equalToSuperview().offset(30)
         }
         view.layoutIfNeeded()
         gridView.setUpUI()
@@ -101,14 +102,16 @@ class CollagePreferencesViewController: UIViewController {
     @objc private func generateCollage(sender: UIButton) {
         sender.isEnabled = false
         
-        guard let username = usernameField.text else { return /*handle error here*/}
+        guard let username = collageCreator?.username,
+              let timeframe = collageCreator?.timeframe,
+              let contentType = collageCreator?.contentType else { return /*handle error here*/}
+        
         guard let selectedRow = gridView.selectedIndex?.row,
-        let selectedColumn = gridView.selectedIndex?.column else { return /*handle error here*/}
+              let selectedColumn = gridView.selectedIndex?.column else { return /*handle error here*/}
         
         let numRows = selectedRow + 1
         let numColumns = selectedColumn + 1
         
-        let timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
         var optionsValue = 0
         optionsValue += titleSwitch.isOn ? CollageTextOptions.displayAlbumTitle.rawValue : 0
         optionsValue += artistSwitch.isOn ? CollageTextOptions.displayArtist.rawValue : 0
@@ -124,7 +127,7 @@ class CollagePreferencesViewController: UIViewController {
                     topAlbums.append(Album(dictionary: album))
                 }
                 ImageDownloader.downloadImages(albums: topAlbums, completion: {
-                    if let image = try? CollageCreator.createCollage(
+                    if let image = try? self.collageCreator?.createCollage(
                         rows: selectedRow + 1,
                         columns: selectedColumn + 1,
                         albums: topAlbums,
