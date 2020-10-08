@@ -14,7 +14,7 @@ class ImageDownloader {
             let album = albums[i]
             imageDownloadGroup.enter()
             if let url = album.imageURL {
-                downloadImageFromURL(url) { (image) in
+                downloadImageFromURL(url) { image in
                     album.image = image
                     imageDownloadGroup.leave()
                 }

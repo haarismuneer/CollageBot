@@ -46,6 +46,7 @@ class ContentEntryViewController: UIViewController {
         $0.font = .collageBotFont(16, fontType: .regular)
     }
     var nextButton = UIButton(type: .system)
+    let logoView = UIImageView(image: UIImage(named: "logo"))
     var contentTypePicker = UIPickerView()
     var timeframePicker = UIPickerView()
 
@@ -55,11 +56,12 @@ class ContentEntryViewController: UIViewController {
         super.viewDidLoad()
 
         setUpUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-//        LastfmAPIClient.getTopContent(type: .albums, username: "moonea", timeframe: .twelveMonths, limit: 25) { result in
-//
-//            print("hi")
-//        }
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -76,21 +78,34 @@ class ContentEntryViewController: UIViewController {
     // MARK: - UI Setup
     
     private func setUpUI() {
+        title = ""
         view.backgroundColor = .collageBotOffWhite
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
+        setUpLogoView()
         setUpUsernameField()
         setUpContentTypeStackView()
         setUpTimeframePicker()
         setUpNextButton()
     }
     
+    private func setUpLogoView()  {
+        logoView.contentMode = .scaleAspectFit
+        view.addSubview(logoView)
+        logoView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.9)
+            make.height.equalTo(logoView.snp.width).multipliedBy(0.25)
+            make.top.equalToSuperview().offset(50)
+        }
+    }
+    
     private func setUpUsernameField() {
         view.addSubview(usernameField)
         usernameField.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(150)
+            make.top.equalTo(logoView.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.75)
         }
@@ -201,7 +216,7 @@ extension ContentEntryViewController: UIPickerViewDelegate, UIPickerViewDataSour
         let label = UILabel()
         label.frame = CGRect(x: 0, y: 0, width: timeframePicker.frame.width, height: Constants.pickerRowHeight)
         label.textAlignment = .center
-        label.font = UIFont.collageBotFont(18)
+        label.font = .collageBotFont(18)
         label.textColor = .darkGray
         if pickerView == timeframePicker {
             label.text = Timeframe.allCases[row].displayableName()
@@ -221,7 +236,8 @@ extension ContentEntryViewController: UIPickerViewDelegate, UIPickerViewDataSour
             selectedLabel = label
         }
         
-        selectedLabel.textColor = .collageBotOrange
+        selectedLabel.textColor = .collageBotTeal
+//        selectedLabel.backgroundColor = .red
         selectedLabel.font = .collageBotFont(18, fontType: .bold)
     }
     

@@ -52,9 +52,15 @@ class CollagePreferencesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.tintColor = .collageBotTeal
         setUpGridView()
         setUpStackViews()
         setUpGenerateButton()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
     }
     
     private func setUpGridView() {
@@ -143,7 +149,7 @@ class CollagePreferencesViewController: UIViewController {
             type: contentType,
             username: username,
             timeframe: timeframe,
-            limit: numRows*numColumns
+            limit: numRows * numColumns
         ) { result in
             switch result {
             case let .success(content):

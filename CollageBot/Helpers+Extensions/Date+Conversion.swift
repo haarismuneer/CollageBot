@@ -8,8 +8,6 @@ import Foundation
 extension Date {
     
     func dateStringBeforeInterval(_ timeframe: Timeframe) -> String {
-        // TODO: create result enum
-        
         var component: Calendar.Component
         var value = 0
         

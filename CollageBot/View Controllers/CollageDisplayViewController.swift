@@ -30,32 +30,53 @@ class CollageDisplayViewController: UIViewController {
     }
     
     private func setUpButtons() {
-        dismissButton.setTitle("❌", for: .normal)
+        dismissButton.setImage(UIImage(named: "close")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        dismissButton.tintColor = .collageBotOrange
+        dismissButton.layer.cornerRadius = 15
+        dismissButton.layer.borderWidth = 2
+        dismissButton.layer.borderColor = UIColor.collageBotOrange.cgColor
+        dismissButton.contentVerticalAlignment = .fill
+        dismissButton.contentHorizontalAlignment = .fill
+        dismissButton.imageEdgeInsets = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         dismissButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
         view.addSubview(dismissButton)
         dismissButton.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(20)
             make.left.equalToSuperview().offset(20)
-            make.height.width.equalTo(40)
+            make.height.width.equalTo(30)
         }
         
-        saveButton.setTitle("⬇️", for: .normal)
+        saveButton.setImage(UIImage(named: "download")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        saveButton.tintColor = .collageBotOrange
+        saveButton.layer.cornerRadius = 30
+        saveButton.layer.borderWidth = 2
+        saveButton.layer.borderColor = UIColor.collageBotOrange.cgColor
+        saveButton.contentVerticalAlignment = .fill
+        saveButton.contentHorizontalAlignment = .fill
+        saveButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         saveButton.addTarget(self, action: #selector(saveCollage), for: .touchUpInside)
         view.addSubview(saveButton)
         saveButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-10)
-            make.left.equalToSuperview().offset(10)
-            make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-30)
+            make.centerX.equalToSuperview().multipliedBy(0.5)
+            make.height.width.equalTo(60)
             make.width.equalTo(saveButton.snp.height)
         }
         
-        shareButton.setTitle("⬆️", for: .normal)
+        shareButton.setImage(UIImage(named: "share")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        shareButton.tintColor = .collageBotOrange
+        shareButton.layer.cornerRadius = 30
+        shareButton.layer.borderWidth = 2
+        shareButton.layer.borderColor = UIColor.collageBotOrange.cgColor
+        shareButton.contentVerticalAlignment = .fill
+        shareButton.contentHorizontalAlignment = .fill
+        shareButton.imageEdgeInsets = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         shareButton.addTarget(self, action: #selector(shareCollage), for: .touchUpInside)
         view.addSubview(shareButton)
         shareButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-10)
-            make.right.equalToSuperview().offset(-10)
-            make.height.equalTo(50)
+            make.bottom.equalToSuperview().offset(-30)
+            make.centerX.equalToSuperview().multipliedBy(1.5)
+            make.height.width.equalTo(60)
             make.width.equalTo(shareButton.snp.height)
         }
     }
