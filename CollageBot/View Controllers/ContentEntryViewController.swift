@@ -45,6 +45,11 @@ class ContentEntryViewController: UIViewController {
         $0.textColor = .black
         $0.font = .collageBotFont(16, fontType: .regular)
     }
+    var mainStackView: UIStackView = createView {
+        $0.axis = .vertical
+        $0.alignment = .center
+        $0.distribution = .equalCentering
+    }
     var nextButton = UIButton(type: .system)
     let logoView = UIImageView(image: UIImage(named: "logo"))
     var contentTypePicker = UIPickerView()
@@ -84,16 +89,41 @@ class ContentEntryViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
         
+        setUpNextButton()
+        setUpStackView()
         setUpLogoView()
         setUpUsernameField()
         setUpContentTypeStackView()
         setUpTimeframePicker()
-        setUpNextButton()
+    }
+    
+    private func setUpNextButton() {
+        nextButton.setTitle("Next →", for: .normal)
+        nextButton.setTitleColor(.collageBotOrange, for: .normal)
+        nextButton.titleLabel?.font = .collageBotFont(20, fontType: .bold)
+        nextButton.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
+        
+        view.addSubview(nextButton)
+        nextButton.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-20)
+            make.centerX.equalToSuperview()
+        }
+    }
+    
+    private func setUpStackView() {
+        view.addSubview(mainStackView)
+        mainStackView.snp.makeConstraints { make in
+            make.width.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
+//            make.height.equalToSuperview().multipliedBy(0.8)
+            make.bottom.greaterThanOrEqualTo(nextButton.snp.top).offset(-15)
+            make.top.greaterThanOrEqualToSuperview().offset(15)
+        }
     }
     
     private func setUpLogoView()  {
         logoView.contentMode = .scaleAspectFit
-        view.addSubview(logoView)
+        mainStackView.addSubview(logoView)
         logoView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.9)
@@ -103,7 +133,7 @@ class ContentEntryViewController: UIViewController {
     }
     
     private func setUpUsernameField() {
-        view.addSubview(usernameField)
+        mainStackView.addSubview(usernameField)
         usernameField.snp.makeConstraints { make in
             make.top.equalTo(logoView.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
@@ -117,7 +147,7 @@ class ContentEntryViewController: UIViewController {
         contentTypeStackView.addArrangedSubview(dataLabel)
         setUpContentTypePicker()
         
-        view.addSubview(contentTypeStackView)
+        mainStackView.addSubview(contentTypeStackView)
         contentTypeStackView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.8)
@@ -135,13 +165,13 @@ class ContentEntryViewController: UIViewController {
     }
     
     private func setUpTimeframePicker() {
-        view.addSubview(forLabel)
+        mainStackView.addSubview(forLabel)
         forLabel.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(contentTypeStackView.snp.bottom).offset(10)
         }
         
-        view.addSubview(timeframePicker)
+        mainStackView.addSubview(timeframePicker)
         timeframePicker.delegate = self
         timeframePicker.dataSource = self
         timeframePicker.snp.makeConstraints { make in
@@ -149,19 +179,6 @@ class ContentEntryViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.75)
             make.height.equalTo(100)
-        }
-    }
-    
-    private func setUpNextButton() {
-        nextButton.setTitle("Next →", for: .normal)
-        nextButton.setTitleColor(.collageBotOrange, for: .normal)
-        nextButton.titleLabel?.font = .collageBotFont(20, fontType: .bold)
-        nextButton.addTarget(self, action: #selector(nextButtonTapped(_:)), for: .touchUpInside)
-        
-        view.addSubview(nextButton)
-        nextButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-30)
-            make.centerX.equalToSuperview()
         }
     }
     

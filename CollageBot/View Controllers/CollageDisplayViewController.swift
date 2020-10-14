@@ -103,7 +103,7 @@ class CollageDisplayViewController: UIViewController {
         
         collageImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalTo(dismissButton.snp.bottom).offset(20)
+            make.centerY.equalToSuperview()
         }
         
         collageWidth >= collageHeight ? setConstraintsBasedOnWidth() : setConstraintsBasedOnHeight()

@@ -47,6 +47,7 @@ class CollagePreferencesViewController: UIViewController {
     var playCountSwitch = UISwitch()
     var gridView = GridSelectionView()
     var generateButton = UIButton(type: .system)
+    var loadingIndicator = UIActivityIndicatorView(frame: .zero)
     var collageCreator: CollageCreator?
 
     override func viewDidLoad() {
@@ -56,7 +57,9 @@ class CollagePreferencesViewController: UIViewController {
         setUpGridView()
         setUpStackViews()
         setUpGenerateButton()
+        setUpLoadingIndicator()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -123,6 +126,26 @@ class CollagePreferencesViewController: UIViewController {
         }
     }
     
+    private func setUpLoadingIndicator() {
+        if #available(iOS 13.0, *) {
+            loadingIndicator.style = .large
+        } else {
+            loadingIndicator.style = .whiteLarge
+        }
+        loadingIndicator.alpha = 0
+        loadingIndicator.color = .collageBotOrange
+        loadingIndicator.backgroundColor = UIColor(white: 0.9, alpha: 0.9)
+        loadingIndicator.layer.cornerRadius = view.frame.width/4
+        loadingIndicator.layer.borderWidth = 3
+        loadingIndicator.layer.borderColor = UIColor.collageBotOrange.cgColor
+        view.addSubview(loadingIndicator)
+        loadingIndicator.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.5)
+            make.height.equalTo(loadingIndicator.snp.width)
+        }
+    }
+    
     @objc private func generateCollage(sender: UIButton) {
         sender.isEnabled = false
         
@@ -133,6 +156,8 @@ class CollagePreferencesViewController: UIViewController {
         guard let selectedRow = gridView.selectedIndex?.row,
               let selectedColumn = gridView.selectedIndex?.column else { return /*handle error here*/}
         
+        showLoadingIndicator()
+
         let numRows = selectedRow + 1
         let numColumns = selectedColumn + 1
         
@@ -166,6 +191,7 @@ class CollagePreferencesViewController: UIViewController {
                     ) {
                         let collageVC = CollageDisplayViewController()
                         collageVC.collageImage = image
+                        self.hideLoadingIndicator()
                         self.present(collageVC, animated: true, completion: nil)
                     }
                 })
@@ -178,6 +204,26 @@ class CollagePreferencesViewController: UIViewController {
             }
         }
         sender.isEnabled = true
+    }
+    
+    private func showLoadingIndicator() {
+        UIView.animate(withDuration: 0.2) {
+            self.loadingIndicator.alpha = 1
+            self.loadingIndicator.isHidden = false
+        } completion: { _ in
+            self.loadingIndicator.startAnimating()
+        }
+
+    }
+    
+    private func hideLoadingIndicator() {
+        UIView.animate(withDuration: 0.2) {
+            self.loadingIndicator.isHidden = true
+            self.loadingIndicator.alpha = 0
+        } completion: { _ in
+            self.loadingIndicator.stopAnimating()
+        }
+        
     }
 
 }
