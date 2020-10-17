@@ -8,11 +8,15 @@ import SnapKit
 
 class CollageDisplayViewController: UIViewController {
     
-    var collageImage = UIImage()
-    var dismissButton = UIButton(type: .system)
+    var collageScrollView = UIScrollView(frame: .zero)
     var collageImageView = UIImageView()
+    
+    var dismissButton = UIButton(type: .system)
     var saveButton = UIButton(type: .system)
     var shareButton = UIButton(type: .system)
+    var buttons: [UIButton] = []
+    
+    var collageImage = UIImage()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +28,7 @@ class CollageDisplayViewController: UIViewController {
     
     private func setUpUI() {
         setUpButtons()
+        setUpScrollView()
         configureCollage()
         
         view.backgroundColor = .collageBotOffWhite
@@ -79,6 +84,19 @@ class CollageDisplayViewController: UIViewController {
             make.height.width.equalTo(60)
             make.width.equalTo(shareButton.snp.height)
         }
+        
+        buttons = [dismissButton, saveButton, shareButton]
+    }
+    
+    private func setUpScrollView() {
+        collageScrollView.minimumZoomScale = 1.0
+        collageScrollView.maximumZoomScale = 4.0
+        collageScrollView.delegate = self
+        view.addSubview(collageScrollView)
+        
+        collageScrollView.snp.makeConstraints { make in
+            make.centerX.centerY.width.height.equalToSuperview()
+        }
     }
     
     private func configureCollage() {
@@ -99,7 +117,9 @@ class CollageDisplayViewController: UIViewController {
             }
         }
         
-        view.addSubview(collageImageView)
+        collageScrollView.addSubview(collageImageView)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleButtonVisibility))
+        collageScrollView.addGestureRecognizer(tapGesture)
         
         collageImageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
@@ -133,4 +153,30 @@ class CollageDisplayViewController: UIViewController {
         }
     }
 
+}
+
+extension CollageDisplayViewController: UIScrollViewDelegate {
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return collageImageView
+    }
+    
+    func scrollViewWillBeginZooming(_ scrollView: UIScrollView, with view: UIView?) {
+        buttons.forEach {
+            $0.isHidden = true
+        }
+    }
+    
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        buttons.forEach {
+            $0.isHidden = scale > 1.0
+        }
+    }
+    
+    @objc private func toggleButtonVisibility() {
+        buttons.forEach {
+            $0.isHidden = !$0.isHidden
+        }
+    }
+    
 }

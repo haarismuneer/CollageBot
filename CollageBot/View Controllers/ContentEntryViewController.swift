@@ -105,7 +105,7 @@ class ContentEntryViewController: UIViewController {
         
         view.addSubview(nextButton)
         nextButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-20)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-20)
             make.centerX.equalToSuperview()
         }
     }
