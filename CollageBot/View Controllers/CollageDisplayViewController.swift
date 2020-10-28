@@ -9,7 +9,7 @@ import SCLAlertView
 
 class CollageDisplayViewController: UIViewController {
     
-    var collageScrollView = UIScrollView(frame: .zero)
+    var collageScrollView = UIScrollView()
     var collageImageView = UIImageView()
     
     var dismissButton = UIButton(type: .system)
@@ -90,6 +90,7 @@ class CollageDisplayViewController: UIViewController {
     }
     
     private func setUpScrollView() {
+        collageScrollView = UIScrollView(frame: view.frame)
         collageScrollView.maximumZoomScale = 4.0
         collageScrollView.showsVerticalScrollIndicator = false
         collageScrollView.showsHorizontalScrollIndicator = false
@@ -103,6 +104,8 @@ class CollageDisplayViewController: UIViewController {
     }
     
     private func configureCollage() {
+        collageImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.width))
+        
         let collageWidth = collageImage.size.width
         let collageHeight = collageImage.size.height
         
