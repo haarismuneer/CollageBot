@@ -47,11 +47,10 @@ class LastfmAPIClient {
                         if content.count == limit {
                             completion(NetworkResult.success(content))
                         } else {
-                            // let incorrectCountError = Error()
-                            // completion(NetworkResult.failure(incorrectCountError))
+                            completion(NetworkResult.failure(CollageBotError.incorrectCount))
                         }
                     } else {
-                        // TODO: handle error
+                        completion(NetworkResult.failure(CollageBotError.genericError))
                     }
                 } catch let error {
                     completion(NetworkResult.failure(error))
@@ -62,7 +61,7 @@ class LastfmAPIClient {
         task.resume()
     }
     
-    class func getAccountCreationDate(username: String, completion: @escaping (NetworkResult<Int>) -> Void) {
+    class func getAccountCreationDate(username: String, completion: @escaping (NetworkResult<String>) -> Void) {
         guard var urlComponents = URLComponents(string: "https://ws.audioscrobbler.com/2.0/") else { return }
         urlComponents.query = "method=user.getinfo&user=\(username)&api_key=\(Secrets.lastFMKey)&format=json"
         
@@ -75,11 +74,12 @@ class LastfmAPIClient {
             } else if let data = data {
                 do {
                     if let serializedData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any],
-                    let registeredDict = serializedData["registered"] as? [String: Any],
-                    let registeredTime = registeredDict["unixtime"] as? Int {
+                       let userDict = serializedData["user"] as? [String: Any],
+                       let registeredDict = userDict["registered"] as? [String: Any],
+                       let registeredTime = registeredDict["unixtime"] as? String {
                         completion(NetworkResult.success(registeredTime))
                     } else {
-                        // TODO: Handle error
+                        completion(NetworkResult.failure(CollageBotError.genericError))
                     }
                 } catch let error {
                     completion(NetworkResult.failure(error))

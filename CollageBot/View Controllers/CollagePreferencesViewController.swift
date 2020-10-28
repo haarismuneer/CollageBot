@@ -4,6 +4,7 @@
 //
 
 import UIKit
+import SCLAlertView
 
 class CollagePreferencesViewController: UIViewController {
     
@@ -85,7 +86,6 @@ class CollagePreferencesViewController: UIViewController {
     }
     
     private func setUpStackViews() {
-        // TODO: set initial state of switches based on User Defaults
         // If an artist collage is being made, there's no title to display
         // so no need for title preferences.
         if collageCreator?.contentType != .artists {
@@ -111,6 +111,20 @@ class CollagePreferencesViewController: UIViewController {
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.5)
             make.height.equalToSuperview().multipliedBy(0.15)
+        }
+        
+        configureSwitches()
+    }
+    
+    private func configureSwitches() {
+        if let showTitle = SettingsManager.get(Setting.showTitle) as? Bool {
+            titleSwitch.isOn = showTitle
+        }
+        if let showArtistName = SettingsManager.get(Setting.showArtistName) as? Bool {
+            artistSwitch.isOn = showArtistName
+        }
+        if let showPlaycount = SettingsManager.get(Setting.showPlaycount) as? Bool {
+            playCountSwitch.isOn = showPlaycount
         }
     }
     
@@ -147,6 +161,12 @@ class CollagePreferencesViewController: UIViewController {
     }
     
     @objc private func generateCollage(sender: UIButton) {
+        defer {
+            sender.isEnabled = true
+            SettingsManager.set(Setting.showTitle, to: titleSwitch.isOn)
+            SettingsManager.set(Setting.showArtistName, to: artistSwitch.isOn)
+            SettingsManager.set(Setting.showPlaycount, to: playCountSwitch.isOn)
+        }
         sender.isEnabled = false
         
         guard let username = collageCreator?.username,
@@ -178,32 +198,48 @@ class CollagePreferencesViewController: UIViewController {
         ) { result in
             switch result {
             case let .success(content):
-                // return and show alert if number of albums is less than rows x columns
                 for item in content {
                     media.append(MediaItem(albumDictionary: item))
                 }
                 ImageDownloader.downloadImages(albums: media, completion: {
-                    if let image = try? self.collageCreator?.createCollage(
-                        rows: selectedRow + 1,
-                        columns: selectedColumn + 1,
-                        albums: media,
-                        options: options
-                    ) {
-                        let collageVC = CollageDisplayViewController()
-                        collageVC.collageImage = image
-                        self.hideLoadingIndicator()
-                        self.present(collageVC, animated: true, completion: nil)
+                    do {
+                        if let image = try self.collageCreator?.createCollage(
+                            rows: selectedRow + 1,
+                            columns: selectedColumn + 1,
+                            albums: media,
+                            options: options
+                        ) {
+                            let collageVC = CollageDisplayViewController()
+                            collageVC.collageImage = image
+                            self.hideLoadingIndicator()
+                            self.present(collageVC, animated: true, completion: nil)
+                        }
+                    } catch {
+                        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+                        let alertView = SCLAlertView(appearance: appearance)
+                        alertView.addButton("OK") {}
+                        self.showGenericErrorAlert(title: "Oh no!", subtitle: "There was an error while creating your collage. Please try again later. Additional info: \(error.localizedDescription)")
                     }
                 })
             case let .failure(error):
-                print(error)
-                // TODO: handle specific error case of username not existing in lastfm
+                var title = ""
+                var subtitle = ""
+                switch error {
+                case CollageBotError.incorrectCount:
+                    title = "Hmmm..."
+                    let contentType = self.collageCreator?.contentType?.displayableName() ?? "album"
+                    subtitle = "We couldn't fetch enough \(contentType) data to fill your collage. Try again with a different timeframe or grid size."
+                default:
+                    title = "Oh no!"
+                    subtitle = "There was an error while fetching your account data. Please try again later. Additional info: \(error.localizedDescription)"
+                }
+                self.showGenericErrorAlert(title: title, subtitle: subtitle)
+                
             }
             DispatchQueue.main.async {
                 sender.isEnabled = true
             }
         }
-        sender.isEnabled = true
     }
     
     private func showLoadingIndicator() {

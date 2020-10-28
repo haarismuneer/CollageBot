@@ -9,7 +9,7 @@ import SCLAlertView
 
 class ContentEntryViewController: UIViewController {
     
-    private let numberOfContentTypeRows = 100000
+    private let numberOfContentTypeRows = 1
     
     let usernameField: UITextField = createView {
         let placeholder = NSAttributedString(
@@ -72,12 +72,17 @@ class ContentEntryViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        // TODO: replace with user defaults
-        timeframePicker.selectRow(0, inComponent: 0, animated: false)
-        pickerView(timeframePicker, didSelectRow: 0, inComponent: 0)
+        var prefereredTimeFrameIndex = 0
+        if let preferredTimeframe = SettingsManager.get(Setting.preferredTimeframe) as? Int {
+            prefereredTimeFrameIndex = preferredTimeframe
+        }
+        timeframePicker.selectRow(prefereredTimeFrameIndex, inComponent: 0, animated: false)
+        pickerView(timeframePicker, didSelectRow: prefereredTimeFrameIndex, inComponent: 0)
         
-        contentTypePicker.selectRow(numberOfContentTypeRows / 2, inComponent: 0, animated: false)
-        pickerView(contentTypePicker, didSelectRow: numberOfContentTypeRows / 2, inComponent: 0)
+//        contentTypePicker.selectRow(numberOfContentTypeRows / 2, inComponent: 0, animated: false)
+//        pickerView(contentTypePicker, didSelectRow: numberOfContentTypeRows / 2, inComponent: 0)
+        contentTypePicker.selectRow(0, inComponent: 0, animated: false)
+        pickerView(contentTypePicker, didSelectRow: 0, inComponent: 0)
     }
     
     // MARK: - UI Setup
@@ -115,7 +120,6 @@ class ContentEntryViewController: UIViewController {
         mainStackView.snp.makeConstraints { make in
             make.width.equalToSuperview()
             make.centerX.centerY.equalToSuperview()
-//            make.height.equalToSuperview().multipliedBy(0.8)
             make.bottom.greaterThanOrEqualTo(nextButton.snp.top).offset(-15)
             make.top.greaterThanOrEqualToSuperview().offset(15)
         }
@@ -159,6 +163,7 @@ class ContentEntryViewController: UIViewController {
     private func setUpContentTypePicker() {
         contentTypePicker.delegate = self
         contentTypePicker.dataSource = self
+        contentTypePicker.isUserInteractionEnabled = false
         
         getLabel.snp.makeConstraints { make in make.width.equalTo(50) }
         dataLabel.snp.makeConstraints { make in make.width.equalTo(50) }
@@ -189,13 +194,29 @@ class ContentEntryViewController: UIViewController {
     }
     
     @objc private func nextButtonTapped(_ sender: UIButton) {
-        if let text = usernameField.text, text.isValidUsername() {
-            performSegue(withIdentifier: "ContentEntryToCollagePreferences", sender: nextButton)
-        } else {
+        sender.isEnabled = false
+        
+        func showErrorAlert() {
             let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
             let alertView = SCLAlertView(appearance: appearance)
             alertView.addButton("OK") {}
-            alertView.showError("Whoops!", subTitle: "You need to enter a valid Last.fm username to continue.")
+            alertView.showError("Whoops!", subTitle: "You need to enter a valid Last.fm username to continue. Please try again.")
+        }
+        
+        if let text = usernameField.text {
+            text.isValidUsername({ isValid in
+                DispatchQueue.main.async {
+                    if isValid {
+                        self.performSegue(withIdentifier: "ContentEntryToCollagePreferences", sender: self.nextButton)
+                    } else {
+                        showErrorAlert()
+                    }
+                    sender.isEnabled = true
+                }
+            })
+        } else {
+            showErrorAlert()
+            sender.isEnabled = true
         }
     }
     
@@ -203,8 +224,9 @@ class ContentEntryViewController: UIViewController {
         let collageCreator = CollageCreator()
         collageCreator.username = usernameField.text
         collageCreator.timeframe = Timeframe.allCases[timeframePicker.selectedRow(inComponent: 0)]
-        let actualContentTypeIndex = contentTypePicker.selectedRow(inComponent: 0) % ContentType.allCases.count
-        collageCreator.contentType = ContentType.allCases[actualContentTypeIndex]
+//        let actualContentTypeIndex = contentTypePicker.selectedRow(inComponent: 0) % ContentType.allCases.count
+//        collageCreator.contentType = ContentType.allCases[actualContentTypeIndex]
+        collageCreator.contentType = .albums
         
         if let preferencesVC = segue.destination as? CollagePreferencesViewController {
             preferencesVC.collageCreator = collageCreator
@@ -222,7 +244,7 @@ extension ContentEntryViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerView == timeframePicker ? Timeframe.allCases.count : numberOfContentTypeRows
+        return pickerView == timeframePicker ? Timeframe.allCases.count : 1
     }
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
@@ -238,8 +260,13 @@ extension ContentEntryViewController: UIPickerViewDelegate, UIPickerViewDataSour
         if pickerView == timeframePicker {
             label.text = Timeframe.allCases[row].displayableName()
         } else if pickerView == contentTypePicker {
-            let actualRowNumber = row % ContentType.allCases.count
-            label.text = ContentType.allCases[actualRowNumber].displayableName()
+//            let actualRowNumber = row % ContentType.allCases.count
+//            label.text = ContentType.allCases[actualRowNumber].displayableName()
+            label.text = "album"
+        }
+        // Workaround for disabling new UIPickerView styling introduced in iOS 14.
+        if #available(iOS 14.0, *) {
+            pickerView.subviews[1].backgroundColor = .clear
         }
         
         return label
@@ -249,12 +276,12 @@ extension ContentEntryViewController: UIPickerViewDelegate, UIPickerViewDataSour
         var selectedLabel = UILabel()
         if let label = timeframePicker.view(forRow: row, forComponent: component) as? UILabel {
             selectedLabel = label
+            SettingsManager.set(Setting.preferredTimeframe, to: row)
         } else if let label = contentTypePicker.view(forRow: row % numberOfContentTypeRows, forComponent: component) as? UILabel {
             selectedLabel = label
         }
         
         selectedLabel.textColor = .collageBotTeal
-//        selectedLabel.backgroundColor = .red
         selectedLabel.font = .collageBotFont(18, fontType: .bold)
     }
     

@@ -33,9 +33,15 @@ class GridSelectionView: UIView {
         }
         
         // Select preferred layout
-        // TODO: replace with User Defaults
+        var preferredRow = 2, preferredColumn = 2
+        if let row = SettingsManager.get(Setting.preferredRowIndex) as? Int {
+            preferredRow = row
+        }
+        if let column = SettingsManager.get(Setting.preferredColumnIndex) as? Int {
+            preferredColumn = column
+        }
         buttons.forEach {
-            if $0.index.row == 2 && $0.index.column == 2 {
+            if $0.index.row == preferredRow && $0.index.column == preferredColumn {
                 buttonTapped($0)
             }
         }
@@ -48,6 +54,8 @@ class GridSelectionView: UIView {
             }
         }
         selectedIndex = sender.index
+        SettingsManager.set(Setting.preferredRowIndex, to: selectedIndex?.row)
+        SettingsManager.set(Setting.preferredColumnIndex, to: selectedIndex?.column)
     }
     
 }

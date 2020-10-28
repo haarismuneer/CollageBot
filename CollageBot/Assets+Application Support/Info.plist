@@ -17,13 +17,13 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>2018.11.17</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>CollageBot needs access to your photo library in order to export collages.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>CollageBot needs access to your photo library in order to save collages.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>CollageBot needs access to your photo library in order to export collages.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Comfortaa_Bold.ttf</string>
@@ -51,5 +51,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>CFBundleIconName</key>
+	<string>AppIcon</string>
 </dict>
 </plist>

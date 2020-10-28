@@ -5,6 +5,7 @@
 
 import UIKit
 import SnapKit
+import SCLAlertView
 
 class CollageDisplayViewController: UIViewController {
     
@@ -89,10 +90,12 @@ class CollageDisplayViewController: UIViewController {
     }
     
     private func setUpScrollView() {
-        collageScrollView.minimumZoomScale = 1.0
         collageScrollView.maximumZoomScale = 4.0
+        collageScrollView.showsVerticalScrollIndicator = false
+        collageScrollView.showsHorizontalScrollIndicator = false
         collageScrollView.delegate = self
         view.addSubview(collageScrollView)
+        view.sendSubviewToBack(collageScrollView)
         
         collageScrollView.snp.makeConstraints { make in
             make.centerX.centerY.width.height.equalToSuperview()
@@ -118,18 +121,16 @@ class CollageDisplayViewController: UIViewController {
         }
         
         collageScrollView.addSubview(collageImageView)
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleButtonVisibility))
-        collageScrollView.addGestureRecognizer(tapGesture)
-        
-        collageImageView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
-        }
-        
         collageWidth >= collageHeight ? setConstraintsBasedOnWidth() : setConstraintsBasedOnHeight()
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(toggleButtonVisibility))
+        collageImageView.isUserInteractionEnabled = true
+        collageImageView.addGestureRecognizer(tapGesture)
+
         collageImageView.image = collageImage
         collageImageView.contentMode = .scaleAspectFit
+        collageScrollView.contentSize = collageImageView.frame.size
+        adjustCentering()
     }
     
     @objc private func shareCollage() {
@@ -147,10 +148,24 @@ class CollageDisplayViewController: UIViewController {
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeRawPointer) {
         if let error = error {
-            // failed
+            displayErrorMessage(error: error)
         } else {
-            
+            displaySuccessMessage()
         }
+    }
+    
+    private func displaySuccessMessage() {
+        let appearance = SCLAlertView.SCLAppearance(showCloseButton: true)
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.addButton("OK") {}
+        alertView.showSuccess("Successfully saved your collage!")
+    }
+    
+    private func displayErrorMessage(error: Error) {
+        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
+        let alertView = SCLAlertView(appearance: appearance)
+        alertView.addButton("OK") {}
+        alertView.showError("Oh no!", subTitle: "There was an error while saving your collage. Please try again later. Additional info: \(error.localizedDescription)")
     }
 
 }
@@ -176,6 +191,21 @@ extension CollageDisplayViewController: UIScrollViewDelegate {
     @objc private func toggleButtonVisibility() {
         buttons.forEach {
             $0.isHidden = !$0.isHidden
+        }
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        adjustCentering()
+    }
+    
+    private func adjustCentering() {
+        if collageImageView.frame.height <= collageScrollView.frame.height {
+            let shiftHeight = collageScrollView.frame.height/2.0 - collageScrollView.contentSize.height/2.0
+            collageScrollView.contentInset.top = shiftHeight
+        }
+        if collageImageView.frame.width <= collageScrollView.frame.width {
+            let shiftWidth = collageScrollView.frame.width/2.0 - collageScrollView.contentSize.width/2.0
+            collageScrollView.contentInset.left = shiftWidth
         }
     }
     

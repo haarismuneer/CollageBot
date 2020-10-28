@@ -15,6 +15,7 @@
 		9D1032292181580A00A63E4F /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1032282181580A00A63E4F /* Secrets.swift */; };
 		9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */; };
 		9D10322D21841E8200A63E4F /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D10322C21841E8200A63E4F /* MediaItem.swift */; };
+		9D25A50B253B932D00F23B63 /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D25A50A253B932D00F23B63 /* SettingsManager.swift */; };
 		9D39F3FF219A88D100223F31 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39F3FE219A88D100223F31 /* Utilities.swift */; };
 		9D41D1982197AC0A007A8C91 /* GridSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */; };
 		9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */; };
@@ -31,6 +32,7 @@
 		9DA8DAD7219D2D0B00631575 /* Comfortaa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */; };
 		9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */; };
 		9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */; };
+		9DEB298125421CE50052ADE0 /* CollageBotError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEB298025421CE50052ADE0 /* CollageBotError.swift */; };
 		9DF396E325170E0F0044CC8C /* String+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF396E225170E0F0044CC8C /* String+Utils.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,7 @@
 		9D1032282181580A00A63E4F /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		9D10322A2183E2C900A63E4F /* LastfmAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastfmAPIClient.swift; sourceTree = "<group>"; };
 		9D10322C21841E8200A63E4F /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		9D25A50A253B932D00F23B63 /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		9D39F3FE219A88D100223F31 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridSelectionView.swift; sourceTree = "<group>"; };
 		9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareGridButton.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		9DA8DAD4219D2D0B00631575 /* Comfortaa_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Comfortaa_Bold.ttf; sourceTree = "<group>"; };
 		9DBE66912516822F00C3AD30 /* CollagePreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollagePreferencesViewController.swift; sourceTree = "<group>"; };
 		9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CollageBot.swift"; sourceTree = "<group>"; };
+		9DEB298025421CE50052ADE0 /* CollageBotError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageBotError.swift; sourceTree = "<group>"; };
 		9DF396E225170E0F0044CC8C /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
 		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +149,7 @@
 				9D39F3FE219A88D100223F31 /* Utilities.swift */,
 				9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */,
 				9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */,
+				9DEB298025421CE50052ADE0 /* CollageBotError.swift */,
 			);
 			path = "Helpers+Extensions";
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				9D41D1972197AC0A007A8C91 /* GridSelectionView.swift */,
 				9D41D1992197AEDC007A8C91 /* SquareGridButton.swift */,
 				9D41D19B2198DAEB007A8C91 /* Timeframe.swift */,
+				9D25A50A253B932D00F23B63 /* SettingsManager.swift */,
 			);
 			path = "Custom Classes";
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 				9D1032172181575600A63E4F /* AppDelegate.swift in Sources */,
 				9D41D19A2197AEDC007A8C91 /* SquareGridButton.swift in Sources */,
 				9D10322D21841E8200A63E4F /* MediaItem.swift in Sources */,
+				9D25A50B253B932D00F23B63 /* SettingsManager.swift in Sources */,
 				9D5B5ADE218B817700F3B467 /* CollageDisplayViewController.swift in Sources */,
 				9DD34983219E7C6700148313 /* UIColor+CollageBot.swift in Sources */,
 				9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */,
@@ -337,6 +344,7 @@
 				9DF396E325170E0F0044CC8C /* String+Utils.swift in Sources */,
 				9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */,
 				9DBE66922516822F00C3AD30 /* CollagePreferencesViewController.swift in Sources */,
+				9DEB298125421CE50052ADE0 /* CollageBotError.swift in Sources */,
 				9D10322B2183E2C900A63E4F /* LastfmAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,15 +494,18 @@
 			baseConfigurationReference = 96623871799726442F9B5EDA /* Pods-CollageBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HKWV3QPGW3;
+				CURRENT_PROJECT_VERSION = 2020.10.20;
+				DEVELOPMENT_TEAM = ZTEU5RXF67;
 				INFOPLIST_FILE = "$(SRCROOT)/CollageBot/Assets+Application Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.CollageBot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.collagebotapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -505,15 +516,18 @@
 			baseConfigurationReference = E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HKWV3QPGW3;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2020.10.20;
+				DEVELOPMENT_TEAM = ZTEU5RXF67;
 				INFOPLIST_FILE = "$(SRCROOT)/CollageBot/Assets+Application Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.CollageBot;
+				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.collagebotapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "CollageBot App Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

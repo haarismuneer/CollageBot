@@ -51,8 +51,7 @@ class CollageCreator {
         }
         
         guard let collage = UIGraphicsGetImageFromCurrentImageContext() else {
-            // TODO
-            throw NSError()
+            throw CollageBotError.unableToCreateCollage
         }
         UIGraphicsEndImageContext()
         return collage
