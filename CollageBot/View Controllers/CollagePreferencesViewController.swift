@@ -10,18 +10,18 @@ class CollagePreferencesViewController: UIViewController {
     
     var outerStackView: UIStackView = createView {
         $0.axis = .horizontal
-        $0.distribution = .fillProportionally
+        $0.distribution = .fillEqually
         $0.spacing = 10
     }
     var switchesStackView: UIStackView = createView {
         $0.axis = .vertical
         $0.alignment = .leading
-        $0.distribution = .fillEqually
+        $0.distribution = .equalCentering
     }
     var labelsStackView: UIStackView = createView {
         $0.axis = .vertical
         $0.alignment = .trailing
-        $0.distribution = .fillEqually
+        $0.distribution = .equalCentering
     }
     var titleLabel: UILabel = createView {
         $0.text = "Display album title"
@@ -107,10 +107,10 @@ class CollagePreferencesViewController: UIViewController {
         outerStackView.addArrangedSubview(switchesStackView)
         view.addSubview(outerStackView)
         outerStackView.snp.makeConstraints { make in
-            make.top.equalTo(gridView.snp.bottom).offset(20)
+            make.top.equalTo(gridView.snp.bottom).offset(30)
             make.centerX.equalToSuperview()
-            make.width.equalToSuperview().multipliedBy(0.5)
-            make.height.equalToSuperview().multipliedBy(0.15)
+            make.width.equalToSuperview().multipliedBy(0.7)
+            make.height.equalTo(120)
         }
         
         configureSwitches()
@@ -125,6 +125,18 @@ class CollagePreferencesViewController: UIViewController {
         }
         if let showPlaycount = SettingsManager.get(Setting.showPlaycount) as? Bool {
             playCountSwitch.isOn = showPlaycount
+        }
+        
+        switchesStackView.subviews.forEach {
+            $0.snp.makeConstraints { make in
+                make.height.equalTo(30)
+            }
+        }
+        
+        labelsStackView.subviews.forEach {
+            $0.snp.makeConstraints { make in
+                make.height.equalTo(30)
+            }
         }
     }
     

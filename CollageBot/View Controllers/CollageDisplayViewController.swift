@@ -160,7 +160,6 @@ class CollageDisplayViewController: UIViewController {
     private func displaySuccessMessage() {
         let appearance = SCLAlertView.SCLAppearance(showCloseButton: true)
         let alertView = SCLAlertView(appearance: appearance)
-        alertView.addButton("OK") {}
         alertView.showSuccess("Successfully saved your collage!")
     }
     
