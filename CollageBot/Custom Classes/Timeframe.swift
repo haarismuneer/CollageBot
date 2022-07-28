@@ -12,7 +12,7 @@ enum Timeframe: String, CaseIterable {
     case sixMonths = "6month"
     case twelveMonths = "12month"
     case overall
-    
+
     func displayableName() -> String {
         switch self {
         case .oneWeek:
