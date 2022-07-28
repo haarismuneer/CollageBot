@@ -6,13 +6,12 @@
 import Foundation
 
 extension String {
-    
-    func isValidUsername(_ completion: @escaping((Bool) -> Void)) {
-        guard !isEmpty && !containsInvalidCharacters() else {
+    func isValidUsername(_ completion: @escaping ((Bool) -> Void)) {
+        guard !isEmpty, !containsInvalidCharacters() else {
             completion(false)
             return
         }
-        
+
         LastfmAPIClient.getAccountCreationDate(username: self) { result in
             switch result {
             case .success:
@@ -22,9 +21,8 @@ extension String {
             }
         }
     }
-    
+
     func containsInvalidCharacters() -> Bool {
         return false
     }
-    
 }

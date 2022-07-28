@@ -12,9 +12,7 @@ enum FontType: String {
 }
 
 extension UIFont {
-    
     class func collageBotFont(_ size: CGFloat, fontType: FontType = .regular) -> UIFont {
         return UIFont(name: "Comfortaa\(fontType.rawValue)", size: size) ?? UIFont()
     }
-    
 }

@@ -6,11 +6,10 @@
 import Foundation
 
 extension Date {
-    
     func dateStringBeforeInterval(_ timeframe: Timeframe) -> String {
         var component: Calendar.Component
         var value = 0
-        
+
         switch timeframe {
         case .oneWeek:
             component = .weekOfYear
@@ -30,23 +29,20 @@ extension Date {
         default:
             return ""
         }
-        
+
         guard let previousDate = Calendar.current.date(byAdding: component, value: value, to: self) else { return "" }
-        
+
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.string(from: previousDate)
     }
-    
 }
 
 extension Double {
-    
     func dateStringFromUnixTimestamp() -> String {
         let date = Date(timeIntervalSince1970: self)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
         return dateFormatter.string(from: date)
     }
-    
 }

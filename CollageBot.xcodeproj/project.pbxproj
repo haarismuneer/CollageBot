@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87D5DAB80C0DB96070F89EB7 /* Pods_CollageBot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73F7D365DAAA0E87D7E04990 /* Pods_CollageBot.framework */; };
 		9D1032172181575600A63E4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1032162181575600A63E4F /* AppDelegate.swift */; };
 		9D10321C2181575600A63E4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D10321A2181575600A63E4F /* Main.storyboard */; };
 		9D10321E2181575700A63E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D10321D2181575700A63E4F /* Assets.xcassets */; };
@@ -26,6 +25,8 @@
 		9D5B5AE2218BC82D00F3B467 /* Date+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AE1218BC82D00F3B467 /* Date+Conversion.swift */; };
 		9D5B5AEA218DF0CE00F3B467 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AE9218DF0CE00F3B467 /* ImageDownloader.swift */; };
 		9D5B5AEC218F38EE00F3B467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5B5AEB218F38EE00F3B467 /* Constants.swift */; };
+		9DA7793128921AEC00244C6B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA7793028921AEC00244C6B /* SnapKit */; };
+		9DA7793528921C6200244C6B /* KippleCore in Frameworks */ = {isa = PBXBuildFile; productRef = 9DA7793428921C6200244C6B /* KippleCore */; };
 		9DA8DAD0219D2A9400631575 /* UIFont+CollageBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA8DACF219D2A9400631575 /* UIFont+CollageBot.swift */; };
 		9DA8DAD5219D2D0B00631575 /* Comfortaa_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD2219D2D0B00631575 /* Comfortaa_Regular.ttf */; };
 		9DA8DAD6219D2D0B00631575 /* Comfortaa_Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DA8DAD3219D2D0B00631575 /* Comfortaa_Thin.ttf */; };
@@ -37,8 +38,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		73F7D365DAAA0E87D7E04990 /* Pods_CollageBot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CollageBot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96623871799726442F9B5EDA /* Pods-CollageBot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.debug.xcconfig"; sourceTree = "<group>"; };
 		9D1032132181575600A63E4F /* CollageBot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollageBot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1032162181575600A63E4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D10321B2181575600A63E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +66,6 @@
 		9DD34982219E7C6700148313 /* UIColor+CollageBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CollageBot.swift"; sourceTree = "<group>"; };
 		9DEB298025421CE50052ADE0 /* CollageBotError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollageBotError.swift; sourceTree = "<group>"; };
 		9DF396E225170E0F0044CC8C /* String+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Utils.swift"; sourceTree = "<group>"; };
-		E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CollageBot.release.xcconfig"; path = "Pods/Target Support Files/Pods-CollageBot/Pods-CollageBot.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,28 +73,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87D5DAB80C0DB96070F89EB7 /* Pods_CollageBot.framework in Frameworks */,
+				9DA7793528921C6200244C6B /* KippleCore in Frameworks */,
+				9DA7793128921AEC00244C6B /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		79CC3D3EC3466418794E4A9A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				73F7D365DAAA0E87D7E04990 /* Pods_CollageBot.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		9D10320A2181575600A63E4F = {
 			isa = PBXGroup;
 			children = (
 				9D1032152181575600A63E4F /* CollageBot */,
 				9D1032142181575600A63E4F /* Products */,
-				AE873B991D57B168FE70C9DA /* Pods */,
-				79CC3D3EC3466418794E4A9A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,15 +187,6 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		AE873B991D57B168FE70C9DA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				96623871799726442F9B5EDA /* Pods-CollageBot.debug.xcconfig */,
-				E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -214,17 +194,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D1032252181575700A63E4F /* Build configuration list for PBXNativeTarget "CollageBot" */;
 			buildPhases = (
-				4EB6489A780D56BFE6CCD467 /* [CP] Check Pods Manifest.lock */,
 				9D10320F2181575600A63E4F /* Sources */,
 				9D1032102181575600A63E4F /* Frameworks */,
 				9D1032112181575600A63E4F /* Resources */,
-				1511BBE128E393F65DBC7B1B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = CollageBot;
+			packageProductDependencies = (
+				9DA7793028921AEC00244C6B /* SnapKit */,
+				9DA7793428921C6200244C6B /* KippleCore */,
+			);
 			productName = CollageBot;
 			productReference = 9D1032132181575600A63E4F /* CollageBot.app */;
 			productType = "com.apple.product-type.application";
@@ -254,6 +236,10 @@
 				Base,
 			);
 			mainGroup = 9D10320A2181575600A63E4F;
+			packageReferences = (
+				9DA7792F28921AEC00244C6B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				9DA7793328921C6200244C6B /* XCRemoteSwiftPackageReference "Core" */,
+			);
 			productRefGroup = 9D1032142181575600A63E4F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -278,48 +264,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1511BBE128E393F65DBC7B1B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CollageBot/Pods-CollageBot-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EB6489A780D56BFE6CCD467 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CollageBot-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D10320F2181575600A63E4F /* Sources */ = {
@@ -491,7 +435,6 @@
 		};
 		9D1032262181575700A63E4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96623871799726442F9B5EDA /* Pods-CollageBot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -499,10 +442,12 @@
 				CURRENT_PROJECT_VERSION = 2020.10.28;
 				DEVELOPMENT_TEAM = ZTEU5RXF67;
 				INFOPLIST_FILE = "$(SRCROOT)/CollageBot/Assets+Application Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.collagebotapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -513,7 +458,6 @@
 		};
 		9D1032272181575700A63E4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E29BA66ADBA8021D8BC62125 /* Pods-CollageBot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -521,10 +465,12 @@
 				CURRENT_PROJECT_VERSION = 2020.10.28;
 				DEVELOPMENT_TEAM = ZTEU5RXF67;
 				INFOPLIST_FILE = "$(SRCROOT)/CollageBot/Assets+Application Support/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.haarismuneer.collagebotapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "CollageBot App Store";
@@ -555,6 +501,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9DA7792F28921AEC00244C6B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		9DA7793328921C6200244C6B /* XCRemoteSwiftPackageReference "Core" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swift-kipple/Core";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9DA7793028921AEC00244C6B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DA7792F28921AEC00244C6B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		9DA7793428921C6200244C6B /* KippleCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9DA7793328921C6200244C6B /* XCRemoteSwiftPackageReference "Core" */;
+			productName = KippleCore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9D10320B2181575600A63E4F /* Project object */;
 }
