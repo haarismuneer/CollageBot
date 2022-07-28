@@ -15,7 +15,7 @@ class ContentEntryViewController: UIViewController {
             attributes: [NSAttributedString.Key.font: UIFont.collageBotFont(16)]
         )
         $0.attributedPlaceholder = placeholder
-        $0.font = UIFont.collageBotFont(16)
+        $0.font = .collageBotFont(16)
         $0.autocorrectionType = .no
         $0.autocapitalizationType = .none
         $0.borderStyle = .roundedRect
@@ -201,10 +201,10 @@ class ContentEntryViewController: UIViewController {
         sender.isEnabled = false
 
         func showErrorAlert() {
-            let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-            let alertView = SCLAlertView(appearance: appearance)
-            alertView.addButton("OK") {}
-            alertView.showError("Whoops!", subTitle: "You need to enter a valid Last.fm username to continue. Please try again.")
+            showErrorAlert(
+                title: "Oops!",
+                message: "You need to enter a valid Last.fm username to continue. Please try again."
+            )
         }
 
         if let text = usernameField.text {

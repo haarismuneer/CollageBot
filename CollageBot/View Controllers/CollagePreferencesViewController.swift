@@ -232,10 +232,10 @@ class CollagePreferencesViewController: UIViewController {
                             self.present(collageVC, animated: true, completion: nil)
                         }
                     } catch {
-                        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-                        let alertView = SCLAlertView(appearance: appearance)
-                        alertView.addButton("OK") {}
-                        self.showGenericErrorAlert(title: "Oh no!", subtitle: "There was an error while creating your collage. Please try again later. Additional info: \(error.localizedDescription)")
+                        self.showErrorAlert(
+                            title: "Oh no!",
+                            message: "There was an error while creating your collage. Please try again later. Additional info: \(error.localizedDescription)"
+                        )
                     }
                 })
             case let .failure(error):
@@ -250,7 +250,7 @@ class CollagePreferencesViewController: UIViewController {
                     title = "Oh no!"
                     subtitle = "There was an error while fetching your account data. Please try again later. Additional info: \(error.localizedDescription)"
                 }
-                self.showGenericErrorAlert(title: title, subtitle: subtitle)
+                self.showErrorAlert(title: title, message: subtitle)
             }
             DispatchQueue.main.async {
                 sender.isEnabled = true

@@ -30,8 +30,7 @@ class ImageDownloader {
     class func downloadImageFromURL(_ url: URL, completion: @escaping (UIImage) -> Void) {
         URLSession.shared.dataTask(with: url) { data, _, _ in
             if let data = data,
-               let image = UIImage(data: data)
-            {
+               let image = UIImage(data: data) {
                 completion(image)
             } else if let defaultImage = UIImage(named: "default_album_art") {
                 completion(defaultImage)

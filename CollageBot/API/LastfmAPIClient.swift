@@ -29,7 +29,7 @@ class LastfmAPIClient {
         guard var urlComponents = URLComponents(string: "https://ws.audioscrobbler.com/2.0/") else { return }
         var query = "method=user.gettop\(type.rawValue)"
         query += "&user=\(username)&period=\(timeframe.rawValue)"
-        query += "&limit=\(limit)&api_key=\(Secrets.lastFMKey)&format=json"
+        query += "&limit=\(limit)&api_key=\(Secrets.lastfmKey)&format=json"
         urlComponents.query = query
 
         guard let url = urlComponents.url else { return }
@@ -63,7 +63,7 @@ class LastfmAPIClient {
 
     class func getAccountCreationDate(username: String, completion: @escaping (NetworkResult<String>) -> Void) {
         guard var urlComponents = URLComponents(string: "https://ws.audioscrobbler.com/2.0/") else { return }
-        urlComponents.query = "method=user.getinfo&user=\(username)&api_key=\(Secrets.lastFMKey)&format=json"
+        urlComponents.query = "method=user.getinfo&user=\(username)&api_key=\(Secrets.lastfmKey)&format=json"
 
         guard let url = urlComponents.url else { return }
 

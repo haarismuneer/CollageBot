@@ -156,16 +156,20 @@ class CollageDisplayViewController: UIViewController {
     }
 
     private func displaySuccessMessage() {
-        let appearance = SCLAlertView.SCLAppearance(showCloseButton: true)
-        let alertView = SCLAlertView(appearance: appearance)
-        alertView.showSuccess("Successfully saved your collage!")
+        let alert = UIAlertController(
+            title: "🎉",
+            message: "Successfully saved your collage!",
+            preferredStyle: .alert
+        )
+        alert.addAction(.init(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 
     private func displayErrorMessage(error: Error) {
-        let appearance = SCLAlertView.SCLAppearance(showCloseButton: false)
-        let alertView = SCLAlertView(appearance: appearance)
-        alertView.addButton("OK") {}
-        alertView.showError("Oh no!", subTitle: "There was an error while saving your collage. Please try again later. Additional info: \(error.localizedDescription)")
+        showErrorAlert(
+            title: "Oh no!",
+            message: "There was an error while saving your collage. Please try again later. Additional info: \(error.localizedDescription)"
+        )
     }
 }
 
