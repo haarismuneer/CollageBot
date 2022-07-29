@@ -7,7 +7,7 @@ import Foundation
 
 extension String {
     func isValidUsername(_ completion: @escaping ((Bool) -> Void)) {
-        guard !isEmpty, !containsInvalidCharacters() else {
+        guard !isEmpty else {
             completion(false)
             return
         }
@@ -20,9 +20,5 @@ extension String {
                 completion(false)
             }
         }
-    }
-
-    func containsInvalidCharacters() -> Bool {
-        return false
     }
 }

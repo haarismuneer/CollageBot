@@ -228,6 +228,7 @@ class CollagePreferencesViewController: UIViewController {
                         ) {
                             let collageVC = CollageDisplayViewController()
                             collageVC.collageImage = image
+                            collageVC.isModalInPresentation = true
                             self.hideLoadingIndicator()
                             self.present(collageVC, animated: true, completion: nil)
                         }

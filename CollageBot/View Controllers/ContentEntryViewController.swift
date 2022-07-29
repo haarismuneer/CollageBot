@@ -200,7 +200,7 @@ class ContentEntryViewController: UIViewController {
     @objc private func nextButtonTapped(_ sender: UIButton) {
         sender.isEnabled = false
 
-        func showErrorAlert() {
+        func showError() {
             showErrorAlert(
                 title: "Oops!",
                 message: "You need to enter a valid Last.fm username to continue. Please try again."
@@ -213,13 +213,13 @@ class ContentEntryViewController: UIViewController {
                     if isValid {
                         self.performSegue(withIdentifier: "ContentEntryToCollagePreferences", sender: self.nextButton)
                     } else {
-                        showErrorAlert()
+                        showError()
                     }
                     sender.isEnabled = true
                 }
             }
         } else {
-            showErrorAlert()
+            showError()
             sender.isEnabled = true
         }
     }
